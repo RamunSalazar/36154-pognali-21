@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Михаил Иванов](https://up.htmlacademy.ru/adaptive/21/user/36154).
-* Наставник: `Неизвестно`.
+* Наставник: `Роман Бляхарский`.
 
 ---
 
