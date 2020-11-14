@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Погнали - Форма</title>
+  </head>
+  <body class="page-body">
+  	<header class="page-header">
+      <div class="container">
+  	    <a class="page-header__logo link" href="">
+  	  	  <img class="page-header__logo-image img" src="" width="" height="" alt="">
+  	    </a>
+  	    <nav class="page-header__navigation">
+  	  	  <button class="page-header__navigation-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+  	  	  <ul class="page-header__navigation-list site-list">
+  	  	    <li class="site-list__item">
+  	  	      <a class="link" href="">о сервисе</a>
+  	  	    </li>
+  	  	    <li class="site-list__item">
+  	  	      <a class="link" href="">направление</a>
+  	  	    </li>
+  	  	    <li class="site-list__item">
+  	  	      <a class="link" href="">попутчики</a>
+  	  	    </li>
+  	  	  </ul>
+  	  	  <ul class="page-header__navigation-list user-list">
+  	  	    <li class="user-list__item">
+  	  	      <a class="link" href=""><span class="visually-hidden">телефон</span></a>
+  	  	    </li>
+  	  	    <li class="user-list__item">
+  	  	      <a class="link" href=""><span class="visually-hidden">электронная почта</span></a>
+  	  	    </li>
+  	  	    <li class="user-list__item">
+  	  	      <a class="link" href="">авторизоваться</a>
+  	  	    </li>
+  	  	  </ul>
+  	    </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Форма профиля</h1>
+      <section class="direction-form">
+        <div class="container">
+          <h2 class="direction-form__title">Направления</h2>
+          <img class="direction-form__image-level" src="" width="" height="" alt="">
+          <img class="direction-form__person-photo" src="" width="" height="" alt="">
+          <button class="direction-form__button" type="button">сменить фото</button>
+          <form>
+            <fieldset class="direction-form__hashtag">
+              <legend class="direction-form__hashtag-title">теги</legend>
+              <textarea class="direction-form__hashtag-text">#бургер #бар #футбол #концерт #крафт</textarea>
+            </fieldset>
+            <fieldset class="direction-form__transport">
+              <legend class="direction-form__transport-title">транспорт</legend>
+              <ul class="direction-form__transport-list">
+                <li class="direction-form__transport-item">
+                  <svg class="direction-form__transport-image" src="" width="" height="" alt=""></svg>
+                </li>
+                <li class="direction-form__transport-item">
+                  <svg class="direction-form__transport-image" src="" width="" height="" alt=""></svg>
+                </li>
+                <li class="direction-form__transport-item">
+                  <svg class="direction-form__transport-image" src="" width="" height="" alt=""></svg>
+                </li>
+                <li class="direction-form__transport-item">
+                  <svg class="direction-form__transport-image" src="" width="" height="" alt=""></svg>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+      <section class="plan">
+        <div class="container">
+          <h2 class="plan__title">Мои планы:</h2>
+          <ul class="plan__list">
+            <li class="plan__item">
+              <div class="plan__item-wrapper">
+                <h3 class="plan__title">1. Франция, Италия</h3>
+                <p class="plan__fellow-travelle">3 попутчика</p>
+                <p class="plan__date">26 мар — 29 мар</p>
+                <button class="plan__button" type="button">изменить</button>
+              </div>
+            </li>
+            <li class="plan__item">
+              <div class="plan__item-wrapper">
+                <h3 class="plan__title">2. Таиланд, Индонезия</h3>
+                <p class="plan__fellow-travelle">1 попутчик</p>
+                <p class="plan__data">1 июл — 15 июл</p>
+                <button class="plan__button" type="button">изменить</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="add-plan">
+        <div class="container">
+          <h2 class="add-plan__title">Добавить план:</h2>
+          <div class="add-plan__date">
+            <h3 class="add-plan__date-title">Шаг 1. Даты пребывания</h3>
+            <p class="add-plan__date-description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <form class="date">
+              <label class="date__fellow-travelle">ищу попутчиков:<span>чел.</span></label>
+              <!--Количесво человек--><br>
+              <label class="date__day">длительность:<span>дн.</span></label>
+              <!--Количесво дней--><br>
+              <input class="date__children-checked" type="checkbox" name="children" id="children">
+              <label class="date__children-title" for="children">Можно с детьми</label><br>
+              <label class="visually-hidden" for="date">Выбор даты</label>
+              <input class="date__value" type="date" name="date" id="date"><br>
+              <button class="date__button" type="button">Следующий шаг</button>
+            </form>
+          </div>
+          <div class="add-plan__route">
+            <h2 class="add-plan__route-title">Шаг 2. Маршрут</h2>
+            <p class="add-plan__route-description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+            <form class="route">
+              <label class="visually-hidden" for="country-1">Выбор страны</label>
+              <input class="route__country" type="text" name="countrys" id="country-1" value="Босния и герцеговина">
+              <svg class="route__country-flag" src="" width="" height="" alt=""></svg><br>
+              <label class="visually-hidden" for="country-2">Выбор страны</label>
+              <input class="route__country" type="text" name="countrys" id="country-2" value="Чехия">
+              <svg class="route__country-flag" src="" width="" height="" alt=""></svg><br>
+              <label class="visually-hidden" for="country">Выбор страны</label>
+              <input class="route__country-value" type="text" list="country-list" name="countrys"  id="country" placeholder="выберите страну">
+              <datalist class="route__country-list" id="country-list">
+                <option class="route__country-item" value="Австралия"></option>
+                <option class="route__country-item" value="Ангола"></option>
+                <option class="route__country-item" value="Аргентина"></option>
+              </datalist><br>
+              <button class="route__add-country" type="button">Добавить страну</button><br>
+              <button class="route__step-forward" type="button">Следующий шаг</button><br>
+              <button class="route__step-backward" type="button">на шаг назад</button><br>
+            </form>
+          </div>
+          <div class="add-plan__entertainment">
+            <h2 class="add-plan__entertainment-title">Шаг 3. Развлечения</h2>
+            <p class="add-plan__entertainment-description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <form class="entertainment">
+              <label class="entertainment__title" for="bosnia">Босния и Герцеговина</label><br>
+              <textarea class="entertainment__text" id="bosnia" placeholder="План действий"></textarea><br>
+              <label class="entertainment__title" for="czech">Чехия</label><br>
+              <textarea class="entertainment__text" id="czech">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea><br>
+              <button class="entertainment__button-send" type="button">Отправить</button><br>
+              <button class="entertainment__step-backward" type="button">На шаг назад</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <a class="page-footer__logo link" href="">
+          <img class="page-footer__logo-image" src="" width="" height="" alt="">
+        </a>
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <svg class="page-footer__image img" src="" width="" height="" alt=""></svg>
+          </li>
+          <li class="page-footer__item">
+            <svg class="page-footer__image img" src="" width="" height="" alt=""></svg>
+          </li>
+          <li class="page-footer__item">
+            <svg class="page-footer__image img" src="" width="" height="" alt=""></svg>
+          </li>
+        </ul>
+        <p class="page-footer__text">Разработано</p>
+        <a class="page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="page-footer__academy-image" src="" width="" height="" alt="">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
