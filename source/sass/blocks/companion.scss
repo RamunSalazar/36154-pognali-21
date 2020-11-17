@@ -1,0 +1,40 @@
+.companion {
+  background: url("../../img/smolov-back-desktop.png") no-repeat top right,
+  url("../../img/back.png") no-repeat top left,
+  url("../../img/rogovaya-back-desktop.png") no-repeat 0 10%;
+  background-color: $special-blue;
+}
+
+.companion__title {
+  @include title;
+}
+
+.companion__description {
+  color: $white;
+  &:nth-child(3) {
+    font-weight: 700;
+  }
+}
+
+.companion__item {
+  background-color: $white;
+}
+
+.companion__person-name {
+  font-weight: 700;
+  color: $blue-light;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.companion__hashtag-link {
+  font-weight: 400;
+  line-height: 18px;
+  color: $special-grey;
+  text-align: center;
+}
+
+.companion__link {
+  @include link;
+}

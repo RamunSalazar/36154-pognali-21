@@ -1,0 +1,77 @@
+.page {
+  height: 100%;
+}
+
+.page-body {
+  width: 320px;
+  padding: 0;
+  margin: 0 auto;
+  font: {
+    family: "Blogger Sans", "Arial", sans-serif;
+    style: normal;
+    weight: 300;
+    size: 16px;
+  }
+  line-height: 22px;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+}
+
+.list__item {
+  list-style-type: none;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 270px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+@mixin title {
+  font: {
+    weight: 700;
+    size: 24px;
+  }
+  color: $orange;
+  line-height: 24px;
+}
+
+@mixin link {
+  font: {
+    weight: 400;
+    size: 18;
+  }
+  line-height: 18px;
+  color: $blue-light;
+}

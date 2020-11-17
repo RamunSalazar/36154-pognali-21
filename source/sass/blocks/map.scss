@@ -1,0 +1,22 @@
+.map {
+  background: url("../../img/background-map.png") no-repeat center center;
+}
+
+.map .container {
+ background-color: $yellow;
+}
+
+.map__address {
+  text-transform: uppercase;
+  color: $special-blue-light;
+  font-weight: 700;
+}
+
+.map__link {
+  font: {
+    weight: 700;
+    size: 18px;
+  }
+  line-height: 18px;
+  color: $special-blue-light;
+}
