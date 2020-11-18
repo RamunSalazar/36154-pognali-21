@@ -1,0 +1,29 @@
+.direction-form {
+  background-color: $grey;
+}
+
+.direction-form__button {
+  color: $blue;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.direction-form__title {
+  color: $blue-light;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.direction-form__hashtag-text {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  color: $special-grey;
+  opacity: 0.6;
+  line-height: 18px;
+}

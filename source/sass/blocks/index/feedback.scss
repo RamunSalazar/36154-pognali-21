@@ -1,0 +1,33 @@
+.feedback {
+  background-color: $special-blue;
+}
+
+.feedback__title {
+  color: $orange;
+}
+
+.feedback__description {
+  color: $white;
+  text-align: center;
+
+  .feedback__description-link {
+    color: $yellow-dark;
+    text-decoration: underline;
+  }
+}
+
+.feedback__text {
+  color: $white;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.feedback__phone,
+.feedback__email {
+  color: $yellow;
+  font-weight: 700;
+}
+
+.feedback__email {
+  text-transform: uppercase;
+}

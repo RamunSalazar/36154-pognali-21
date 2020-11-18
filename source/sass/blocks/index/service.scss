@@ -1,0 +1,15 @@
+.service {
+  background: $special-blue url("../../img/about-mobile.png") no-repeat center center;
+}
+
+.service__title {
+  color: $orange;
+}
+
+.service__description {
+  color: $white;
+
+  &:nth-child(3) {
+    font-weight: 700;
+  }
+}

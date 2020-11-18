@@ -1,160 +1,164 @@
-<!DOCtransport html>
+<!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали - Каталог</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
-  	<header class="page-header">
+    <header class="page-header">
       <div class="container">
-  	    <a class="page-header__logo link" href="">
-  	  	  <img class="page-header__logo-image img" src="" width="" height="" alt="">
-  	    </a>
-  	    <nav class="page-header__navigation">
-  	  	  <button class="page-header__navigation-toggle" transport="button"><span class="visually-hidden">Открыть меню</span></button>
-  	  	  <ul class="page-header__navigation-list site-list">
-  	  	    <li class="site-list__item">
-  	  	      <a class="link" href="">о сервисе</a>
-  	  	    </li>
-  	  	    <li class="site-list__item">
-  	  	      <a class="link" href="">направление</a>
-  	  	    </li>
-  	  	    <li class="site-list__item">
-  	  	      <a class="link" href="">попутчики</a>
-  	  	    </li>
-  	  	  </ul>
-  	  	  <ul class="page-header__navigation-list user-list">
-  	  	    <li class="user-list__item">
-  	  	      <a class="link" href=""><span class="visually-hidden">телефон</span></a>
-  	  	    </li>
-  	  	    <li class="user-list__item">
-  	  	      <a class="link" href=""><span class="visually-hidden">электронная почта</span></a>
-  	  	    </li>
-  	  	    <li class="user-list__item">
-  	  	      <a class="link" href="">авторизоваться</a>
-  	  	    </li>
-  	  	  </ul>
-  	    </nav>
+        <a class="page-header__logo link" href="index.html">
+          погнали?
+          <img class="page-header__logo-image img" src="" width="" height="" alt="">
+        </a>
+        <nav class="page-header__navigation visually-hidden">
+          <button class="page-header__navigation-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="page-header__navigation-list page-header__site-list list">
+            <li class="page-header__site-item list__item">
+              <a class="page-header__site-link link" href="">о сервисе</a>
+            </li>
+            <li class="page-header__site-item list__item">
+              <a class="page-header__site-link link" href="">направление</a>
+            </li>
+            <li class="page-header__site-item list__item">
+              <a class="page-header__site-link link" href="">попутчики</a>
+            </li>
+          </ul>
+          <ul class="page-header__navigation-list page-header__user-list list">
+            <li class="page-header__user-item list__item">
+              <a class="page-header__user-link link" href=""><span class="visually-hidden">телефон</span></a>
+            </li>
+            <li class="page-header__user-item list__item">
+              <a class="page-header__user-link link" href=""><span class="visually-hidden">электронная почта</span></a>
+            </li>
+            <li class="page-header__user-item list__item">
+              <a class="page-header__user-link link" href="">авторизоваться</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main class="page-main">
-      <h1 class="companion-title">Попутчики</h1>
+      <div class="container">
+        <h1 class="title title--large">Попутчики</h1>
+      </div>
       <section class="filter-country">
-        <div class="filter-country__wrapper">
+        <div class="container">
           <h2 class="filter-country__title">Фильтрация по странам:</h2>
           <button class="filter-country__toggle" type="button"><span class="visually-hidden">Открыть фильтр</span></button>
         </div>
       </section>
       <section class="filter-companion">
         <div class="container">
-          <h2 class="filter-companion__title">Подберите идеального попутчика</h2>
-          <form class="companion-form">
-            <div class="companion-form__hobby">
-              <h3 class="companion-form__hobby-title">хобби</h3>
-              <input class="companion-form__hobby-check" type="checkbox" name="gym" id="hobby-gym">
-              <label class="companion-form__hobby-label" for="hobby-gym">Спортзал</label><br>
-              <input class="companion-form__hobby-check" type="checkbox" name="hookah" id="hobby-hookah">
-              <label class="companion-form__hobby-label" for="hobby-hookah">Кальян</label><br>
-              <input class="companion-form__hobby-check" type="checkbox" name="sofa" id="hobby-sofa">
-              <label class="companion-form__hobby-label" for="hobby-sofa">Диван</label><br>
+          <h2 class="filter-companion__main-title">Подберите идеального попутчика</h2>
+          <form class="filter-companion__form">
+            <div class="filter-companion__hobby">
+              <h3 class="filter-companion__title">хобби</h3>
+              <input class="filter-companion__check" type="checkbox" name="gym" id="hobby-gym">
+              <label class="filter-companion__label" for="hobby-gym">Спортзал</label><br>
+              <input class="filter-companion__check" type="checkbox" name="hookah" id="hobby-hookah">
+              <label class="filter-companion__label" for="hobby-hookah">Кальян</label><br>
+              <input class="filter-companion__check" type="checkbox" name="sofa" id="hobby-sofa">
+              <label class="filter-companion__label" for="hobby-sofa">Диван</label><br>
             </div>
-            <div class="companion-form__music">
-              <h3 class="companion-form__music-title">музыка</h3>
-              <input class="companion-form__music-check" type="checkbox" name="rock" id="music-rock">
-              <label class="companion-form__music-label" for="music-rock">Тяжелый рок</label><br>
-              <input class="companion-form__music-check" type="checkbox" name="rap" id="music-rap">
-              <label class="companion-form__music-label" for="music-rap">Русский рэп</label><br>
-              <input class="companion-form__music-check" type="checkbox" name="dance" id="music-dance">
-              <label class="companion-form__music-label" for="music-dance">Евроденс</label><br>
+            <div class="filter-companion__music">
+              <h3 class="filter-companion__title">музыка</h3>
+              <input class="filter-companion__check" type="checkbox" name="rock" id="music-rock">
+              <label class="filter-companion__label" for="music-rock">Тяжелый рок</label><br>
+              <input class="filter-companion__check" type="checkbox" name="rap" id="music-rap">
+              <label class="filter-companion__label" for="music-rap">Русский рэп</label><br>
+              <input class="filter-companion__check" type="checkbox" name="dance" id="music-dance">
+              <label class="filter-companion__label" for="music-dance">Евроденс</label><br>
             </div>
-            <div class="companion-form__food">
-              <h3 class="companion-form__food-title">еда</h3>
-              <input class="companion-form__food-check" type="checkbox" name="meat" id="food-meat">
-              <label class="companion-form__food-label" for="food-meat">Мясоед</label><br>
-              <input class="companion-form__food-check" type="checkbox" name="healthy" id="food-healthy">
-              <label class="companion-form__food-label" for="food-healthy">Сидит на ПП</label><br>
-              <input class="companion-form__food-check" type="checkbox" name="vegetarian" id="food-vegetarian">
-              <label class="companion-form__food-label" for="food-vegetarian">Веган-сыроед</label><br>
+            <div class="filter-companion__food">
+              <h3 class="filter-companion__title">еда</h3>
+              <input class="filter-companion__check" type="checkbox" name="meat" id="food-meat">
+              <label class="filter-companion__label" for="food-meat">Мясоед</label><br>
+              <input class="filter-companion__check" type="checkbox" name="healthy" id="food-healthy">
+              <label class="filter-companion__label" for="food-healthy">Сидит на ПП</label><br>
+              <input class="filter-companion__check" type="checkbox" name="vegetarian" id="food-vegetarian">
+              <label class="filter-companion__label" for="food-vegetarian">Веган-сыроед</label><br>
             </div>
-            <div class="companion-form__transport">
-              <h3 class="companion-form__transport-title">транспорт</h3>
-              <ul class="companion__transport-list">
-                <li class="companion__transport-item">
+            <div class="filter-companion__transport">
+              <h3 class="filter-companion__title">транспорт</h3>
+              <ul class="filter-companion__list list">
+                <li class="filter-companion__item list__item">
                   <svg class="img" src="" width="" height="" alt=""></svg>
                 </li>
-                <li class="companion__transport-item">
+                <li class="filter-companion__item list__item">
                   <svg class="img" src="" width="" height="" alt=""></svg>
                 </li>
-                <li class="companion__transport-item">
+                <li class="filter-companion__item list__item">
                   <svg class="img" src="" width="" height="" alt=""></svg>
                 </li>
-                <li class="companion__transport-item">
+                <li class="filter-companion__item list__item">
                   <svg class="img" src="" width="" height="" alt=""></svg>
                 </li>
               </ul>
             </div>
-            <div class="companion-form__level">
+            <div class="filter-companion__level">
               <!--Фильтр по уровню-->
             </div>
-            <button class="companion-form__button" type="submit">показать</button>
+            <button class="filter-companion__button" type="submit">показать</button>
           </form>
         </div>
       </section>
       <section class="filter-profile">
         <div class="container">
           <h2 class="visually-hidden">Профили попутчиков</h2>
-          <ul class="filter-profile__list">
-            <li class="filter-profile__item">
+          <ul class="filter-profile__list list">
+            <li class="filter-profile__item list__item">
               <div class="filter-profile__item-wrapper">
                 <a class="filter-profile__photo-link link" href="">
                   <img class="filter-profile__photo" src="" width="" height="" alt="">
                 </a>
                 <a class="filter-profile__name-link link" href="">Таня Фирсова</a>
                 <p class="filter-profile__like">1,5 М</p>
-                <ul class="filter-profile__hashtag-list">
-                  <li class="filter-profile__hashtag-item">#ЗОЖ</li>
-                  <li class="filter-profile__hashtag-item">#ПП</li>
-                  <li class="filter-profile__hashtag-item">#Фитнес</li>
-                  <li class="filter-profile__hashtag-item">#пляж</li>
-                  <li class="filter-profile__hashtag-item">#авокадо</li>
-                  <li class="filter-profile__hashtag-item">#смузи</li>
+                <ul class="filter-profile__hashtag-list list">
+                  <li class="filter-profile__hashtag-item list__item">#ЗОЖ</li>
+                  <li class="filter-profile__hashtag-item list__item">#ПП</li>
+                  <li class="filter-profile__hashtag-item list__item">#Фитнес</li>
+                  <li class="filter-profile__hashtag-item list__item">#пляж</li>
+                  <li class="filter-profile__hashtag-item list__item">#авокадо</li>
+                  <li class="filter-profile__hashtag-item list__item">#смузи</li>
                 </ul>
-                <p class="filter-profile__visit">хочет посетить:</p>
-                <ul class="filter-profile__visit-list">
-                  <li class="filter-profile__visit-item">
+                <p class="filter-profile__text">хочет посетить:</p>
+                <ul class="filter-profile__visit-list list">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">шри-ланка</p>
                   </li>
-                  <li class="filter-profile__visit-item">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">Тайланд</p>
                   </li>
-                  <li class="filter-profile__visit-item">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">сейшелы</p>
                   </li>
                 </ul>
-                <p class="filter-profile__transport">транспорт:</p>
-                <ul class="filter-profile__transport-list">
-                  <li class="filter-profile__transport-item">
+                <p class="filter-profile__text">транспорт:</p>
+                <ul class="filter-profile__transport-list list">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
                 </ul>
-                <p class="filter-profile__level">левел:</p>
+                <p class="filter-profile__text">левел:</p>
                 <svg class="filter-profile__level-image img" src="" width="" height="" alt=""></svg>
                 <button class="filter-profile__button" type="button">Позвать!</button>
               </div>
             </li>
-            <li class="filter-profile__item">
+            <li class="filter-profile__item list__item">
               <div class="filter-profile__item-wrapper">
                 <a class="filter-profile__photo-link link" href="">
                   <img class="filter-profile__photo" src="" width="" height="" alt="">
@@ -162,44 +166,44 @@
                 <a class="filter-profile__name-link link" href="">Петя Демин</a>
                 <p class="filter-profile__like">1500</p>
                 <ul class="filter-profile__hashtag-list">
-                  <li class="filter-profile__hashtag-item">#бургер</li>
-                  <li class="filter-profile__hashtag-item">#бар</li>
-                  <li class="filter-profile__hashtag-item">#футбол</li>
-                  <li class="filter-profile__hashtag-item">#концерт</li>
-                  <li class="filter-profile__hashtag-item">#крафт</li>
+                  <li class="filter-profile__hashtag-item list__item">#бургер</li>
+                  <li class="filter-profile__hashtag-item list__item">#бар</li>
+                  <li class="filter-profile__hashtag-item list__item">#футбол</li>
+                  <li class="filter-profile__hashtag-item list__item">#концерт</li>
+                  <li class="filter-profile__hashtag-item list__item">#крафт</li>
                 </ul>
-                <p class="filter-profile__visit">хочет посетить:</p>
+                <p class="filter-profile__text">хочет посетить:</p>
                 <ul class="filter-profile__visit-list">
-                  <li class="filter-profile__visit-item">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">бельгия</p>
                   </li>
-                  <li class="filter-profile__visit-item">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">чехия</p>
                   </li>
                 </ul>
-                <p class="filter-profile__transport">транспорт:</p>
+                <p class="filter-profile__text">транспорт:</p>
                 <ul class="filter-profile__transport-list">
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
                 </ul>
-                <p class="filter-profile__level">левел:</p>
+                <p class="filter-profile__text">левел:</p>
                 <svg class="filter-profile__level-image img" src="" width="" height="" alt=""></svg>
                 <button class="filter-profile__button" type="button">Позвать!</button>
               </div>
             </li>
-            <li class="filter-profile__item">
+            <li class="filter-profile__item list__item">
               <div class="filter-profile__item-wrapper">
                 <a class="filter-profile__photo-link link" href="">
                   <img class="filter-profile__photo" src="" width="" height="" alt="">
@@ -207,48 +211,48 @@
                 <a class="filter-profile__name-link link" href="">Марк Смолов</a>
                 <p class="filter-profile__like">170</p>
                 <ul class="filter-profile__hashtag-list">
-                  <li class="filter-profile__hashtag-item">#рэп</li>
-                  <li class="filter-profile__hashtag-item">#тату</li>
-                  <li class="filter-profile__hashtag-item">#хайпбист</li>
-                  <li class="filter-profile__hashtag-item">#кроссовки</li>
-                  <li class="filter-profile__hashtag-item">#суприм</li>
+                  <li class="filter-profile__hashtag-item list__item">#рэп</li>
+                  <li class="filter-profile__hashtag-item list__item">#тату</li>
+                  <li class="filter-profile__hashtag-item list__item">#хайпбист</li>
+                  <li class="filter-profile__hashtag-item list__item">#кроссовки</li>
+                  <li class="filter-profile__hashtag-item list__item">#суприм</li>
                 </ul>
-                <p class="filter-profile__visit">хочет посетить:</p>
+                <p class="filter-profile__text">хочет посетить:</p>
                 <ul class="filter-profile__visit-list">
-                  <li class="filter-profile__visit-item">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">сша</p>
                   </li>
-                  <li class="filter-profile__visit-item">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">австралия</p>
                   </li>
-                  <li class="filter-profile__visit-item">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">доминика</p>
                   </li>
                 </ul>
-                <p class="filter-profile__transport">транспорт:</p>
+                <p class="filter-profile__text">транспорт:</p>
                 <ul class="filter-profile__transport-list">
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
                 </ul>
-                <p class="filter-profile__level">левел:</p>
+                <p class="filter-profile__text">левел:</p>
                 <svg class="filter-profile__level-image img" src="" width="" height="" alt=""></svg>
                 <button class="filter-profile__button" type="button">Позвать!</button>
               </div>
             </li>
-            <li class="filter-profile__item">
+            <li class="filter-profile__item list__item">
               <div class="filter-profile__item-wrapper">
                 <a class="filter-profile__photo-link link" href="">
                   <img class="filter-profile__photo" src="" width="" height="" alt="">
@@ -256,38 +260,38 @@
                 <a class="filter-profile__name-link link" href="">Лариса Роговая</a>
                 <p class="filter-profile__like">23</p>
                 <ul class="filter-profile__hashtag-list">
-                  <li class="filter-profile__hashtag-item">#образование</li>
-                  <li class="filter-profile__hashtag-item">#карьера</li>
-                  <li class="filter-profile__hashtag-item">#учеба</li>
-                  <li class="filter-profile__hashtag-item">#линкедин</li>
+                  <li class="filter-profile__hashtag-item list__item">#образование</li>
+                  <li class="filter-profile__hashtag-item list__item">#карьера</li>
+                  <li class="filter-profile__hashtag-item list__item">#учеба</li>
+                  <li class="filter-profile__hashtag-item list__item">#линкедин</li>
                 </ul>
-                <p class="filter-profile__visit">хочет посетить:</p>
+                <p class="filter-profile__text">хочет посетить:</p>
                 <ul class="filter-profile__visit-list">
-                  <li class="filter-profile__visit-item">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">Великобритания</p>
                   </li>
-                  <li class="filter-profile__visit-item">
+                  <li class="filter-profile__visit-item list__item">
                     <svg class="filter-profile__visit-image img" src="" width="" height="" alt=""></svg>
                     <p class="filter-profile__visit-name">Германия</p>
                   </li>
                 </ul>
-                <p class="filter-profile__transport">транспорт:</p>
+                <p class="filter-profile__text">транспорт:</p>
                 <ul class="filter-profile__transport-list">
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
-                  <li class="filter-profile__transport-item">
+                  <li class="filter-profile__transport-item list__item">
                     <svg class="filter-profile__transport-img img" src="" width="" height="" alt=""></svg>
                   </li>
                 </ul>
-                <p class="filter-profile__level">левел:</p>
+                <p class="filter-profile__text">левел:</p>
                 <svg class="filter-profile__level-image img" src="" width="" height="" alt=""></svg>
                 <button class="filter-profile__button" type="button">Позвать!</button>
               </div>
@@ -301,14 +305,14 @@
         <a class="page-footer__logo link" href="">
           <img class="page-footer__logo-image" src="" width="" height="" alt="">
         </a>
-        <ul class="page-footer__list">
-          <li class="page-footer__item">
+        <ul class="page-footer__list list">
+          <li class="page-footer__item list__item">
             <svg class="page-footer__image img" src="" width="" height="" alt=""></svg>
           </li>
-          <li class="page-footer__item">
+          <li class="page-footer__item list__item">
             <svg class="page-footer__image img" src="" width="" height="" alt=""></svg>
           </li>
-          <li class="page-footer__item">
+          <li class="page-footer__item list__item">
             <svg class="page-footer__image img" src="" width="" height="" alt=""></svg>
           </li>
         </ul>

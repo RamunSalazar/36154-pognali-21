@@ -1,0 +1,40 @@
+.filter-companion {
+  background-color: $grey;
+}
+
+.filter-companion .container {
+  background-color: $yellow;
+}
+
+.filter-companion__main-title {
+  color: $blue-light;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.filter-companion__title {
+  color: $blue-light;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.filter-companion__label {
+  color: $black;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.filter-companion__button {
+  color: $blue;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+}

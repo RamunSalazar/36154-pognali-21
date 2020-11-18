@@ -1,0 +1,54 @@
+.filter-profile {
+  background-color: $grey;
+}
+
+.filter-profile__item {
+  background-color: $white;
+}
+
+.filter-profile__name-link {
+  color: $blue-light;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.filter-profile__like {
+  color: $blue-light;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.filter-profile__hashtag-item {
+  color: $special-grey;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.filter-profile__text {
+  color: $special-grey;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.filter-profile__visit-name {
+  color: $blue-light;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.filter-profile__button {
+  color: $blue-light;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,0 +1,32 @@
+.direction {
+  background-color: $grey;
+}
+
+.direction__title {
+  color: $orange;
+}
+
+.direction__description {
+  color: $special-grey;
+}
+
+.direction__country-description {
+  font-weight: 500;
+  line-height: 20px;
+  color: $special-grey;
+  opacity: 0.3;
+}
+
+.direction__counter {
+  font-weight: 500;
+  line-height: 20px;
+  color: $blue;
+  opacity: 0.3;
+}
+
+.direction__link {
+  font-weight: 400;
+  font-size: 18;
+  line-height: 18px;
+  color: $blue-light;
+}

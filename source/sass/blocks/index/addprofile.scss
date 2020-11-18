@@ -1,0 +1,36 @@
+.add-profile {
+  background-color: $grey-light;
+}
+
+.add-profile__title {
+  color: $orange;
+}
+
+.add-profile__option-description {
+  line-height: 16px;
+  color: $special-grey;
+}
+
+.add-profile__option-number {
+  line-height: 16px;
+  font-weight: 400;
+  color: $white;
+}
+
+.add-profile__option-number:nth-child(2) {
+  background-color: $orange;
+}
+
+.add-profile__option-number:nth-child(4) {
+  background-color: $yellow-dark;
+}
+
+.add-profile__option-number:nth-child(6) {
+  background-color: $yellow;
+}
+
+.add-profile_link {
+  line-height: 16px;
+  font-weight: 700;
+  color: $blue-dark;
+}
