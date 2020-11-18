@@ -1,12 +1,13 @@
 @import "global/fonts";
 @import "global/colors";
 @import "global/globalstyle";
-
-@import "blocks/header";
-@import "blocks/service";
-@import "blocks/direction";
-@import "blocks/companion";
-@import "blocks/addprofile";
-@import "blocks/feedback";
-@import "blocks/map";
-@import "blocks/footer";
+@import "blocks/common/header";
+@import "blocks/index/service";
+@import "blocks/index/direction";
+@import "blocks/index/companion";
+@import "blocks/index/addprofile";
+@import "blocks/index/feedback";
+@import "blocks/index/map";
+@import "blocks/common/footer";
+@import "blocks/form/direction-form";
+@import "blocks/form/plan";

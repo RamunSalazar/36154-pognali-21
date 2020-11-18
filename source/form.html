@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали - Форма</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -10,7 +11,7 @@
         <a class="page-header__logo link" href="">
           <img class="page-header__logo-image img" src="" width="" height="" alt="">
         </a>
-        <nav class="page-header__navigation">
+        <nav class="page-header__navigation visually-hidden">
           <button class="page-header__navigation-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="page-header__navigation-list site-list">
             <li class="site-list__item">
@@ -38,7 +39,9 @@
       </div>
     </header>
     <main class="page-main">
-      <h1 class="direction-title">Направления</h1>
+      <div class="container">
+        <h1 class="direction-title">Направления</h1>
+      </div>
       <section class="direction-form">
         <div class="container">
           <h2 class="visually-hidden">Форма профиля</h2>
@@ -47,22 +50,22 @@
           <button class="direction-form__button" type="button">сменить фото</button>
           <form>
             <fieldset class="direction-form__hashtag">
-              <legend class="direction-form__hashtag-title">теги</legend>
+              <legend class="direction-form__title">теги</legend>
               <textarea class="direction-form__hashtag-text">#бургер #бар #футбол #концерт #крафт</textarea>
             </fieldset>
             <fieldset class="direction-form__transport">
-              <legend class="direction-form__transport-title">транспорт</legend>
-              <ul class="direction-form__transport-list">
-                <li class="direction-form__transport-item">
+              <legend class="direction-form__title">транспорт</legend>
+              <ul class="direction-form__transport-list list">
+                <li class="direction-form__transport-item list__item">
                   <svg class="direction-form__transport-image" src="" width="" height="" alt=""></svg>
                 </li>
-                <li class="direction-form__transport-item">
+                <li class="direction-form__transport-item list__item">
                   <svg class="direction-form__transport-image" src="" width="" height="" alt=""></svg>
                 </li>
-                <li class="direction-form__transport-item">
+                <li class="direction-form__transport-item list__item">
                   <svg class="direction-form__transport-image" src="" width="" height="" alt=""></svg>
                 </li>
-                <li class="direction-form__transport-item">
+                <li class="direction-form__transport-item list__item">
                   <svg class="direction-form__transport-image" src="" width="" height="" alt=""></svg>
                 </li>
               </ul>
@@ -73,20 +76,20 @@
       <section class="plan">
         <div class="container">
           <h2 class="plan__title">Мои планы:</h2>
-          <ul class="plan__list">
-            <li class="plan__item">
+          <ul class="plan__list list">
+            <li class="plan__item list__item">
               <div class="plan__item-wrapper">
-                <h3 class="plan__title">1. Франция, Италия</h3>
-                <p class="plan__companion">3 попутчика</p>
-                <p class="plan__date">26 мар — 29 мар</p>
+                <h3 class="plan__item-title">1. Франция, Италия</h3>
+                <p class="plan__text">3 попутчика</p>
+                <p class="plan__text">26 мар — 29 мар</p>
                 <button class="plan__button" type="button">изменить</button>
               </div>
             </li>
-            <li class="plan__item">
+            <li class="plan__item list__item">
               <div class="plan__item-wrapper">
-                <h3 class="plan__title">2. Таиланд, Индонезия</h3>
-                <p class="plan__companion">1 попутчик</p>
-                <p class="plan__data">1 июл — 15 июл</p>
+                <h3 class="plan__item-title">2. Таиланд, Индонезия</h3>
+                <p class="plan__text">1 попутчик</p>
+                <p class="plan__text">1 июл — 15 июл</p>
                 <button class="plan__button" type="button">изменить</button>
               </div>
             </li>

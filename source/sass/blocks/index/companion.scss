@@ -1,16 +1,20 @@
 .companion {
   background: url("../../img/smolov-back-desktop.png") no-repeat top right,
-  url("../../img/back.png") no-repeat top left,
-  url("../../img/rogovaya-back-desktop.png") no-repeat 0 10%;
+    url("../../img/back.png") no-repeat top left,
+    url("../../img/rogovaya-back-desktop.png") no-repeat 0 10%;
   background-color: $special-blue;
 }
 
 .companion__title {
-  @include title;
+  font-weight: 700;
+  font-size: 24px;
+  color: $orange;
+  line-height: 24px;
 }
 
 .companion__description {
   color: $white;
+
   &:nth-child(3) {
     font-weight: 700;
   }
@@ -36,5 +40,8 @@
 }
 
 .companion__link {
-  @include link;
+  font-weight: 700;
+  font-size: 24px;
+  color: $orange;
+  line-height: 24px;
 }

@@ -1,0 +1,76 @@
+.page-header {
+  background: url("../../img/globe-back-mobile.png") no-repeat center center,
+    url("../../img/traveller-illustration-mobile.png") no-repeat bottom center;
+  background-color: $blue;
+}
+
+.page-header__title {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: $white;
+}
+
+.page-header__review {
+  color: $white;
+}
+
+.page-header__review-author {
+  font-weight: 700;
+}
+
+.page-header__sequence {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.page-header__sequence-number {
+  color: $white;
+
+  &:nth-child(2) {
+    background-color: $orange;
+  }
+
+  &:nth-child(4) {
+    background-color: $orange-light;
+  }
+
+  &:nth-child(6) {
+    background-color: $yellow-dark;
+  }
+
+  &:nth-child(8) {
+    background-color: $yellow;
+  }
+}
+
+.page-header__sequence-operation {
+  &:nth-child(1) {
+    background-color: $orange;
+  }
+
+  &:nth-child(3) {
+    background-color: $orange-light;
+  }
+
+  &:nth-child(5) {
+    background-color: $yellow-dark;
+  }
+
+  &:nth-child(7) {
+    background-color: $yellow;
+  }
+}
+
+.page-header__site-link {
+  text-transform: uppercase;
+  color: $blue;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+}

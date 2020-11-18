@@ -6,12 +6,10 @@
   width: 320px;
   padding: 0;
   margin: 0 auto;
-  font: {
-    family: "Blogger Sans", "Arial", sans-serif;
-    style: normal;
-    weight: 300;
-    size: 16px;
-  }
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
   line-height: 22px;
 }
 
@@ -56,22 +54,4 @@
 
 .section:last-child {
   margin-bottom: 0;
-}
-
-@mixin title {
-  font: {
-    weight: 700;
-    size: 24px;
-  }
-  color: $orange;
-  line-height: 24px;
-}
-
-@mixin link {
-  font: {
-    weight: 400;
-    size: 18;
-  }
-  line-height: 18px;
-  color: $blue-light;
 }

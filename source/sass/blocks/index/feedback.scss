@@ -3,12 +3,16 @@
 }
 
 .feedback__title {
-  @include title;
+  font-weight: 700;
+  font-size: 24px;
+  color: $orange;
+  line-height: 24px;
 }
 
 .feedback__description {
   color: $white;
   text-align: center;
+
   .feedback__description-link {
     color: $yellow-dark;
     text-decoration: underline;
