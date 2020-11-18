@@ -2,14 +2,6 @@
   background-color: $grey;
 }
 
-.direction-title {
-  background-color: $special-blue-dark;
-  color: $white;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 36px;
-}
-
 .direction-form__button {
   color: $blue;
   font-family: inherit;
@@ -20,7 +12,7 @@
 }
 
 .direction-form__title {
-  color: $special-blue-light;
+  color: $blue-light;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 18px;

@@ -6,10 +6,7 @@
 }
 
 .companion__title {
-  font-weight: 700;
-  font-size: 24px;
   color: $orange;
-  line-height: 24px;
 }
 
 .companion__description {
@@ -25,10 +22,7 @@
 }
 
 .companion__person-name {
-  font-weight: 700;
   color: $blue-light;
-  font-size: 21px;
-  line-height: 21px;
   text-align: center;
 }
 
@@ -41,7 +35,7 @@
 
 .companion__link {
   font-weight: 700;
-  font-size: 24px;
-  color: $orange;
-  line-height: 24px;
+  font-size: 18px;
+  color: $blue-light;
+  line-height: 18px;
 }

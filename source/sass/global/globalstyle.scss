@@ -55,3 +55,22 @@
 .section:last-child {
   margin-bottom: 0;
 }
+
+.title {
+  font-weight: 700;
+  line-height: 1;
+
+  &-small {
+    font-size: 21px;
+  }
+
+  &--middle {
+    font-size: 24px;
+  }
+
+  &--large {
+    font-size: 36px;
+    color: $white;
+    background-color: $special-blue-dark;
+  }
+}
