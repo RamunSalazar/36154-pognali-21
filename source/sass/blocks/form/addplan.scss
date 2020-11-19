@@ -12,9 +12,6 @@
 
 .add-plan__step-title {
   color: $blue-light;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 20px;
 }
 
 .add-plan__step-description {
@@ -25,11 +22,6 @@
 .add-plan__date-companion,
 .add-plan__date-day {
   color: $blue-light;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
 
   span {
     letter-spacing: 0.07em;
@@ -56,23 +48,11 @@
 .add-plan__route-country,
 .add-plan__button-add {
   color: $blue-light;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
 }
 
 .add-plan__route-value {
   &::placeholder {
     color: $blue-light;
-    font-family: "Blogger Sans", "Arial", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
   }
 }
 
