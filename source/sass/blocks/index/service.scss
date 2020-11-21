@@ -1,5 +1,5 @@
 .service {
-  background: $special-blue url("../../img/about-mobile.png") no-repeat center center;
+  background-color: $special-blue;
 }
 
 .service__title {
@@ -11,5 +11,24 @@
 
   &:nth-child(3) {
     font-weight: 700;
+  }
+}
+
+@media (max-width: $table-width - 1px) {
+  .service__link,
+  .servise__image {
+    display: none;
+  }
+}
+
+.service-wrapper {
+  width: 210px;
+
+  @media (min-width: $table-width) {
+    width: 310px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 620px;
   }
 }

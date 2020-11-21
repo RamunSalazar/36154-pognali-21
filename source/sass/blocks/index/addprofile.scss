@@ -4,33 +4,77 @@
 
 .add-profile__title {
   color: $orange;
+  width: 107px;
+
+  @media (min-width: $table-width) {
+    width: 482px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
-.add-profile__option-description {
+.add-profile__option {
   line-height: 16px;
   color: $special-grey;
+  margin: 0;
 }
 
-.add-profile__option-number {
+.add-profile__number-item {
   line-height: 16px;
   font-weight: 400;
   color: $white;
-}
+  margin-bottom: 17px;
 
-.add-profile__option-number:nth-child(2) {
-  background-color: $orange;
-}
+  &:nth-child(1) {
+    background-color: $orange;
+  }
 
-.add-profile__option-number:nth-child(4) {
-  background-color: $yellow-dark;
-}
+  &:nth-child(2) {
+    background-color: $yellow-dark;
+  }
 
-.add-profile__option-number:nth-child(6) {
-  background-color: $yellow;
+  &:nth-child(3) {
+    background-color: $yellow;
+  }
+
+  @media (min-width: $table-width) {
+    margin-right: 10px;
+  }
 }
 
 .add-profile_link {
   line-height: 16px;
   font-weight: 700;
   color: $blue-dark;
+}
+
+.add-profile__option-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $table-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+
+    .add-profile__number-list {
+      order: -1;
+    }
+
+    .add-profile__wrapper {
+      display: flex;
+      margin-bottom: 17px;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 900px;
+
+    .add-profile__wrapper {
+      display: flex;
+      margin-bottom: 17px;
+      justify-content: space-between;
+    }
+  }
 }

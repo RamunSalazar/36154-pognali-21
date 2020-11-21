@@ -1,9 +1,12 @@
+$table-width: 768px;
+$desktop-width: 1440px;
+
 .page {
   height: 100%;
 }
 
 .page-body {
-  width: 320px;
+  width: 100%;
   padding: 0;
   margin: 0 auto;
   font-family: "Blogger Sans", "Arial", sans-serif;
@@ -11,6 +14,10 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
 }
 
 .link {
@@ -46,12 +53,23 @@
 }
 
 .container {
-  width: 270px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 25px;
   position: relative;
+
+  @media (min-width: $table-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+  }
 }
 
 .section:last-child {
   margin-bottom: 0;
+}
+
+.definition {
+  margin: 0;
 }
