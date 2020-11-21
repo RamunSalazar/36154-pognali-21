@@ -3,16 +3,13 @@
 
   .container {
     @media (min-width: $desktop-width) {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content min-content;
 
       .companion__list {
-        order: 1;
-        margin-left: 440px;
-      }
-
-      .companion__link {
-        align-self: flex-end;
-        margin-left: -440px;
+        grid-row: 1/-1;
+        grid-column: 2/3;
       }
     }
   }

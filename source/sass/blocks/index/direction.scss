@@ -3,19 +3,13 @@
 
   .container {
     @media (min-width: $desktop-width) {
-      display: flex;
-
-      .direction__wrapper {
-        margin-left: 300px;
-      }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content min-content;
 
       .direction__list {
-        order: -1;
-      }
-
-      .direction__link {
-        align-self: flex-end;
-        margin-left: -200px;
+        grid-column: 1/2;
+        grid-row: 1/-1;
       }
     }
   }

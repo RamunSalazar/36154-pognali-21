@@ -4,15 +4,17 @@
   @media (min-width: $desktop-width) {
 
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .page-header__navigation-top,
+    .page-header__sequence {
+      width: 100%;
+    }
 
     .page-header__navigation-bottom {
       order: 1;
-    }
-
-    .page-header__review {
-      margin-top: -110px;
-      align-self: flex-end;
+      width: 100%;
     }
   }
 }
@@ -22,15 +24,15 @@
 .page-header__review,
 .page-header__sequence {
   @media (max-width: $table-width - 1px) {
-    padding: 0 25px 0 25px;
+    margin: 0 25px;
   }
 
   @media (min-width: $table-width) {
-    padding: 0 40px 0 40px;
+    margin: 0 40px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 60px 0 60px;
+    margin: 0 60px;
   }
 }
 
@@ -48,12 +50,17 @@
   @media (min-width: $desktop-width) {
     margin: 0;
     text-align: left;
+    margin-left: 60px;
   }
 }
 
 .page-header__review {
   color: $white;
   width: 160px;
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-right: 60px;
+  }
 }
 
 .page-header__review-author {
@@ -177,6 +184,8 @@
   @media (min-width: $desktop-width) {
     display: flex;
     background-color: $white;
+    margin: 0;
+    padding-left: 60px;
 
     .page-header__navigation,
     .page-header__site-list,
