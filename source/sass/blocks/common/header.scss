@@ -1,7 +1,37 @@
 .page-header {
-  background: url("../../img/globe-back-mobile.png") no-repeat center center,
-    url("../../img/traveller-illustration-mobile.png") no-repeat bottom center;
   background-color: $blue;
+
+  @media (min-width: $desktop-width) {
+
+    display: flex;
+    flex-direction: column;
+
+    .page-header__navigation-bottom {
+      order: 1;
+    }
+
+    .page-header__review {
+      margin-top: -110px;
+      align-self: flex-end;
+    }
+  }
+}
+
+.page-header__navigation-wrapper,
+.page-header__title,
+.page-header__review,
+.page-header__sequence {
+  @media (max-width: $table-width - 1px) {
+    padding: 0 25px 0 25px;
+  }
+
+  @media (min-width: $table-width) {
+    padding: 0 40px 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 60px 0 60px;
+  }
 }
 
 .page-header__title {
@@ -12,10 +42,18 @@
   line-height: 40px;
   text-align: center;
   color: $white;
+  width: 240px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    text-align: left;
+  }
 }
 
 .page-header__review {
   color: $white;
+  width: 160px;
 }
 
 .page-header__review-author {
@@ -26,51 +64,137 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
+  padding-bottom: 50px;
+
+  @media (min-width: $table-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.page-header__sequence-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  &:nth-of-type(1) {
+    background-color: $orange;
+  }
+
+  &:nth-of-type(2) {
+    background-color: $orange-light;
+  }
+
+  &:nth-of-type(3) {
+    background-color: $yellow-dark;
+  }
+
+  &:nth-of-type(4) {
+    background-color: $yellow;
+  }
+
+  @media (min-width: $table-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .page-header__sequence-number {
   color: $white;
+}
 
-  &:nth-child(2) {
-    background-color: $orange;
+.page-header__navigation-top {
+  display: flex;
+
+  @media (max-width: $desktop-width - 1px) {
+    justify-content: space-between;
   }
 
-  &:nth-child(4) {
-    background-color: $orange-light;
+  .page-header__navigation {
+    display: none;
   }
 
-  &:nth-child(6) {
-    background-color: $yellow-dark;
+  @media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
+    .page-header__navigation {
+      display: block;
+
+      .page-header__site-list {
+        display: none;
+      }
+
+      .page-header__user-item {
+        &:not(:last-child) {
+          display: none;
+        }
+      }
+    }
   }
 
-  &:nth-child(8) {
-    background-color: $yellow;
+  @media (min-width: $desktop-width) {
+    .page-header__navigation,
+    .page-header__site-list,
+    .page-header__user-list {
+      display: flex;
+      margin-right: 30px;
+
+      .page-header__site-link,
+      .page-header__user-link {
+        margin-right: 15px;
+      }
+    }
+
+    .page-header__logo {
+      margin-right: 30px;
+    }
   }
 }
 
-.page-header__sequence-operation {
-  &:nth-child(1) {
-    background-color: $orange;
+.page-header__navigation-bottom {
+  .page-header__site-list,
+  .page-header__logo {
+    display: none;
   }
 
-  &:nth-child(3) {
-    background-color: $orange-light;
+  @media (max-width: $table-width - 1px) {
+    .page-header__user-list {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
-  &:nth-child(5) {
-    background-color: $yellow-dark;
+  @media (min-width: $table-width) {
+    .page-header__navigation {
+      display: none;
+    }
   }
 
-  &:nth-child(7) {
-    background-color: $yellow;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    background-color: $white;
+
+    .page-header__navigation,
+    .page-header__site-list,
+    .page-header__user-list,
+    .page-header__logo {
+      display: flex;
+      margin-right: 30px;
+
+      .page-header__site-link,
+      .page-header__user-link {
+        margin-right: 15px;
+      }
+    }
   }
 }
 
-.page-header__user-link {
-  text-transform: uppercase;
-  color: $blue;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
-  text-align: center;
+.page-header__navigation-toggle {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

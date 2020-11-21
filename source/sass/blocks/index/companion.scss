@@ -1,8 +1,21 @@
 .companion {
-  background: url("../../img/smolov-back-desktop.png") no-repeat top right,
-    url("../../img/back.png") no-repeat top left,
-    url("../../img/rogovaya-back-desktop.png") no-repeat 0 10%;
   background-color: $special-blue;
+
+  .container {
+    @media (min-width: $desktop-width) {
+      display: flex;
+
+      .companion__list {
+        order: 1;
+        margin-left: 440px;
+      }
+
+      .companion__link {
+        align-self: flex-end;
+        margin-left: -440px;
+      }
+    }
+  }
 }
 
 .companion__title {
@@ -19,6 +32,15 @@
 
 .companion__item {
   background-color: $white;
+  margin-bottom: 10px;
+
+  @media (min-width: $table-width) {
+    width: 285px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 10px;
+  }
 }
 
 .companion__person-name {
@@ -31,4 +53,47 @@
   line-height: 18px;
   color: $special-grey;
   text-align: center;
+  margin-right: 5px;
+}
+
+.companion__text-wrapper {
+  width: 217px;
+
+  @media (min-width: $table-width) {
+    width: 430px;
+  }
+}
+
+.companion__image-wrapper {
+  width: 100%;
+  height: 270px;
+  background-color: $black;
+}
+
+.companion__info-wrapper {
+  text-align: center;
+}
+
+.companion__hashtag-list {
+  width: 188px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.companion__link {
+  background-color: $yellow;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+  }
+}
+
+.companion__list {
+  @media (min-width: $table-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

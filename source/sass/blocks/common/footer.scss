@@ -3,3 +3,41 @@
   color: $special-grey;
   font-weight: 400;
 }
+
+.page-footer__item {
+  width: 62px;
+  height: 62px;
+  background-color: $yellow;
+  margin: 10px;
+}
+
+.page-footer__academy-logo {
+  width: 34px;
+  height: 34px;
+  background-color: $yellow;
+}
+
+.page-footer__list,
+.copyright-wrapper {
+  display: flex;
+}
+
+.copyright-wrapper {
+  width: 100%;
+  justify-content: space-between;
+
+  @media (min-width: $table-width) {
+    width: 160px;
+  }
+}
+
+.page-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $table-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

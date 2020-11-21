@@ -2,122 +2,159 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="container">
-        <a class="link page-header__logo" href="">
-          погнали?
-          <img class="img page-header__logo-image" src="" width="" height="" alt="">
-        </a>
-        <nav class="page-header__navigation visually-hidden">
+      <div class="page-header__navigation-wrapper page-header__navigation-top">
+          <a class="link page-header__logo" href="">
+            погнали?
+            <img class="img page-header__logo-image" src="" width="" height="" alt="">
+          </a>
           <button class="page-header__navigation-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="list page-header__navigation-list page-header__site-list">
-            <li class="list__item page-header__site-item">
-              <a class="link page-header__site-link" href="">о сервисе</a>
-            </li>
-            <li class="list__item page-header__site-item">
-              <a class="link page-header__site-link" href="">направление</a>
-            </li>
-            <li class="list__item page-header__site-item">
-              <a class="link page-header__site-link" href="">попутчики</a>
-            </li>
-          </ul>
-          <ul class="list page-header__navigation-list page-header__user-list">
-            <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href=""><span class="visually-hidden">телефон</span></a>
-            </li>
-            <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href=""><span class="visually-hidden">электронная почта</span></a>
-            </li>
-            <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href="">авторизоваться</a>
-            </li>
-          </ul>
-        </nav>
-        <h1 class="page-header__title">В путешествие с крутыми попутчиками!</h1>
-        <dl class="page-header__review">
-          <dt class="page-header__review-text">«Лучшее приложение, что я видел в жизни!»</dt>
-          <dd class="page-header__review-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</dd>
-        </dl>
-        <dl class="page-header__sequence">
-          <dt class="page-header__sequence-operation">Выберите направление</dt>
-          <dd class="page-header__sequence-number">1</dd>
-          <dt class="page-header__sequence-operation">Изучите идеи путешественников</dt>
-          <dd class="page-header__sequence-number">2</dd>
-          <dt class="page-header__sequence-operation">Находите тех, кто похож на вас</dt>
-          <dd class="page-header__sequence-number">3</dd>
-          <dt class="page-header__sequence-operation">Путешествуйте вместе!</dt>
-          <dd class="page-header__sequence-number">4</dd>
-        </dl>
-        <nav class="page-header__navigation--visually-hidden">
-          <button class="page-header__navigation-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="list page-header__navigation-list page-header__site-list visually-hidden">
-            <li class="list__item page-header__site-item">
-              <a class="link page-header__site-link" href="">о сервисе</a>
-            </li>
-            <li class="list__item page-header__site-item">
-              <a class="link page-header__site-link" href="">направление</a>
-            </li>
-            <li class="list__item page-header__site-item">
-              <a class="link page-header__site-link" href="">попутчики</a>
-            </li>
-          </ul>
-          <ul class="list page-header__navigation-list page-header__user-list">
-            <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href=""><span class="visually-hidden">телефон</span></a>
-            </li>
-            <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href=""><span class="visually-hidden">электронная почта</span></a>
-            </li>
-            <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href="">авторизоваться</a>
-            </li>
-          </ul>
-        </nav>
+          <nav class="page-header__navigation">
+            <ul class="list page-header__navigation-list page-header__site-list">
+              <li class="list__item page-header__site-item">
+                <a class="link page-header__site-link" href="">о сервисе</a>
+              </li>
+              <li class="list__item page-header__site-item">
+                <a class="link page-header__site-link" href="">направление</a>
+              </li>
+              <li class="list__item page-header__site-item">
+                <a class="link page-header__site-link" href="">попутчики</a>
+              </li>
+            </ul>
+            <ul class="list page-header__navigation-list page-header__user-list">
+              <li class="list__item page-header__user-item">
+                <a class="link page-header__user-link" href=""><span>т</span></a>
+              </li>
+              <li class="list__item page-header__user-item">
+                <a class="link page-header__user-link" href=""><span>эп</span></a>
+              </li>
+              <li class="list__item page-header__user-item">
+                <a class="link page-header__user-link" href="">авторизоваться</a>
+              </li>
+            </ul>
+          </nav>
       </div>
+      <h1 class="page-header__title">В путешествие с крутыми попутчиками!</h1>
+      <div class="page-header__navigation-wrapper page-header__navigation-bottom">
+          <a class="link page-header__logo" href="">
+            погнали?
+            <img class="img page-header__logo-image" src="" width="" height="" alt="">
+          </a>
+          <nav class="page-header__navigation">
+            <ul class="list page-header__navigation-list page-header__site-list">
+              <li class="list__item page-header__site-item">
+                <a class="link page-header__site-link" href="">о сервисе</a>
+              </li>
+              <li class="list__item page-header__site-item">
+                <a class="link page-header__site-link" href="">направление</a>
+              </li>
+              <li class="list__item page-header__site-item">
+                <a class="link page-header__site-link" href="">попутчики</a>
+              </li>
+            </ul>
+            <ul class="list page-header__navigation-list page-header__user-list">
+              <li class="list__item page-header__user-item">
+                <a class="link page-header__user-link" href=""><span>т</span></a>
+              </li>
+              <li class="list__item page-header__user-item">
+                <a class="link page-header__user-link" href=""><span>эп</span></a>
+              </li>
+              <li class="list__item page-header__user-item">
+                <a class="link page-header__user-link" href="">авторизоваться</a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+      <dl class="page-header__review">
+          <dt class="page-header__review-text">«Лучшее приложение, что я видел в жизни!»</dt>
+          <dd class="definition page-header__review-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</dd>
+      </dl>
+      <dl class="page-header__sequence">
+          <div class="page-header__sequence-wrapper">
+            <dt class="page-header__sequence-operation">Выберите<br> направление</dt>
+            <dd class="definition page-header__sequence-number">1</dd>
+          </div>
+          <div class="page-header__sequence-wrapper">
+            <dt class="page-header__sequence-operation">Изучите идеи<br> путешественников</dt>
+            <dd class="definition page-header__sequence-number">2</dd>
+          </div>
+          <div class="page-header__sequence-wrapper">
+            <dt class="page-header__sequence-operation">Находите тех,<br> кто похож на вас</dt>
+            <dd class="definition page-header__sequence-number">3</dd>
+          </div>
+          <div class="page-header__sequence-wrapper">
+            <dt class="page-header__sequence-operation">Путешествуйте<br> вместе!</dt>
+            <dd class="definition page-header__sequence-number">4</dd>
+          </div>
+      </dl>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Сервис для путешествий - погнали?</h1>
       <section class="service">
         <div class="container">
-          <h2 class="title title--middle service__title">О сервисе</h2>
-          <p class="service__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-          <p class="service__description">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-          <a class="service__link visually-hidden" href="">Подробнее</a>
+          <div class="service-wrapper">
+            <h2 class="title title--middle service__title">О сервисе</h2>
+            <p class="service__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+            <p class="service__description">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+            <a class="link service__link" href="">Подробнее</a>
+          </div>
+          <img class="img servise__image" src="" width="" height="" alt="">
         </div>
       </section>
       <section class="direction">
         <div class="container">
-          <h2 class="title title--middle direction__title">Направления</h2>
-          <p class="direction__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+          <div class="direction__wrapper">
+            <h2 class="title title--middle direction__title">Направления</h2>
+            <p class="direction__description">
+              Мы не продаем туры<br>
+              и ничего не рекламируем.<br>
+              Люди сами пишут о странах,<br>
+              куда хотели бы отправиться<br>
+              и чем можно там заняться.
+            </p>
+          </div>
           <ul class="list direction__list">
             <li class="list__item direction__item">
-              <img class="img direction__county-image" src="" width="" height="" alt="">
-              <img class="img direction__county-flag" src="" width="" height="" alt="">
+              <div class="direction__image-wrapper">
+                <img class="img direction__county-image" src="" width="" height="" alt="">
+                <img class="img direction__county-flag" src="" width="" height="" alt="">
+              </div>
               <div class="direction__country-wrapper">
-                <span class="span span--middle direction__country-name">Таиланд</span>
-                <p class="direction__country-description">Джунгли зовут!</p>
+                <div class="direction__text-wrapper">
+                  <span class="span span--middle direction__country-name">Таиланд</span>
+                  <p class="direction__country-description">Джунгли зовут!</p>
+                </div>
                 <p class="direction__counter">18321</p>
               </div>
             </li>
             <li class="list__item direction__item">
-              <img class="img direction__county-image" src="" width="" height="" alt="">
-              <img class="img direction__county-flag" src="" width="" height="" alt="">
+              <div class="direction__image-wrapper">
+                <img class="img direction__county-image" src="" width="" height="" alt="">
+                <img class="img direction__county-flag" src="" width="" height="" alt="">
+              </div>
               <div class="direction__country-wrapper">
-                <span class="span span--middle direction__country-name">Франция</span>
-                <p class="direction__country-description">Трэ бьен, манифик!</p>
+                <div class="direction__text-wrapper">
+                  <span class="span span--middle direction__country-name">Франция</span>
+                  <p class="direction__country-description">Трэ бьен, манифик!</p>
+                </div>
                 <p class="direction__counter">12518</p>
               </div>
             </li>
             <li class="list__item direction__item">
-              <img class="img direction__county-image" src="" width="" height="" alt="">
-              <img class="img direction__county-flag" src="" width="" height="" alt="">
+              <div class="direction__image-wrapper">
+                <img class="img direction__county-image" src="" width="" height="" alt="">
+                <img class="img direction__county-flag" src="" width="" height="" alt="">
+              </div>
               <div class="direction__country-wrapper">
-                <span class="span span--middle direction__country-name">Чехия</span>
-                <p class="direction__country-description">Закоулки старой Европы</p>
+                <div class="direction__text-wrapper">
+                  <span class="span span--middle direction__country-name">Чехия</span>
+                  <p class="direction__country-description">Закоулки старой Европы</p>
+                </div>
                 <p class="direction__counter">5326</p>
               </div>
             </li>
@@ -127,22 +164,26 @@
       </section>
       <section class="companion">
         <div class="container">
-          <h2 class="title title--middle companion__title">Попутчики</h2>
-          <p class="companion__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class="companion__description">Теперь можно легко найти единомышленников!</p>
+          <div class="companion__text-wrapper">
+            <h2 class="title title--middle companion__title">Попутчики</h2>
+            <p class="companion__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+            <p class="companion__description">Теперь можно легко найти единомышленников!</p>
+          </div>
           <ul class="list companion__list">
             <li class="list__item companion__item">
-              <img class="img companion__person-photo" src="" width="" height="" alt="">
+              <div class="companion__image-wrapper">
+                <img class="img companion__person-photo" src="" width="" height="" alt="">
+              </div>
               <div class="companion__info-wrapper">
                 <ul class="list companion__flag-list">
                   <li class="list__item companion__flag-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                   <li class="list__item companion__flag-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                   <li class="list__item companion__flag-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                 </ul>
                 <span class="span span--middle companion__person-name">Таня Фирсова</span>
@@ -168,29 +209,31 @@
                 </ul>
                 <ul class="list companion__type-list">
                   <li class="list__item companion__type-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                   <li class="list__item companion__type-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                   <li class="list__item companion__type-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                   <li class="list__item companion__type-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="list__item companion__item">
-              <img class="img companion__person-photo" src="" width="" height="" alt="">
+              <div class="companion__image-wrapper">
+                <img class="img companion__person-photo" src="" width="" height="" alt="">
+              </div>
               <div class="companion__info-wrapper">
                 <ul class="list companion__flag-list">
                   <li class="list__item companion__flag-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                   <li class="list__item companion__flag-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                 </ul>
                 <span class="span span--middle companion__person-name">Петя Демин</span>
@@ -213,16 +256,16 @@
                 </ul>
                 <ul class="list companion__type-list">
                   <li class="list__item companion__type-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                   <li class="list__item companion__type-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                   <li class="list__item companion__type-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                   <li class="list__item companion__type-item">
-                    <svg class="img" src="" width="" height="" alt=""></svg>
+                    <img class="img" src="" width="" height="" alt=""></img>
                   </li>
                 </ul>
               </div>
@@ -234,38 +277,57 @@
       <section class="add-profile">
         <div class="container">
           <h2 class="title title--middle add-profile__title">Добавьте свой профиль</h2>
-          <svg class="img add-profile__icon" src="" width="" height="" alt=""></svg>
-          <dl class="add-profile__option">
-            <dt class="add-profile__option-description">Базовое размещение Бесплатно</dt>
-            <dd class="add-profile__option-number">1</dd>
-            <dt class="add-profile__option-description">Вывод на первых позициях 99 руб./мес</dt>
-            <dd class="add-profile__option-number">2</dd>
-            <dt class="add-profile__option-description">Кастомный цвет карточки 59 руб./мес</dt>
-            <dd class="add-profile__option-number">3</dd>
-          </dl>
+          <img class="img add-profile__icon" src="" width="" height="" alt=""></img>
+          <div class="add-profile__option-wrapper">
+            <dl class="add-profile__option">
+              <div class="add-profile__wrapper">
+                <dt class="add-profile__option-description">Базовое размещение</dt>
+                <dd class="definition add-profile__option-price">Бесплатно</dd>
+              </div>
+              <div class="add-profile__wrapper">
+                <dt class="add-profile__option-description">Вывод на первых позициях</dt>
+                <dd class="definition add-profile__option-price">99 руб./мес</dd>
+              </div>
+              <div class="add-profile__wrapper">
+                <dt class="add-profile__option-description">Кастомный цвет карточки</dt>
+                <dd class="definition add-profile__option-price">59 руб./мес</dd>
+              </div>
+            </dl>
+            <ul class="list add-profile__number-list">
+              <li class="list__item add-profile__number-item">1</li>
+              <li class="list__item add-profile__number-item">2</li>
+              <li class="list__item add-profile__number-item">3</li>
+            </ul>
+          </div>
           <a class="link add-profile_link" href="">Показать тарифы для бизнеса</a>
         </div>
       </section>
       <section class="feedback">
         <div class="container">
           <h2 class="title title--middle feedback__title">Заинтересовались?</h2>
-          <p class="feedback__description">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+          <p class="feedback__description">Зарегистрируйтесь, это&nbsp;быстро и бесплатно!</p>
+          <p class="feedback__description">Уже зарегистрированы? Тогда скорее
             <a class="link feedback__description-link">авторизуйтесь.</a>
           </p>
           <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="feedback-email">Электронная почта для обратнойсвязи</label>
-            <input class="" type="email" id="feedback-email" placeholder="E-mail">
+            <input class="feedback__email" type="email" id="feedback-email" placeholder="E-mail">
             <button class="feedback__button" type="submit"></button>
           </form>
-          <p class="feedback__text">Остались вопросы? Мы с радостью на них ответим!</p>
-          <a class="link feedback__phone" href="tel:+78005558628">8 800 555-86-28</a>
-          <a class="link feedback__email" href="">mail@htmlacademy.ru</a>
+          <div class="feedback__text-wrapper">
+            <p class="feedback__text">Остались вопросы?</p>
+            <p class="feedback__text">Мы с радостью на них ответим!</p>
+          </div>
+          <div class="feedback__link-wrapper">
+            <a class="link feedback__link feedback__phone-link" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="link feedback__link feedback__email-link" href="">mail@htmlacademy.ru</a>
+          </div>
         </div>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <div class="container">
-          <p class="map__address">ул. Большая Конюшенная, 19/8</p>
+        <div class="map__wrapper">
+          <p class="map__address">ул. Большая Конюшенная,&nbsp;19/8</p>
           <a class="link link-typography link-typography--small map__link" href="">Проложить маршрут</a>
         </div>
         <img class="img map__image" src="" width="" height="" alt="">
@@ -274,23 +336,26 @@
     <footer class="page-footer">
       <div class="container">
         <a class="link page-footer__logo" href="">
+          погнали?
           <img class="page-footer__logo-image" src="" width="" height="" alt="">
         </a>
         <ul class="list page-footer__list">
           <li class="list__item page-footer__item">
-            <svg class="img page-footer__image" src="" width="" height="" alt=""></svg>
+            <img class="img page-footer__image" src="" width="" height="" alt=""></img>
           </li>
           <li class="list__item page-footer__item">
-            <svg class="img page-footer__image" src="" width="" height="" alt=""></svg>
+            <img class="img page-footer__image" src="" width="" height="" alt=""></img>
           </li>
           <li class="list__item page-footer__item">
-            <svg class="img page-footer__image" src="" width="" height="" alt=""></svg>
+            <img class="img page-footer__image" src="" width="" height="" alt=""></img>
           </li>
         </ul>
-        <p class="page-footer__text">Разработано</p>
-        <a class="link page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="img page-footer__academy-image" src="" width="" height="" alt="">
-        </a>
+        <div class="copyright-wrapper">
+          <p class="page-footer__text">Разработано</p>
+          <a class="link page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="img page-footer__academy-image" src="" width="" height="" alt="">
+          </a>
+        </div>
       </div>
     </footer>
   </body>
