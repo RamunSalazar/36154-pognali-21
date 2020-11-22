@@ -5,8 +5,11 @@
 .add-profile__title {
   color: $orange;
   width: 107px;
+}
 
-  @media (min-width: $table-width) {
+
+@media (min-width: $table-width) {
+  .add-profile__title {
     width: 482px;
     margin: 0 auto;
     text-align: center;
@@ -36,8 +39,11 @@
   &:nth-child(3) {
     background-color: $yellow;
   }
+}
 
-  @media (min-width: $table-width) {
+
+@media (min-width: $table-width) {
+  .add-profile__number-item {
     margin-right: 10px;
   }
 }
@@ -51,30 +57,38 @@
 .add-profile__option-wrapper {
   display: flex;
   justify-content: space-between;
+}
 
-  @media (min-width: $table-width) {
+@media (min-width: $table-width) {
+  .add-profile__option-wrapper {
     display: grid;
     grid-template-columns: min-content 1fr;
+  }
+}
 
-    .add-profile__number-list {
-      order: -1;
-    }
-
-    .add-profile__wrapper {
-      display: flex;
-      margin-bottom: 17px;
-      justify-content: space-between;
-      width: 100%;
-    }
+@media (min-width: $table-width) {
+  .add-profile__number-list {
+    order: -1;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 900px;
+  .add-profile__wrapper {
+    display: flex;
+    margin-bottom: 17px;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
 
-    .add-profile__wrapper {
-      display: flex;
-      margin-bottom: 17px;
-      justify-content: space-between;
-    }
+@media (min-width: $desktop-width) {
+  .add-profile__option-wrapper {
+    width: 900px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-profile__wrapper {
+    display: flex;
+    margin-bottom: 17px;
+    justify-content: space-between;
   }
 }
