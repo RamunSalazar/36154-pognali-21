@@ -5,6 +5,7 @@
 
 .plan__item {
   background-color: $white;
+  margin-bottom: 10px;
 }
 
 .plan__item-name,
@@ -34,10 +35,6 @@
   border: none;
 }
 
-.plan__item {
-  margin-bottom: 10px;
-}
-
 .plan__item-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +53,7 @@
     }
   }
 
-  @media (min-width: $table-width) and (max-width: $desktop-width - 1px){
+  @media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
     .plan__item-name {
       order: -1;
     }
