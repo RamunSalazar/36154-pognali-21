@@ -14,6 +14,7 @@
   }
 }
 
+
 @media (max-width: $table-width - 1px) {
   .service__link,
   .servise__image {
@@ -23,12 +24,17 @@
 
 .service-wrapper {
   width: 210px;
+}
 
-  @media (min-width: $table-width) {
+
+@media (min-width: $table-width) {
+  .service-wrapper {
     width: 310px;
   }
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .service-wrapper {
     width: 620px;
   }
 }

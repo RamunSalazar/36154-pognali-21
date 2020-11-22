@@ -7,72 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    @media (min-width: $table-width) {
-      .direction-form__main-title {
-        order: 0;
-      }
-
-      .direction-form__level-wrapper {
-        width: 15%;
-        order: 1;
-      }
-
-      .direction-form__person-photo {
-        width: 15%;
-        order: 3;
-      }
-
-      .direction-form__button-wrapper {
-        order: 4;
-      }
-
-      .direction-form__hashtag {
-        width: 70%;
-        order: 2;
-      }
-
-      .direction-form__transport {
-        order: 5;
-      }
-    }
-
-    @media (min-width: $desktop-width) {
-      .direction-form__main-title {
-        order: 0;
-        width: 60%;
-      }
-
-      .direction-form__level-wrapper {
-        width: 15%;
-        order: 1;
-      }
-
-      .direction-form__person-photo {
-        width: 15%;
-        order: 2;
-      }
-
-      .direction-form__button-wrapper {
-        width: 100%;
-        order: 3;
-        text-align: right;
-      }
-
-      .direction-form__hashtag {
-        width: 60%;
-        order: 4;
-
-        .direction-form__title {
-          text-align: right;
-        }
-      }
-
-      .direction-form__transport {
-        width: 30%;
-        order: 5;
-      }
-    }
   }
 }
 
@@ -92,13 +26,17 @@
   line-height: 18px;
   text-align: center;
   width: 100%;
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .direction-form__button {
     width: 190px;
+  }
+}
 
-    .direction-form__button-text {
-      display: none;
-    }
+@media (min-width: $desktop-width) {
+  .direction-form__button-text {
+    display: none;
   }
 }
 
@@ -120,8 +58,8 @@
   width: 100%;
 }
 
-.direction-form__level-wrapper {
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .direction-form__level-wrapper {
     margin-right: 10px;
   }
 }
@@ -150,5 +88,92 @@
   .direction-form__title,
   .direction-form__wrapepr {
     transform: rotate(180deg);
+  }
+}
+
+@media (min-width: $table-width) {
+  .direction-form__main-title {
+    order: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction-form__main-title {
+    order: 0;
+    width: 60%;
+  }
+}
+
+
+@media (min-width: $table-width) {
+  .direction-form__level-wrapper {
+    width: 15%;
+    order: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction-form__level-wrapper {
+    width: 15%;
+    order: 1;
+  }
+}
+
+@media (min-width: $table-width) {
+  .direction-form__person-photo {
+    width: 15%;
+    order: 3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction-form__person-photo {
+    width: 15%;
+    order: 2;
+  }
+}
+
+@media (min-width: $table-width) {
+  .direction-form__button-wrapper {
+    order: 4;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction-form__button-wrapper {
+    width: 100%;
+    order: 3;
+    text-align: right;
+  }
+}
+
+@media (min-width: $table-width) {
+  .direction-form__hashtag {
+    width: 70%;
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction-form__hashtag {
+    width: 60%;
+    order: 4;
+
+    .direction-form__title {
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: $table-width) {
+  .direction-form__transport {
+    order: 5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction-form__transport {
+    width: 30%;
+    order: 5;
   }
 }

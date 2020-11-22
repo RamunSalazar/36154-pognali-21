@@ -14,8 +14,10 @@ $desktop-width: 1440px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .page-body {
     width: 1440px;
   }
 }
@@ -56,12 +58,16 @@ $desktop-width: 1440px;
   margin: 0 auto;
   padding: 0 25px;
   position: relative;
+}
 
-  @media (min-width: $table-width) {
+@media (min-width: $table-width) {
+  .container {
     padding: 0 40px;
   }
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .container {
     width: 1320px;
   }
 }

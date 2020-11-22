@@ -5,16 +5,23 @@
 
 .map__wrapper {
   background-color: $yellow;
+}
 
-  @media (max-width: $table-width - 1px) {
+
+@media (max-width: $table-width - 1px) {
+  .map__wrapper {
     padding: 0 25px;
   }
+}
 
-  @media (min-width: $table-width) {
+@media (min-width: $table-width) {
+  .map__wrapper {
     padding: 0 40px;
   }
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .map__wrapper {
     padding: 0 60px;
     display: flex;
   }
@@ -25,8 +32,11 @@
   color: $blue-light;
   font-weight: 700;
   width: 145px;
+}
 
-  @media (min-width: $table-width) {
+
+@media (min-width: $table-width) {
+  .map__address {
     width: 430px;
   }
 }
@@ -34,8 +44,10 @@
 .map__link {
   width: 100%;
   border: 1px solid $black;
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .map__link {
     width: 325px;
   }
 }
