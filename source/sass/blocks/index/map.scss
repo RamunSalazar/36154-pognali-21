@@ -5,13 +5,7 @@
 
 .map__wrapper {
   background-color: $yellow;
-}
-
-
-@media (max-width: $table-width - 1px) {
-  .map__wrapper {
-    padding: 0 25px;
-  }
+  padding: 0 25px;
 }
 
 @media (min-width: $table-width) {

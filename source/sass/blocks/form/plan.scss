@@ -20,6 +20,7 @@
   line-height: 14px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  width: 100%;
 }
 
 .plan__button {
@@ -52,11 +53,24 @@
   }
 }
 
-@media (max-width: $desktop-width - 1px) {
-  .plan__text {
-    width: 100%;
+@media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
+  .plan__item-name {
+    order: -1;
   }
 }
+
+@media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
+  .plan__text {
+    width: 33%;
+  }
+}
+
+@media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
+  .plan__button {
+    width: 33%;
+  }
+}
+
 
 @media (min-width: $desktop-width) {
   .plan__item-number {
@@ -79,23 +93,5 @@
 @media (min-width: $desktop-width) {
   .plan__button {
     width: 10%;
-  }
-}
-
-@media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
-  .plan__item-name {
-    order: -1;
-  }
-}
-
-@media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
-  .plan__text {
-    width: 33%;
-  }
-}
-
-@media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
-  .plan__button {
-    width: 33%;
   }
 }

@@ -1,0 +1,54 @@
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  z-index: 1;
+  margin-top: -80px;
+}
+
+@media (max-width: $table-width - 1px) {
+  .title-button {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    &--catalog {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: $grey;
+
+      .title-wrapper {
+        width: 100%;
+      }
+
+      .filter-country {
+        width: 100%;
+      }
+    }
+
+    .cart-profile {
+      width: 950px;
+      margin-left: 60px;
+      margin-right: 85px;
+
+      .container {
+        width: 950px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .filter-companion {
+      order: 1;
+      width: 20%;
+
+      .container {
+        width: 285px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
