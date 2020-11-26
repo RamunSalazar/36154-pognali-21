@@ -1,18 +1,85 @@
+.page-footer {
+  background-color: $white;
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -34px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 37px;
+    padding-bottom: 18px;
+  }
+}
+
+@media (min-width: $table-width) {
+  .page-footer {
+    margin-top: -55px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+
+    .container {
+      padding: 0 60px;
+      padding-top: 44px;
+      padding-bottom: 18px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: $table-width - 1px) {
+  .page-footer__logo {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: $table-width) {
+  .page-footer__logo {
+    width: 156px;
+  }
+}
+
 .page-footer__text {
   line-height: 16px;
   color: $special-grey;
   font-weight: 400;
+  margin-top: 10px;
+}
+
+@media (min-width: $table-width) {
+  .page-footer__text {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: $table-width - 1px) {
+  .page-footer__list {
+    margin-bottom: 46px;
+  }
 }
 
 .page-footer__item {
-  width: 62px;
-  height: 62px;
+  width: 45px;
+  height: 45px;
   background-color: $yellow;
-  margin: 10px;
+  border-radius: 50%;
+}
+
+@media (min-width: $table-width) {
+  .page-footer__item {
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .page-footer__academy-logo {
-  width: 34px;
+  width: 28px;
   height: 34px;
   background-color: $yellow;
 }
@@ -25,23 +92,24 @@
 .copyright-wrapper {
   width: 100%;
   justify-content: space-between;
+  position: relative;
+}
+
+@media (max-width: $table-width - 1px) {
+  .copyright-wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $basic-grey;
+      top: -13px;
+    }
+  }
 }
 
 @media (min-width: $table-width) {
   .copyright-wrapper {
-    width: 160px;
-  }
-}
-
-.page-footer .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media (min-width: $table-width) {
-  .page-footer .container {
-    flex-direction: row;
-    justify-content: space-between;
+    width: 154px;
   }
 }

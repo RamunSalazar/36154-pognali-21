@@ -1,5 +1,6 @@
 .filter-companion {
   background-color: $grey;
+
   .container {
     background-color: $yellow;
     margin: 0 25px;
@@ -59,19 +60,11 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    &:nth-child(5){
+    &:nth-child(5) {
       grid-column: 1/-1;
     }
-  }
 
-  .filter-companion__wrapper {
     &:nth-child(4),
-    &:nth-child(5) {
-      display: flex;
-    }
-  }
-
-  .filter-companion__wrapper {
     &:nth-child(5) {
       display: flex;
       justify-content: space-between;
