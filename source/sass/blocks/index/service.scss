@@ -13,62 +13,13 @@
   }
 }
 
-@media (min-width: $table-width) {
-  .service {
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-
-    .container {
-      padding-top: 37px;
-      padding-left: 74px;
-      padding-bottom: 89px;
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .service {
-    border-bottom-left-radius: 56px;
-    border-bottom-right-radius: 56px;
-
-    .container {
-      padding-left: 130px;
-      padding-bottom: 163px;
-    }
-  }
-}
-
 .service-wrapper {
   width: 211px;
-}
-
-@media (min-width: $table-width) {
-  .service-wrapper {
-    width: 301px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .service-wrapper {
-    width: 620px;
-  }
 }
 
 .service__title {
   color: $orange;
   margin-bottom: 19px;
-}
-
-@media (min-width: $table-width) {
-  .service__title {
-    margin-bottom: 42px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .service__title {
-    margin-bottom: 60px;
-  }
 }
 
 .service__description {
@@ -88,7 +39,42 @@
   }
 }
 
+.service__link {
+  width: 244px;
+  background-color: $yellow;
+  padding-top: 26px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  border-radius: 20px;
+}
+
+@media (max-width: $table-width - 1px) {
+  .service__link,
+  .service__image {
+    display: none;
+  }
+}
+
 @media (min-width: $table-width) {
+  .service {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    .container {
+      padding-top: 37px;
+      padding-left: 74px;
+      padding-bottom: 89px;
+    }
+  }
+
+  .service-wrapper {
+    width: 301px;
+  }
+
+  .service__title {
+    margin-bottom: 42px;
+  }
+
   .service__description {
     margin-left: 1px;
     margin-bottom: 55px;
@@ -114,6 +100,24 @@
 }
 
 @media (min-width: $desktop-width) {
+  .service {
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+
+    .container {
+      padding-left: 130px;
+      padding-bottom: 163px;
+    }
+  }
+
+  .service-wrapper {
+    width: 620px;
+  }
+
+  .service__title {
+    margin-bottom: 60px;
+  }
+
   .service__description {
     &:nth-child(2) {
       margin-bottom: 39px;
@@ -124,25 +128,7 @@
       margin-bottom: 87px;
     }
   }
-}
 
-.service__link {
-  width: 244px;
-  background-color: $yellow;
-  padding-top: 26px;
-  padding-bottom: 30px;
-  padding-left: 32px;
-  border-radius: 20px;
-}
-
-@media (max-width: $table-width - 1px) {
-  .service__link,
-  .service__image {
-    display: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
   .service__link {
     width: 241px;
     margin-left: 1px;

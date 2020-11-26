@@ -15,34 +15,6 @@
   }
 }
 
-@media (min-width: $table-width) {
-  .page-footer {
-    margin-top: -55px;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-
-    .container {
-      padding: 0 60px;
-      padding-top: 44px;
-      padding-bottom: 18px;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-}
-
-@media (max-width: $table-width - 1px) {
-  .page-footer__logo {
-    margin-bottom: 32px;
-  }
-}
-
-@media (min-width: $table-width) {
-  .page-footer__logo {
-    width: 156px;
-  }
-}
-
 .page-footer__text {
   line-height: 16px;
   color: $special-grey;
@@ -50,32 +22,11 @@
   margin-top: 10px;
 }
 
-@media (min-width: $table-width) {
-  .page-footer__text {
-    font-size: 20px;
-    line-height: 20px;
-    margin-top: 4px;
-  }
-}
-
-@media (max-width: $table-width - 1px) {
-  .page-footer__list {
-    margin-bottom: 46px;
-  }
-}
-
 .page-footer__item {
   width: 45px;
   height: 45px;
   background-color: $yellow;
   border-radius: 50%;
-}
-
-@media (min-width: $table-width) {
-  .page-footer__item {
-    width: 62px;
-    height: 62px;
-  }
 }
 
 .page-footer__academy-logo {
@@ -96,6 +47,14 @@
 }
 
 @media (max-width: $table-width - 1px) {
+  .page-footer__logo {
+    margin-bottom: 32px;
+  }
+
+  .page-footer__list {
+    margin-bottom: 46px;
+  }
+
   .copyright-wrapper {
     &::after {
       position: absolute;
@@ -109,7 +68,43 @@
 }
 
 @media (min-width: $table-width) {
+  .page-footer {
+    margin-top: -55px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+
+    .container {
+      padding-top: 44px;
+      padding-bottom: 18px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .page-footer__logo {
+    width: 156px;
+  }
+
+  .page-footer__text {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 4px;
+  }
+
+  .page-footer__item {
+    width: 62px;
+    height: 62px;
+  }
+
   .copyright-wrapper {
     width: 154px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    .container {
+      padding: 0 60px;
+    }
   }
 }

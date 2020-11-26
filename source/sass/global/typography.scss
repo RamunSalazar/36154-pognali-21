@@ -17,28 +17,12 @@
   }
 }
 
-@media (min-width: $table-width) {
-  .title {
-    &--middle {
-      font-size: 45px;
-    }
-  }
-}
-
 .span {
   font-weight: 700;
   line-height: 1;
 
   &--middle {
     font-size: 21px;
-  }
-}
-
-@media (min-width: $table-width) {
-  .span {
-    &--middle {
-      font-size: 24px;
-    }
   }
 }
 
@@ -53,14 +37,6 @@
 
   &--middle {
     font-size: 20px;
-  }
-}
-
-@media (min-width: $table-width) {
-  .link-typography {
-    &--small {
-      font-size: 24px;
-    }
   }
 }
 
@@ -81,6 +57,26 @@
 
     &::placeholder {
       all: unset;
+    }
+  }
+}
+
+@media (min-width: $table-width) {
+  .title {
+    &--middle {
+      font-size: 45px;
+    }
+  }
+
+  .span {
+    &--middle {
+      font-size: 24px;
+    }
+  }
+
+  .link-typography {
+    &--small {
+      font-size: 24px;
     }
   }
 }
