@@ -8,38 +8,58 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="page-header__navigation-wrapper page-header__navigation-top">
+      <div class="page-header__navigation-wrapper page-header__navigation-top page-header__navigation-top">
         <a class="link page-header__logo" href="">
           погнали?
           <img class="img page-header__logo-image" src="" width="" height="" alt="">
         </a>
-        <button class="page-header__navigation-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <nav class="page-header__navigation">
+        <button class="page-header__navigation-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <nav class="page-header__navigation page-header__navigation-site">
           <ul class="list page-header__navigation-list page-header__site-list">
             <li class="list__item page-header__site-item">
               <a class="link page-header__site-link" href="">о сервисе</a>
             </li>
             <li class="list__item page-header__site-item">
-              <a class="link page-header__site-link" href="">направление</a>
+              <a class="link page-header__site-link" href="">направления</a>
             </li>
             <li class="list__item page-header__site-item">
               <a class="link page-header__site-link" href="">попутчики</a>
             </li>
           </ul>
+        </nav>
+        <nav class="page-header__navigation page-header__navigation-user">
           <ul class="list page-header__navigation-list page-header__user-list">
             <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href=""><span>т</span></a>
+              <a class="link page-header__user-link" href="">
+                <span class="page-header__link-text">8 800 555-86-28</span>
+              </a>
             </li>
             <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href=""><span>эп</span></a>
+              <a class="link page-header__user-link" href="">
+                <span class="page-header__link-text">mail@htmlacademy.ru</span>
+              </a>
             </li>
             <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href="">авторизоваться</a>
+              <a class="link page-header__user-link" href="">авторизация</a>
             </li>
           </ul>
         </nav>
+        <ul class="list page-header__social-list">
+          <li class="list__item page-header__social-item">
+            <img class="img page-header__social-img" src="" width="" height="" alt="">
+          </li>
+          <li class="list__item page-header__social-item">
+            <img class="img page-header__social-img" src="" width="" height="" alt="">
+          </li>
+          <li class="list__item page-header__social-item">
+            <img class="img page-header__social-img" src="" width="" height="" alt="">
+          </li>
+        </ul>
+        <a class="link page-header__user-authorization page-header__authorization" href="">авторизация</a>
       </div>
-      <h1 class="page-header__title">В путешествие с крутыми попутчиками!</h1>
+      <h1 class="page-header__title">В путешествие<br> с крутыми<br> попутчиками!</h1>
       <div class="page-header__navigation-wrapper page-header__navigation-bottom">
         <a class="link page-header__logo" href="">
           погнали?
@@ -51,28 +71,34 @@
               <a class="link page-header__site-link" href="">о сервисе</a>
             </li>
             <li class="list__item page-header__site-item">
-              <a class="link page-header__site-link" href="">направление</a>
+              <a class="link page-header__site-link" href="">направления</a>
             </li>
             <li class="list__item page-header__site-item">
               <a class="link page-header__site-link" href="">попутчики</a>
             </li>
           </ul>
+        </nav>
+        <nav class="page-header__navigation">
           <ul class="list page-header__navigation-list page-header__user-list">
             <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href=""><span>т</span></a>
+              <a class="link page-header__user-link" href="">
+                <span class="visually-hidden">телефон</span>
+              </a>
             </li>
             <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href=""><span>эп</span></a>
+              <a class="link page-header__user-link" href="">
+                <span class="visually-hidden">электронная ппочта</span>
+              </a>
             </li>
             <li class="list__item page-header__user-item">
-              <a class="link page-header__user-link" href="">авторизоваться</a>
+              <a class="link page-header__user-link page-header__authorization" href="">авторизация</a>
             </li>
           </ul>
         </nav>
       </div>
       <dl class="page-header__review">
         <dt class="page-header__review-text">«Лучшее приложение, что я видел в жизни!»</dt>
-        <dd class="definition page-header__review-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</dd>
+        <dd class="definition page-header__review-author">Мурат Эльтазин главный&nbsp;редактор газеты «гаджетлайф»</dd>
       </dl>
       <dl class="page-header__sequence">
         <div class="page-header__sequence-wrapper">
@@ -99,11 +125,20 @@
         <div class="container">
           <div class="service-wrapper">
             <h2 class="title title--middle service__title">О сервисе</h2>
-            <p class="service__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-            <p class="service__description">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-            <a class="link service__link" href="">Подробнее</a>
+            <p class="service__description">
+              Любое путешествие веселее с&nbsp;попутчиками,
+              которые на одной волне с&nbsp;тобой!
+              Делитесь своими идеями путешествий
+              <span class="service__description-text1">и черпайте</span>
+              <span class="service__description-text2">и&nbsp;черпайте</span>
+              вдохновение в чужих.
+            </p>
+            <p class="service__description">А если найдете кого-то близкого по духу
+              <span class="service__description-text1">—&nbsp;скорее</span>
+              <span class="service__description-text2">— скорее</span>
+              зовите в совместный трип!</p>
+            <a class="link link-typography link-typography--small service__link" href="">Подробнее</a>
           </div>
-          <img class="img service__image" src="" width="" height="" alt="">
         </div>
       </section>
       <section class="direction">
@@ -122,11 +157,10 @@
             <li class="list__item direction__item">
               <div class="direction__image-wrapper">
                 <img class="img direction__county-image" src="" width="" height="" alt="">
-                <img class="img direction__county-flag" src="" width="" height="" alt="">
               </div>
               <div class="direction__country-wrapper">
                 <div class="direction__text-wrapper">
-                  <span class="span span--middle direction__country-name">Таиланд</span><br>
+                  <span class="span span--middle direction__country-name">Таиланд</span>
                   <span class="direction__country-description">Джунгли зовут!</span>
                 </div>
                 <span class="direction__counter">18321</span>
@@ -135,11 +169,10 @@
             <li class="list__item direction__item">
               <div class="direction__image-wrapper">
                 <img class="img direction__county-image" src="" width="" height="" alt="">
-                <img class="img direction__county-flag" src="" width="" height="" alt="">
               </div>
               <div class="direction__country-wrapper">
                 <div class="direction__text-wrapper">
-                  <span class="span span--middle direction__country-name">Франция</span><br>
+                  <span class="span span--middle direction__country-name">Франция</span>
                   <span class="direction__country-description">Трэ бьен, манифик!</span>
                 </div>
                 <span class="direction__counter">12518</span>
@@ -148,28 +181,35 @@
             <li class="list__item direction__item">
               <div class="direction__image-wrapper">
                 <img class="img direction__county-image" src="" width="" height="" alt="">
-                <img class="img direction__county-flag" src="" width="" height="" alt="">
               </div>
               <div class="direction__country-wrapper">
                 <div class="direction__text-wrapper">
-                  <span class="span span--middle direction__country-name">Чехия</span><br>
+                  <span class="span span--middle direction__country-name">Чехия</span>
                   <span class="direction__country-description">Закоулки старой Европы</span>
                 </div>
                 <span class="direction__counter">5326</span>
               </div>
             </li>
           </ul>
-          <div class="direction__link-wrapeer">
-            <a class="link link-typography link-typography--small direction__link" href="form.html">Показать все</a>
-          </div>
+          <a class="link link-typography link-typography--small direction__link" href="form.html">
+            <span class="direction__link-text">Показать все</span>
+          </a>
         </div>
       </section>
       <section class="companion">
         <div class="container">
           <div class="companion__text-wrapper">
             <h2 class="title title--middle companion__title">Попутчики</h2>
-            <p class="companion__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-            <p class="companion__description">Теперь можно легко найти единомышленников!</p>
+            <p class="companion__description">
+              Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,
+              <span class="companion__description-text1">а другому</span>
+              <span class="companion__description-text2">а&nbsp;другому</span>
+              маршрут для хайкинга.
+            </p>
+            <p class="companion__description">Теперь можно легко
+              <span class="companion__description-text1">найти единомышленников!</span>
+              <span class="companion__description-text2">найти&nbsp;единомышленников!</span>
+            </p>
           </div>
           <ul class="list companion__list">
             <li class="list__item companion__item">
@@ -274,14 +314,18 @@
             </li>
           </ul>
           <div class="companion__link-wrapper">
-            <a class="link link-typography link-typography--small companion__link" href="catalog.html">Показать всех</a>
+            <a class="link link-typography link-typography--small companion__link" href="catalog.html">
+              <span class="companion__link-text">Показать всех</span>
+            </a>
           </div>
         </div>
       </section>
       <section class="add-profile">
         <div class="container">
           <h2 class="title title--middle add-profile__title">Добавьте свой профиль</h2>
-          <img class="img add-profile__icon" src="" width="" height="" alt="">
+          <div class="add-profile__icon-wrapper">
+            <img class="img add-profile__icon" src="" width="" height="" alt="">
+          </div>
           <div class="add-profile__option-wrapper">
             <dl class="add-profile__option">
               <div class="add-profile__wrapper">
@@ -309,14 +353,22 @@
       <section class="feedback">
         <div class="container">
           <h2 class="title title--middle feedback__title">Заинтересовались?</h2>
-          <p class="feedback__description">Зарегистрируйтесь, это&nbsp;быстро и бесплатно!</p>
-          <p class="feedback__description">Уже зарегистрированы? Тогда скорее
-            <a class="link feedback__description-link">авторизуйтесь.</a>
+          <p class="feedback__description">
+            <span class="feedback__description-text1">Зарегистрируйтесь,</span>
+            <span class="feedback__description-text2">это&nbsp;быстро и бесплатно!</span>
+          </p>
+          <p class="feedback__description">
+            <span class="feedback__description-text1">Уже зарегистрированы? Тогда</span>
+            <span class="feedback__description-text2">скорее
+              <a class="link feedback__description-link">авторизуйтесь.</a>
+            </span>
           </p>
           <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="feedback-email">Электронная почта для обратнойсвязи</label>
             <input class="feedback__email" type="email" id="feedback-email" placeholder="E-mail">
-            <button class="feedback__button" type="submit"></button>
+            <button class="feedback__button" type="submit">
+              <span class="feedback__button-text">Регистрация</span>
+            </button>
           </form>
           <div class="feedback__text-wrapper">
             <p class="feedback__text">Остались вопросы?</p>
@@ -329,10 +381,12 @@
         </div>
       </section>
       <section class="map">
-        <h2 class="visually-hidden">Карта</h2>
-        <div class="map__wrapper">
+        <div class="container">
+          <h2 class="visually-hidden">Карта</h2>
           <p class="map__address">ул. Большая Конюшенная,&nbsp;19/8</p>
-          <a class="link link-typography link-typography--small map__link" href="">Проложить маршрут</a>
+          <a class="link link-typography link-typography--small map__link" href="">
+            <span class="map__link-text">Проложить маршрут</span>
+          </a>
         </div>
         <img class="img map__image" src="" width="" height="" alt="">
       </section>

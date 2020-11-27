@@ -1,16 +1,9 @@
 .filter-companion {
   background-color: $grey;
+
   .container {
     background-color: $yellow;
     margin: 0 25px;
-  }
-}
-
-@media (min-width: $table-width) {
-  .filter-companion {
-    .container {
-      margin: 0 40px;
-    }
   }
 }
 
@@ -20,12 +13,6 @@
   font-size: 22px;
   line-height: 22px;
   letter-spacing: 0.02em;
-}
-
-@media (max-width: $table-width - 1px) {
-  .filter-companion__filter-title {
-    width: 145px;
-  }
 }
 
 .filter-companion__name {
@@ -54,45 +41,6 @@
   width: 100%;
 }
 
-@media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
-  .filter-companion__wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    &:nth-child(5){
-      grid-column: 1/-1;
-    }
-  }
-
-  .filter-companion__wrapper {
-    &:nth-child(4),
-    &:nth-child(5) {
-      display: flex;
-    }
-  }
-
-  .filter-companion__wrapper {
-    &:nth-child(5) {
-      display: flex;
-      justify-content: space-between;
-
-      .filter-companion__name {
-        order: 0;
-      }
-
-      .filter-companion__range {
-        order: 2;
-        width: 150px;
-      }
-
-      .filter-companion__range-strip {
-        order: 1;
-        width: 275px;
-      }
-    }
-  }
-}
-
 .filter-companion__list {
   display: flex;
 }
@@ -116,4 +64,49 @@
   height: 2px;
   background-color: $blue-light;
   margin-bottom: 15px;
+}
+
+@media (max-width: $table-width - 1px) {
+  .filter-companion__filter-title {
+    width: 145px;
+  }
+}
+
+@media (min-width: $table-width) {
+  .filter-companion {
+    .container {
+      margin: 0 40px;
+    }
+  }
+}
+
+@media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
+  .filter-companion__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &:nth-child(5) {
+      grid-column: 1/-1;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      display: flex;
+      justify-content: space-between;
+
+      .filter-companion__name {
+        order: 0;
+      }
+
+      .filter-companion__range {
+        order: 2;
+        width: 150px;
+      }
+
+      .filter-companion__range-strip {
+        order: 1;
+        width: 275px;
+      }
+    }
+  }
 }

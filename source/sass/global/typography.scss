@@ -1,6 +1,7 @@
 .title {
   font-weight: 700;
   line-height: 1;
+  margin: 0;
 
   &--small {
     font-size: 20px;
@@ -56,6 +57,26 @@
 
     &::placeholder {
       all: unset;
+    }
+  }
+}
+
+@media (min-width: $table-width) {
+  .title {
+    &--middle {
+      font-size: 45px;
+    }
+  }
+
+  .span {
+    &--middle {
+      font-size: 24px;
+    }
+  }
+
+  .link-typography {
+    &--small {
+      font-size: 24px;
     }
   }
 }

@@ -16,12 +16,6 @@ $desktop-width: 1440px;
   line-height: 22px;
 }
 
-@media (min-width: $desktop-width) {
-  .page-body {
-    width: 1440px;
-  }
-}
-
 .link {
   text-decoration: none;
   display: inline-block;
@@ -60,22 +54,27 @@ $desktop-width: 1440px;
   position: relative;
 }
 
-@media (min-width: $table-width) {
-  .container {
-    padding: 0 40px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .container {
-    width: 1320px;
-  }
-}
-
 .section:last-child {
   margin-bottom: 0;
 }
 
 .definition {
   margin: 0;
+}
+
+@media (min-width: $table-width) {
+  .page-body {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-body {
+    width: 1440px;
+  }
 }
