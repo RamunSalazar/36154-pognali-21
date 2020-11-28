@@ -1,21 +1,53 @@
 .direction-form {
-  background: linear-gradient(to bottom, transparent 80px, $grey 80px, $grey 100%);
-  margin-top: -80px;
+  background: linear-gradient(to bottom, transparent 33px, $grey 33px, $grey 100%);
   z-index: 1;
+  margin-top: -53px;
 
   .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 59px;
   }
 }
 
 .direction-form__main-title {
   width: 100%;
+  margin-bottom: 41px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 214px;
+    height: 5px;
+    background-color: $orange;
+    border-radius: 4px;
+    left: 0;
+    bottom: -19px;
+  }
 }
 
-.direction-form__button-wrapper {
-  width: 100%;
+.direction-form__level-wrapper,
+.direction-form__person-photo {
+  width: 100px;
+  height: 100px;
+  background-color: $black;
+  border-radius: 50%;
+}
+
+.direction-form__level-wrapper {
+  margin-left: 17px;
+  margin-bottom: 18px;
+}
+
+.direction-form__person-photo {
+  margin: 0;
+  margin-right: 18px;
+}
+
+.direction-form__person-text {
+  display: none;
 }
 
 .direction-form__button {
@@ -26,14 +58,41 @@
   line-height: 18px;
   text-align: center;
   width: 100%;
+  border: none;
+  text-transform: uppercase;
+  background-color: $blue-grey-light;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  border-radius: 25px;
+  margin-bottom: 24px;
+}
+
+.direction-form__form {
+  width: 100%;
 }
 
 .direction-form__title {
+  display: block;
   color: $blue-light;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 18px;
   text-align: center;
+  padding-inline-start: 17px;
+  padding-inline-end: 17px;
+}
+
+.direction-form__group {
+  border: 1px solid $basic-grey-normal;
+  border-radius: 10px;
+}
+
+.direction-form__hashtag-group {
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  padding-block-start: 14px;
+  padding-block-end: 20px;
+  margin-bottom: 16px;
 }
 
 .direction-form__hashtag-text {
@@ -44,25 +103,24 @@
   opacity: 0.6;
   line-height: 18px;
   width: 100%;
+  border: none;
+  background-color: transparent;
 }
 
-.direction-form__level-wrapper,
-.direction-form__person-photo {
-  width: 100px;
-  height: 100px;
-  background-color: $black;
+.direction-form__transport-group {
+  padding-block-end: 15px;
 }
 
-.direction-form__person-photo {
-  margin: 0;
+.direction-form__transport-list {
+  display: flex;
+  justify-content: center;
 }
 
-.direction-form__person-text {
-  display: none;
-}
-
-.direction-form__form {
-  width: 100%;
+.direction-form__transport-item {
+  width: 32px;
+  height: 32px;
+  background-color: $white;
+  border-radius: 50%;
 }
 
 @media (min-width: $table-width) {

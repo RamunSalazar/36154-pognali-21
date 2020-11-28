@@ -1,9 +1,62 @@
 .add-plan {
   background-color: $blue-grey-dark;
+  margin-top: -26px;
+  border-top-left-radius: 29px;
+  border-top-right-radius: 29px;
+
+  .container {
+    padding-top: 27px;
+    padding-bottom: 77px;
+  }
+}
+
+.add-plan__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-plan__title {
+  color: $blue-light;
+  margin-bottom: 32px;
+}
+
+.add-plan__main-list {
+  display: flex;
+}
+
+.add-plan__main-item {
+  margin-right: 21px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: $blue-light;
+    border-radius: 50%;
+    top: 12px;
+    left: -23px;
+  }
+
+  &:nth-child(2),
+  &:nth-child(3) {
+    opacity: 0.3;
+  }
 }
 
 .add-plan__step {
   background-color: $white;
+  border-radius: 10px;
+  padding-top: 22px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 23px;
+  margin-bottom: 9px;
 
   &:nth-child(2) {
     .add-plan__step-title {
@@ -12,21 +65,34 @@
   }
 
   &:nth-child(3) {
+    padding-bottom: 6px;
+
     .add-plan__step-title {
       width: 81px;
+    }
+
+    .add-plan__step-description {
+      margin-bottom: 22px;
     }
   }
 
   &:nth-child(4) {
+    padding-bottom: 6px;
+    margin-bottom: 0;
+
     .add-plan__step-title {
       width: 116px;
     }
+
+    .add-plan__step-description {
+      margin-bottom: 24px;
+    }
+
+    .add-plan__link {
+      margin-left: -3px;
+      width: calc(100% + 8px);
+    }
   }
-}
-
-
-.add-plan__title {
-  color: $blue-light;
 }
 
 .add-plan__step-title {
@@ -41,6 +107,8 @@
 .add-plan__date-companion,
 .add-plan__date-day {
   color: $blue-light;
+  margin-top: 3px;
+  margin-bottom: 11px;
 
   &--text {
     letter-spacing: 0.07em;
@@ -49,20 +117,263 @@
   }
 }
 
+.add-plan__text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &:nth-child(1) {
+    margin-bottom: 15px;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 20px;
+  }
+}
+
+.add-plan__counter {
+  width: 100%;
+  border: 1px solid $basic-grey-normal;
+  text-align: center;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+  }
+
+  &::before {
+    content: "-";
+    left: 14px;
+  }
+
+  &::after {
+    content: "+";
+    right: 14px;
+  }
+}
+
+.add-plan__counter-text {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $blue-light;
+}
+
+.add-plan__checkbox-wrapper {
+  margin-bottom: 37px;
+}
+
 .add-plan__date-label {
   color: $blue-light;
   font-weight: 400;
   font-size: 15px;
   line-height: 15px;
+  position: relative;
+  margin-left: 40px;
 }
 
-.add-plan__button {
+.add-plan__date-checkbox + .add-plan__date-label {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border: 1px solid $basic-grey-normal;
+    border-radius: 4px;
+    left: -39px;
+    top: -3px;
+  }
+}
+
+.add-plan__date-checkbox {
+  &:checked + .add-plan__date-label {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 5px;
+      left: -29px;
+      top: 8px;
+      border-radius: 50%;
+      background-color: $black;
+    }
+  }
+}
+
+.add-plan__calendar-wrapper {
+  margin-bottom: 23px;
+}
+
+.add-plan__month-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 25px;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $basic-grey-dark;
+  }
+
+  &::before {
+    top: -11px;
+  }
+
+  &::after {
+    bottom: -13px;
+  }
+}
+
+.add-plan__month-button {
+  background-color: transparent;
+  border: none;
+}
+
+.add-plan__month-name {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
   color: $blue-light;
-  font-family: inherit;
+}
+
+.add-plan__calendar {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.add-plan__calendar-text2,
+.add-plan__calendar-text3 {
+  display: none;
+}
+
+.add-plan__calendar-text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $special-grey;
+}
+
+.add-plan__calendar-weekend {
+  color: $orange-normal;
+}
+
+.add-plan__calendar-header {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 3px;
+}
+
+.add-plan__calendar-number {
+  width: 30px;
+  height: 30px;
+  border: 1px solid $basic-grey-dark;
+  padding: 0;
+  background-color: $grey;
+}
+
+.add-plan__calendar-button {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $blue-light;
+}
+
+.add-plan__link {
+  width: 100%;
+  color: $blue-light;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
+  background-color: $yellow;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.add-plan__route-form {
+  width: 100%;
+
+  .add-plan__button {
+    width: 100%;
+  }
+}
+
+.add-plan__route-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+  position: relative;
+
+  &:nth-child(3) {
+    .add-plan__image-wrapper {
+      height: 0;
+      border: none;
+      padding-top: 0;
+      background: none;
+      position: relative;
+      top: -41px;
+      left: calc(100% - 52px);
+
+      &::before {
+        width: 6px;
+        height: 6px;
+        border: 1px solid $basic-grey-normal;
+        background: none;
+      }
+    }
+
+    .add-plan__route-flag {
+      display: none;
+    }
+
+    .add-plan__route-label {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        right: 17px;
+      }
+    }
+  }
+
+  &:focus-within {
+    .add-plan__route-label {
+      &::before {
+        background-color: $orange;
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 10px;
+    background-color: $black;
+    bottom: -15px;
+    right: 49px;
+  }
 }
 
 .add-plan__route-country,
@@ -70,10 +381,140 @@
   color: $blue-light;
 }
 
+.add-plan__route-country,
+.add-plan__route-value,
+.add-plan__button-add {
+  border: 1px solid $basic-grey-normal;
+  border-radius: 4px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 9px;
+}
+
+.add-plan__route-country {
+  width: calc(76% - 13px + (24% - 54px));
+}
+
+.add-plan__route-label {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: 52px;
+    height: 36px;
+    background: linear-gradient(to right, transparent, $white 25%);
+    top: 3px;
+    right: 55px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 7px;
+    background-color: $black;
+    z-index: 2;
+    top: 18px;
+    right: 69px;
+  }
+}
+
+.add-plan__image-wrapper {
+  width: 52px;
+  border: 1px solid $basic-grey-normal;
+  border-radius: 4px;
+  margin-left: -1px;
+  position: relative;
+  padding-top: 8px;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    z-index: 3;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $blue-light;
+    top: 16px;
+    left: -5px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: $grey;
+    top: -11px;
+    right: -10px;
+  }
+}
+
+.add-plan__route-flag {
+  width: 35px;
+  height: 24px;
+  background-color: $black;
+  border: none;
+}
+
 .add-plan__route-value {
+  width: 100%;
+  border: 1px solid $basic-grey-normal;
+  padding-left: 12px;
+
   &::placeholder {
     color: $blue-light;
   }
+}
+
+.add-plan__button-add {
+  margin-left: 2px;
+  text-align: left;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 11px;
+  border: none;
+  width: calc(100% - 2px);
+  background-color: $grey;
+  position: relative;
+  margin-bottom: 25px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: $black;
+    z-index: 2;
+    top: 14px;
+    right: 15px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: 1px solid $basic-grey-normal;
+    border-radius: 50%;
+    top: 17px;
+    right: 50px;
+  }
+}
+
+.add-plan__link-backward {
+  background-color: transparent;
+  letter-spacing: 0.01em;
+  padding-top: 11px;
+}
+
+.add-plan__entertainment-form {
+  position: relative;
 }
 
 .add-plan__entertainment-label {
@@ -81,6 +522,76 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
+  width: 100%;
+  margin-left: 12px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $blue-light;
+    top: 7px;
+    left: -14px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 2px;
+    background-color: $blue-light;
+    top: 9px;
+    left: -25px;
+  }
+}
+
+.add-plan__flag-wrapper {
+  width: 72px;
+  position: absolute;
+  padding-top: 5px;
+  right: 0;
+  top: -8px;
+  text-align: right;
+  background: linear-gradient(to right, transparent, $white 25%);
+}
+
+.add-plan__entertainment-wrapper {
+  position: relative;
+
+  &:nth-child(1) {
+    margin-bottom: 21px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 283px;
+      background-color: $blue-light;
+      top: 9px;
+      left: -13px;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 17px;
+  }
+
+  .add-plan__text-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .add-plan__entertainment-label {
+    margin-bottom: 2px;
+  }
+}
+
+.add-plan__entertainment-flag {
+  width: 35px;
+  height: 24px;
+  background-color: $black;
 }
 
 .add-plan__entertainment-text {
@@ -89,101 +600,23 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  width: 100%;
+  width: calc(100% - 30px);
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border: 1px solid $basic-grey-normal;
+  border-radius: 4px;
+  height: 200px;
+  position: relative;
 
   &::placeholder {
     opacity: 0.3;
   }
 }
 
-.add-plan__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.add-plan__main-list {
-  display: flex;
-
-  .add-plan__main-item {
-    margin-right: 20px;
-  }
-}
-
 .add-plan__list {
   display: none;
-}
-
-.add-plan__text-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  .add-plan__entertainment-label {
-    width: 80%;
-  }
-
-  .add-plan__entertainment-flag {
-    width: 20%;
-    background-color: $black;
-  }
-
-  .add-plan__counter {
-    width: 100%;
-    border: 1px solid $black;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.add-plan__date-calendar {
-  width: 100%;
-}
-
-.add-plan__date {
-  .add-plan__button-forward {
-    width: 100%;
-  }
-}
-
-.add-plan__route-wrapper {
-  width: 100%;
-  display: flex;
-
-  .add-plan__route-country {
-    width: 80%;
-  }
-
-  .add-plan__image-wrapper {
-    width: 20%;
-    background-color: $black;
-  }
-
-  .add-plan__route-value {
-    width: 100%;
-  }
-
-  &:nth-child(3) {
-    .add-plan__image-wrapper {
-      display: none;
-    }
-  }
-}
-
-.add-plan__route-form {
-  .add-plan__button,
-  .add-plan__button-add {
-    width: 100%;
-  }
-}
-
-.add-plan__entertainment-wrapper {
-  width: 100%;
-}
-
-.add-plan__entertainment-form {
-  .add-plan__button {
-    width: 100%;
-  }
 }
 
 @media (min-width: $table-width) {
