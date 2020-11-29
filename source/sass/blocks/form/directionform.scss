@@ -1,21 +1,58 @@
 .direction-form {
-  background: linear-gradient(to bottom, transparent 80px, $grey 80px, $grey 100%);
-  margin-top: -80px;
+  background: linear-gradient(to bottom, transparent 33px, $grey 33px, $grey 100%);
   z-index: 1;
+  margin-top: -53px;
 
   .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 59px;
   }
 }
 
 .direction-form__main-title {
   width: 100%;
+  margin-bottom: 41px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 214px;
+    height: 5px;
+    background-color: $orange;
+    border-radius: 4px;
+    left: 0;
+    bottom: -19px;
+  }
+}
+
+.direction-form__level-wrapper,
+.direction-form__person-photo {
+  width: 100px;
+  height: 100px;
+  background-color: $black;
+  border-radius: 50%;
+}
+
+.direction-form__level-wrapper {
+  margin-left: 17px;
+  margin-bottom: 18px;
+}
+
+.direction-form__person-photo {
+  margin: 0;
+  margin-right: 18px;
+}
+
+.direction-form__person-text {
+  display: none;
 }
 
 .direction-form__button-wrapper {
   width: 100%;
+  margin-bottom: 24px;
 }
 
 .direction-form__button {
@@ -26,14 +63,40 @@
   line-height: 18px;
   text-align: center;
   width: 100%;
+  border: none;
+  text-transform: uppercase;
+  background-color: $blue-grey-light;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  border-radius: 25px;
+}
+
+.direction-form__form {
+  width: 100%;
 }
 
 .direction-form__title {
+  display: block;
   color: $blue-light;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 18px;
   text-align: center;
+  padding-inline-start: 17px;
+  padding-inline-end: 17px;
+}
+
+.direction-form__group {
+  border: 1px solid $basic-grey-normal;
+  border-radius: 10px;
+}
+
+.direction-form__hashtag-group {
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  padding-block-start: 14px;
+  padding-block-end: 20px;
+  margin-bottom: 16px;
 }
 
 .direction-form__hashtag-text {
@@ -44,104 +107,220 @@
   opacity: 0.6;
   line-height: 18px;
   width: 100%;
+  border: none;
+  background-color: transparent;
 }
 
-.direction-form__level-wrapper,
-.direction-form__person-photo {
-  width: 100px;
-  height: 100px;
-  background-color: $black;
+.direction-form__transport-group {
+  padding-block-end: 15px;
 }
 
-.direction-form__person-photo {
-  margin: 0;
+.direction-form__transport-list {
+  display: flex;
+  justify-content: center;
 }
 
-.direction-form__person-text {
-  display: none;
-}
-
-.direction-form__form {
-  width: 100%;
+.direction-form__transport-item {
+  width: 32px;
+  height: 32px;
+  background-color: $white;
+  border-radius: 50%;
 }
 
 @media (min-width: $table-width) {
+  .direction-form {
+    margin-top: -132px;
+
+    .container {
+      padding-left: 73px;
+      padding-right: 73px;
+      padding-bottom: 57px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .direction-form__main-title {
+    margin-bottom: 138px;
+    margin-left: 2px;
+    order: 0;
+
+    &::after {
+      width: 358px;
+      height: 8px;
+      left: 0;
+      bottom: -76px;
+    }
+  }
+
+  .direction-form__level-wrapper,
+  .direction-form__person-photo {
+    width: 94px;
+    height: 94px;
+  }
+
+  .direction-form__level-wrapper {
+    margin-left: 2px;
+    order: 1;
+  }
+
+  .direction-form__person-photo {
+    margin-right: 2px;
+    border-radius: 7px;
+    order: 3;
+  }
+
+  .direction-form__hashtag {
+    order: 5;
+  }
+
+  .direction-form__button-wrapper {
+    order: 4;
+    margin-bottom: 52px;
+  }
+
+  .direction-form__button {
+    letter-spacing: 0.09em;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    border-radius: 10px;
+    width: calc(100% - 4px);
+    margin-left: 2px;
+  }
+
+  .direction-form__transport {
+    order: 2;
+    width: 50.1%;
+    margin-left: -4px;
+  }
+
+  .direction-form__title {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.07em;
+  }
+
   .direction-form__group,
   .direction-form__title,
   .direction-form__wrapepr {
     transform: rotate(180deg);
   }
 
-  .direction-form__main-title {
-    order: 0;
+  .direction-form__transport-item {
+    width: 43px;
+    height: 43px;
   }
 
-  .direction-form__level-wrapper {
-    width: 15%;
-    order: 1;
+  .direction-form__transport-group {
+    padding-block-end: 25px;
+    padding-block-start: 16px;
+    margin-bottom: 40px;
   }
 
-  .direction-form__person-photo {
-    width: 15%;
-    order: 3;
+  .direction-form__hashtag-text {
+    font-size: 20px;
+    line-height: 22px;
   }
 
-  .direction-form__button-wrapper {
-    order: 4;
-  }
-
-  .direction-form__hashtag {
-    width: 70%;
-    order: 2;
-  }
-
-  .direction-form__transport {
-    order: 5;
+  .direction-form__hashtag-group {
+    padding-inline-end: 37px;
+    padding-inline-start: 37px;
+    padding-block-end: 30px;
+    padding-block-start: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .direction-form {
+    margin-top: -134px;
+
+    .container {
+      padding-left: 122px;
+      padding-right: 59px;
+      padding-bottom: 71px;
+    }
+  }
+
+  .direction-form__main-title {
+    margin-bottom: 0;
+    order: 0;
+    width: 60%;
+
+    &::after {
+      left: 2px;
+      bottom: -4px;
+    }
+  }
+
+  .direction-form__level-wrapper {
+    order: 1;
+    margin: 0;
+    margin-right: -30px;
+    margin-top: -14px;
+  }
+
+  .direction-form__person-photo {
+    width: 190px;
+    height: 190px;
+    order: 2;
+    margin: 0;
+    border-radius: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-right: 96px;
+    margin-top: -56px;
+  }
+
+  .direction-form__hashtag-group {
+    padding-inline-end: 21px;
+
+    .direction-form__title {
+      text-align: right;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .direction-form__hashtag {
+    order: 4;
+    width: 736px;
+  }
+
+  .direction-form__hashtag-text {
+    padding-left: 17px;
+  }
+
+  .direction-form__transport-group {
+    padding-block-end: 24px;
+  }
+
+  .direction-form__transport {
+    order: 5;
+    width: 387px;
+  }
+
+  .direction-form__transport-list {
+    margin-left: -5px;
+  }
+
+  .direction-form__button-wrapper {
+    order: 3;
+    text-align: right;
+    margin-bottom: 26px;
+  }
+
   .direction-form__button {
     width: 190px;
+    border-radius: 0;
+    margin-right: 96px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    letter-spacing: 0;
+    padding-top: 15px;
+    padding-bottom: 14px;
   }
 
   .direction-form__button-text {
     display: none;
-  }
-
-  .direction-form__level-wrapper {
-    margin-right: 10px;
-    width: 15%;
-    order: 1;
-  }
-
-  .direction-form__main-title {
-    order: 0;
-    width: 60%;
-  }
-
-  .direction-form__person-photo {
-    width: 15%;
-    order: 2;
-  }
-
-  .direction-form__button-wrapper {
-    width: 100%;
-    order: 3;
-    text-align: right;
-  }
-
-  .direction-form__hashtag {
-    width: 60%;
-    order: 4;
-
-    .direction-form__title {
-      text-align: right;
-    }
-  }
-
-  .direction-form__transport {
-    width: 30%;
-    order: 5;
   }
 }
