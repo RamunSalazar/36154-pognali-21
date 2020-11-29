@@ -210,6 +210,16 @@
 @media (min-width: $table-width) {
   .page-header {
     padding-bottom: 96px;
+
+    &--inner-page {
+      padding-bottom: 195px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+
+      .page-header__navigation-top {
+        padding-top: 25px;
+      }
+    }
   }
 
   .page-header__title {
@@ -421,7 +431,7 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 20px;
-      padding-top: 16px;
+      padding-top: 14px;
       height: 36px;
       border-radius: 25px;
       text-align: center;
@@ -551,6 +561,26 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 0;
+
+    &--inner-page {
+      padding-bottom: 148px;
+      border-bottom-left-radius: 56px;
+      border-bottom-right-radius: 56px;
+
+      .page-header__navigation-top {
+        padding-top: 21px;
+
+        .page-header__logo {
+          &::after {
+            top: 18px;
+          }
+        }
+
+        .page-header__user-list {
+          margin-top: 1px;
+        }
+      }
+    }
   }
 
   .page-header__title {

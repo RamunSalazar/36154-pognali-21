@@ -72,9 +72,11 @@
             <img class="img direction-form__person-image" src="" width="" height="" alt="">
             <figcaption class="direction-form__person-text">фото</figcaption>
           </figure>
-          <button class="direction-form__button" type="button">
-            <span class="direction-form__button-text">сменить</span> фото
-          </button>
+          <div class="direction-form__button-wrapper">
+            <button class="direction-form__button" type="button">
+              <span class="direction-form__button-text">сменить</span> фото
+            </button>
+          </div>
           <form class="direction-form__form direction-form__hashtag">
             <fieldset class="direction-form__group direction-form__hashtag-group">
               <legend class="direction-form__title">тэги</legend>
@@ -141,16 +143,16 @@
           </div>
           <div class="add-plan__step add-plan__date">
             <h3 class="title title--small add-plan__step-title">Шаг 1. Даты&nbsp;пребывания</h3>
-            <p class="add-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <p class="add-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в поездку, и ее предполагаемую длительность.</p>
             <ul class="list add-plan__list">
-              <li class="add-plan__item">
+              <li class="list__item add-plan__item">
                 <span class="add-plan__item-text">Даты</span>
               </li>
-              <li class="add-plan__item">
+              <li class="list__item add-plan__item">
                 <span class="add-plan__item-text">маршрут</span>
               </li>
-              <li class="add-plan__item">
-                <span class="add-plan__item-text">маршрут</span>
+              <li class="list__item add-plan__item">
+                <span class="add-plan__item-text">развлечения</span>
               </li>
             </ul>
             <form class="add-plan__form add-plan__date">
@@ -164,7 +166,7 @@
               <div class="add-plan__text-wrapper">
                 <span class="text text--date add-plan__date-day">длительность:</span>
                 <span class="text text--date add-plan__date-day add-plan__date-day--text">дн.</span>
-                <div class="add-plan__counter">
+                <div class="add-plan__counter add-plan__counter-day">
                   <span class="add-plan__counter-text">3</span>
                 </div>
               </div>
@@ -190,7 +192,7 @@
                     </th>
                     <th class="add-plan__calendar-header">
                       <span class="add-plan__calendar-text add-plan__calendar-text1">С</span>
-                      <span class="add-plan__calendar-text add-plan__calendar-text2">СР</span>
+                      <span class="add-plan__calendar-text add-plan__calendar-text2">Ср</span>
                     </th>
                     <th class="add-plan__calendar-header">
                       <span class="add-plan__calendar-text add-plan__calendar-text1">Ч</span>
@@ -364,14 +366,14 @@
             <h3 class="title title--small add-plan__step-title">Шаг 2. Маршрут</h3>
             <p class="add-plan__step-description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
             <ul class="list add-plan__list">
-              <li class="add-plan__item">
+              <li class="list__item add-plan__item">
                 <span class="add-plan__item-text">Даты</span>
               </li>
-              <li class="add-plan__item">
+              <li class="list__item add-plan__item">
                 <span class="add-plan__item-text">маршрут</span>
               </li>
-              <li class="add-plan__item">
-                <span class="add-plan__item-text">маршрут</span>
+              <li class="list__item add-plan__item">
+                <span class="add-plan__item-text">развлечения</span>
               </li>
             </ul>
             <form class="add-plan__form add-plan__route-form">
@@ -386,20 +388,20 @@
                 <label class="add-plan__route-label" for="country-2" aria-label="Выбор страны"></label>
                 <input class="text text--route add-plan__route-country" type="text" name="countrys" id="country-2" value="Чехия">
                 <div class="add-plan__image-wrapper">
-                  <img class="img add-plan__route-flag" src="" width="" height="" alt=""><br>
+                  <img class="img add-plan__route-flag" src="" width="" height="" alt="">
                 </div>
               </div>
               <div class="add-plan__route-wrapper">
                 <label class="add-plan__route-label" for="country" aria-label="Выбор страны"></label>
                 <input class="text text--route add-plan__route-value" type="text" name="countrys"  id="country" placeholder="выберите страну">
                 <div class="add-plan__image-wrapper">
-                  <img class="img add-plan__route-flag" src="" width="" height="" alt=""><br>
+                  <img class="img add-plan__route-flag" src="" width="" height="" alt="">
                 </div>
               </div>
               <button class="text text--route add-plan__button-add" type="button">Добавить страну</button><br>
-              <div class="add-plan__route-button">
+              <div class="add-plan__route-link">
                 <a class="link add-plan__link add-plan__link-forward">Следующий шаг</a>
-                <a class="link add-plan__link add-plan__link-backward">на шаг назад</a>
+                <a class="link add-plan__link add-plan__link-backward">На шаг назад</a>
               </div>
             </form>
           </div>
@@ -407,14 +409,14 @@
             <h3 class="title title--small add-plan__step-title">Шаг 3. Развлечения</h3>
             <p class="add-plan__step-description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
             <ul class="list add-plan__list">
-              <li class="add-plan__item">
+              <li class="list__item add-plan__item">
                 <span class="add-plan__item-text">Даты</span>
               </li>
-              <li class="add-plan__item">
+              <li class="list__item add-plan__item">
                 <span class="add-plan__item-text">маршрут</span>
               </li>
-              <li class="add-plan__item">
-                <span class="add-plan__item-text">маршрут</span>
+              <li class="list__item add-plan__item">
+                <span class="add-plan__item-text">развлечения</span>
               </li>
             </ul>
             <form class="add-plan__form add-plan__entertainment-form">
@@ -445,7 +447,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--inner-page">
       <div class="container">
         <a class="link page-footer__logo" href="">
           погнали?

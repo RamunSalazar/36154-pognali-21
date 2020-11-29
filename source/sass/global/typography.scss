@@ -66,6 +66,10 @@
     &--middle {
       font-size: 45px;
     }
+
+    &--large {
+      font-size: 60px;
+    }
   }
 
   .span {
@@ -77,6 +81,13 @@
   .link-typography {
     &--small {
       font-size: 24px;
+    }
+  }
+
+  .text {
+    &--date {
+      font-size: 20px;
+      line-height: 18px;
     }
   }
 }

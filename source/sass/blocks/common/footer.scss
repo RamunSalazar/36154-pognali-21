@@ -73,6 +73,11 @@
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
 
+    &--inner-page {
+      border-top-left-radius: 56px;
+      border-top-right-radius: 56px;
+    }
+
     .container {
       padding-top: 44px;
       padding-bottom: 18px;
@@ -105,6 +110,8 @@
   .page-footer {
     .container {
       padding: 0 60px;
+      padding-top: 44px;
+      padding-bottom: 18px;
     }
   }
 }

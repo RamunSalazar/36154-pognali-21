@@ -293,6 +293,7 @@
   line-height: 18px;
   font-weight: 500;
   color: $blue-light;
+  padding: 0;
 }
 
 .add-plan__link {
@@ -548,16 +549,6 @@
   }
 }
 
-.add-plan__flag-wrapper {
-  width: 72px;
-  position: absolute;
-  padding-top: 5px;
-  right: 0;
-  top: -8px;
-  text-align: right;
-  background: linear-gradient(to right, transparent, $white 25%);
-}
-
 .add-plan__entertainment-wrapper {
   position: relative;
 
@@ -586,6 +577,16 @@
   .add-plan__entertainment-label {
     margin-bottom: 2px;
   }
+}
+
+.add-plan__flag-wrapper {
+  width: 72px;
+  position: absolute;
+  padding-top: 5px;
+  right: 0;
+  top: -8px;
+  text-align: right;
+  background: linear-gradient(to right, transparent, $white 25%);
 }
 
 .add-plan__entertainment-flag {
@@ -620,81 +621,707 @@
 }
 
 @media (min-width: $table-width) {
-  .add-plan__date {
-    .add-plan__button-forward {
-      width: 284px;
+  .add-plan {
+    .container {
+      padding-top: 49px;
+      padding-bottom: 118px;
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 
-  .add-plan__route-wrapper {
-    .add-plan__route-value {
-      width: 80%;
-    }
-
-    &:nth-child(3) {
-      .add-plan__image-wrapper {
-        display: block;
-        visibility: hidden;
-      }
-    }
+  .add-plan__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 60px;
   }
 
-  .add-plan__route-form {
-    .add-plan__button-add {
-      width: 80%;
+  .add-plan__main-item {
+    margin-right: 35px;
+
+    &::before {
+      width: 6px;
+      height: 6px;
+      top: 17px;
+      left: -4px;
     }
   }
 
-  .add-plan__route-button,
-  .add-plan__entertainment-button {
-    display: flex;
-  }
-}
-
-@media (min-width: $desktop-width) {
   .add-plan__step {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    margin-bottom: 20px;
+    border-radius: 30px;
+    padding-top: 44px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 56px;
+    margin-bottom: 39px;
 
     &:nth-child(2) {
-      .add-plan__step-title {
-        width: 407px;
+      .add-plan__text-wrapper {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background-color: $super-grey-light;
+          top: -22px;
+        }
+
+        &:nth-child(1) {
+          order: 0;
+          margin-bottom: 22px;
+        }
+
+        &:nth-child(2) {
+          order: 2;
+          margin-bottom: 83px;
+
+          &::before {
+            top: -21px;
+          }
+        }
       }
     }
 
     &:nth-child(3) {
+      padding-left: 43px;
+      padding-bottom: 54px;
+      position: relative;
+      margin-bottom: 51px;
+
       .add-plan__step-title {
-        width: 260px;
+        width: 150px;
+        margin-bottom: 37px;
+      }
+
+      .add-plan__step-description {
+        width: 440px;
+        margin-bottom: 76px;
+      }
+
+      .add-plan__link-forward {
+        width: 253px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 3px;
+        height: 70px;
+        bottom: 143px;
+        right: 178px;
+        background: linear-gradient(to bottom, transparent, $white 99%);
       }
     }
 
     &:nth-child(4) {
+      padding-top: 43px;
+      padding-left: 43px;
+      padding-right: 43px;
+      padding-bottom: 53px;
+
       .add-plan__step-title {
-        width: 323px;
+        margin-bottom: 36px;
+      }
+
+      .add-plan__step-description {
+        margin-bottom: 69px;
+      }
+
+      .add-plan__text-wrapper {
+        margin-bottom: 39px;
+
+        &::before {
+          top: -34px;
+        }
+      }
+
+      .add-plan__entertainment-link {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .add-plan__link-forward {
+        width: 253px;
+        margin-left: 0;
+      }
+
+      .add-plan__link-backward {
+        width: 248px;
+        margin-right: -3px;
+      }
+    }
+  }
+
+  .add-plan__step-title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 18px;
+  }
+
+  .add-plan__step-description {
+    width: 95%;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 60px;
+  }
+
+  .add-plan__date {
+    display: flex;
+    flex-direction: column;
+
+    .add-plan__link-forward {
+      order: 4;
+    }
+  }
+
+  .add-plan__date-companion {
+    letter-spacing: 0.1em;
+    margin-bottom: 26px;
+
+    &--text {
+      letter-spacing: 0.08em;
+      margin-right: 4px;
+    }
+  }
+
+  .add-plan__date-day {
+    letter-spacing: 0.1em;
+    margin-bottom: 26px;
+
+    &--text {
+      letter-spacing: 0;
+    }
+  }
+
+  .add-plan__counter {
+    padding-top: 13px;
+    padding-bottom: 22px;
+
+    &::before {
+      top: 15px;
+      left: 25px;
+    }
+
+    &::after {
+      top: 17px;
+      right: 25px;
+    }
+  }
+
+  .add-plan__counter-text {
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: -7px;
+  }
+
+  .add-plan__checkbox-wrapper {
+    order: 1;
+    margin-bottom: 53px;
+  }
+
+  .add-plan__date-label {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-left: 58px;
+    font-weight: 500;
+  }
+
+  .add-plan__date-checkbox + .add-plan__date-label {
+    &::before {
+      width: 34px;
+      height: 34px;
+      left: -58px;
+      top: -4px;
+    }
+  }
+
+  .add-plan__date-checkbox {
+    &:checked + .add-plan__date-label {
+      &::after {
+        left: -42px;
+        top: 13px;
+      }
+    }
+  }
+
+  .add-plan__calendar-wrapper {
+    order: 3;
+    margin-bottom: 47px;
+  }
+
+  .add-plan__month-wrapper {
+    margin-bottom: 60px;
+
+    &::before {
+      top: -24px;
+    }
+
+    &::after {
+      bottom: -27px;
+    }
+  }
+
+  .add-plan__month-name {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: -2px;
+  }
+
+  .add-plan__calendar-text {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .add-plan__calendar-text1 {
+    display: none;
+  }
+
+  .add-plan__calendar-text2 {
+    display: block;
+  }
+
+  .add-plan__calendar-header {
+    width: 76px;
+    height: 28px;
+  }
+
+  .add-plan__calendar-number {
+    width: 76px;
+    height: 68px;
+  }
+
+  .add-plan__calendar-button {
+    font-size: 18px;
+  }
+
+  .add-plan__route-form {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100% - 2px);
+      height: 1px;
+      background-color: $super-grey-light;
+      top: -43px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 396px;
+      background-color: $super-grey-light;
+      top: -42px;
+      right: 139px;
+      z-index: 0;
+    }
+  }
+
+  .add-plan__route-link {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .add-plan__link-forward {
+    width: 251px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+    text-transform: none;
+    border-radius: 20px;
+    padding-top: 26px;
+    padding-left: 33px;
+    padding-bottom: 30px;
+  }
+
+  .add-plan__link-backward {
+    width: 200px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: right;
+    text-transform: none;
+    padding-top: 27px;
+    padding-right: 2px;
+    padding-bottom: 29px;
+    letter-spacing: 0;
+  }
+
+  .add-plan__route-wrapper {
+    margin-bottom: 16px;
+
+    &:nth-child(1) {
+      .add-plan__image-wrapper {
+        &::before {
+          top: 26px;
+        }
       }
     }
 
-    .add-plan__step-title {
-      grid-row: 1/2;
-      grid-column: 1/2;
+    &:nth-child(2) {
+      margin-bottom: 15px;
     }
 
-    .add-plan__step-description {
-      grid-row: 2/3;
-      grid-column: 1/2;
+    &:nth-child(3) {
+      margin-bottom: 13px;
+
+      .add-plan__image-wrapper {
+        left: 0;
+        top: 0;
+
+        &::before {
+          width: 12px;
+          height: 12px;
+          top: 27px;
+          left: 19px;
+          z-index: 1;
+          background-color: $white;
+        }
+
+        &::after {
+          top: 24px;
+          right: -2px;
+        }
+      }
+
+      .add-plan__route-label {
+        &::before {
+          top: 29px;
+          right: 0;
+        }
+      }
     }
 
-    .add-plan__list {
-      grid-row: 1/3;
-      grid-column: 2/3;
+    &::after {
+      display: none;
+    }
+  }
+
+  .add-plan__route-country,
+  .add-plan__route-value,
+  .add-plan__button-add {
+    font-size: 20px;
+    line-height: 20px;
+    width: calc(63.8% - 29px + (36.2% - 165px));
+    padding-top: 21px;
+    padding-bottom: 22px;
+    padding-left: 24px;
+    letter-spacing: 0.1em;
+  }
+
+  .add-plan__route-label {
+    width: calc(63.8% - 29px + (36.2% - 165px));
+
+    &::after {
+      display: none;
     }
 
-    .add-plan__form {
-      grid-row: 3/4;
-      grid-column: 1/-1;
+    &::before {
+      height: 11px;
+      width: 16px;
+      top: 29px;
+      right: 0;
     }
+  }
+
+  .add-plan__image-wrapper {
+    width: 165px;
+    border: none;
+    margin-left: 0;
+    padding-top: 12px;
+    text-align: center;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+      top: 25px;
+      left: 19px;
+      z-index: 1;
+    }
+
+    &::after {
+      top: 24px;
+      right: -2px;
+    }
+  }
+
+  .add-plan__route-flag {
+    width: 70px;
+    height: 47px;
+    margin-left: 7px;
+  }
+
+  .add-plan__button-add {
+    margin-left: 0;
+    padding-top: 24px;
+    padding-bottom: 26px;
+    padding-left: 26px;
+    letter-spacing: 0.09em;
+    width: calc(69% - 1px + (31% - 165px));
+    margin-bottom: 50px;
+    opacity: 1;
+
+    &::before {
+      top: 29px;
+      right: 29px;
+    }
+
+    &::after {
+      width: 12px;
+      height: 12px;
+      top: 27px;
+      right: -33px;
+      background-color: $grey;
+      z-index: 1;
+    }
+  }
+
+  .add-plan__entertainment-wrapper {
+    &:nth-child(1) {
+      margin-bottom: 42px;
+
+      &::before {
+        width: 2px;
+        height: 270px;
+        top: 14px;
+        left: auto;
+        right: 3px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-left: 1px;
+      margin-bottom: 41px;
+
+      .add-plan__entertainment-text {
+        margin-left: 1px;
+        padding-left: 18px;
+        padding-top: 15px;
+        line-height: 23px;
+        height: 115px;
+      }
+
+      .add-plan__entertainment-label {
+        &::before {
+          top: 11px;
+        }
+      }
+    }
+  }
+
+  .add-plan__entertainment-label {
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 0;
+    font-weight: 700;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+      top: 12px;
+      left: auto;
+      right: -3px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .add-plan__entertainment-text {
+    margin-left: 2px;
+    width: calc(82.9% - 8px + (17.1% - 83px));
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 16px;
+    padding-right: 40px;
+    padding-left: 17px;
+    height: 114px;
+  }
+
+  .add-plan__flag-wrapper {
+    width: 70px;
+    height: 49px;
+    padding-top: 0;
+    right: 30px;
+    top: -7px;
+    text-align: center;
+    background: none;
+  }
+
+  .add-plan__entertainment-flag {
+    width: 70px;
+    height: 49px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-plan {
+    margin-top: -55px;
+    border-top-left-radius: 57px;
+    border-top-right-radius: 57px;
+
+    .container {
+      padding-top: 51px;
+      padding-bottom: 128px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  .add-plan__step {
+    border-radius: 60px;
+    padding-top: 97px;
+    padding-left: 159px;
+    padding-right: 163px;
+    padding-bottom: 106px;
+    margin-bottom: 44px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .add-plan__step-title {
+        width: 581px;
+      }
+    }
+
+    &:nth-child(2) {
+      .add-plan__text-wrapper {
+        align-items: baseline;
+
+        &:nth-child(1) {
+          width: 479px;
+          margin-bottom: 14px;
+        }
+
+        &:nth-child(2) {
+          width: 468px;
+          margin-bottom: 57px;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        &::before {
+          width: 208.4%;
+          top: -31px;
+        }
+      }
+
+      .add-plan__link-forward {
+        margin-left: 1px;
+        width: 253px;
+      }
+    }
+
+    &:nth-child(3) {
+      padding-top: 94px;
+      padding-left: 160px;
+      padding-right: 160px;
+      padding-bottom: 106px;
+      margin-bottom: 43px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .add-plan__step-title {
+        margin-bottom: 20px;
+      }
+
+      .add-plan__list {
+        margin-right: 44px;
+      }
+
+      .add-plan__item {
+        &:nth-child(1),
+        &:nth-child(3) {
+          opacity: 0.6;
+
+          &::before {
+            opacity: 0.3;
+          }
+        }
+
+        &:nth-child(2) {
+          opacity: 1;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+
+      .add-plan__step-description {
+        margin-bottom: 118px;
+      }
+    }
+
+    &:nth-child(4) {
+      padding-top: 96px;
+      padding-left: 158px;
+      padding-right: 160px;
+      padding-bottom: 103px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .add-plan__step-title {
+        margin-bottom: 19px;
+      }
+
+      .add-plan__list {
+        margin-right: 44px;
+      }
+
+      .add-plan__item {
+        &:nth-child(1),
+        &:nth-child(2) {
+          opacity: 0.6;
+
+          &::before {
+            opacity: 0.3;
+          }
+        }
+
+        &:nth-child(3) {
+          opacity: 1;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+
+      .add-plan__step-description {
+        margin-left: 2px;
+        margin-bottom: 133px;
+        width: 474px;
+      }
+
+      .add-plan__flag-wrapper {
+        top: -4px;
+        right: 116px;
+      }
+
+      .add-plan__link-forward {
+        margin-left: 2px;
+      }
+
+      .add-plan__link-backward {
+        margin-right: 1px;
+      }
+    }
+  }
+
+  .add-plan__title {
+    margin-left: 69px;
+    margin-bottom: 58px;
   }
 
   .add-plan__main-list {
@@ -703,68 +1330,251 @@
 
   .add-plan__list {
     display: block;
+    width: max-content;
+    margin-top: -54px;
+    margin-right: 41px;
   }
 
-  .add-plan__text-wrapper {
-    .add-plan__date-day,
-    .add-plan__date-companion {
-      &:nth-child(1) {
-        order: 0;
-      }
+  .add-plan__item {
+    margin-bottom: 11px;
+    position: relative;
 
-      &:nth-child(2) {
-        order: 2;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      opacity: 0.6;
+
+      &::before {
+        opacity: 0.3;
       }
     }
 
-    .add-plan__counter {
-      width: 180px;
-      order: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $blue-light;
+      top: 16px;
+      left: -42px;
     }
+  }
+
+  .add-plan__item-text {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .add-plan__step-description {
+    width: 581px;
+    margin-top: 18px;
+    margin-bottom: 86px;
+  }
+
+  .add-plan__form {
+    width: 100%;
   }
 
   .add-plan__date {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 3fr 1fr;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
-    .add-plan__text-wrapper {
-      width: 475px;
+  .add-plan__date-companion {
+    letter-spacing: normal;
 
-      &:nth-child(1) {
-        grid-row: 1/2;
-        grid-column: 1/2;
+    &--text {
+      opacity: 1;
+    }
+
+    &:nth-child(1) {
+      order: 0;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+  }
+
+  .add-plan__counter {
+    order: 1;
+    width: 178px;
+    margin-left: 25px;
+  }
+
+  .add-plan__counter-day {
+    margin-left: 44px;
+  }
+
+  .add-plan__checkbox-wrapper {
+    width: max-content;
+    margin-top: 13px;
+    margin-right: -5px;
+    margin-bottom: 0;
+  }
+
+  .add-plan__date-day {
+    letter-spacing: normal;
+
+    &:nth-child(1) {
+      order: 0;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+  }
+
+  .add-plan__calendar-wrapper {
+    width: 100%;
+    margin-bottom: 57px;
+  }
+
+  .add-plan__calendar {
+    width: 100%;
+    margin-left: 1px;
+  }
+
+  .add-plan__month-wrapper {
+    margin-bottom: 42px;
+  }
+
+  .add-plan__month-name {
+    margin-left: 3px;
+  }
+
+  .add-plan__calendar-header {
+    width: 141px;
+    height: max-content;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-left: 18px;
+  }
+
+  .add-plan__calendar-number {
+    width: 141px;
+    height: 70px;
+  }
+
+  .add-plan__calendar-button {
+    width: 141px;
+    display: flex;
+    padding-top: 13px;
+    padding-left: 15px;
+  }
+
+  .add-plan__calendar-text3 {
+    display: block;
+  }
+
+  .add-plan__calendar-row {
+    &:nth-child(2),
+    &:nth-child(7) {
+      .add-plan__calendar-text3 {
+        margin-left: 5px;
+      }
+    }
+
+    &:nth-child(6) {
+      .add-plan__calendar-button {
+        flex-direction: column;
       }
 
-      &:nth-child(2) {
-        grid-row: 2/3;
-        grid-column: 1/2;
+      .add-plan__calendar-text3 {
+        margin-left: 2px;
+        margin-top: 7px;
       }
+    }
+  }
+
+  .add-plan__route-wrapper {
+    &:nth-child(3) {
+      .add-plan__image-wrapper {
+        &::before {
+          top: 25px;
+          left: 38px;
+        }
+      }
+    }
+  }
+
+  .add-plan__route-country,
+  .add-plan__route-value,
+  .add-plan__route-label {
+    width: 702px;
+  }
+
+  .add-plan__button-add {
+    width: 730px;
+    margin-bottom: 57px;
+
+    &::after {
+      right: -52px;
+      top: 26px;
     }
   }
 
   .add-plan__route-form {
-    .add-plan__route-button {
-      width: 100%;
-      justify-content: space-between;
+    &::before {
+      top: -63px;
+    }
+
+    &::after {
+      height: 540px;
+      top: -63px;
+      right: 225px;
     }
   }
 
-  .add-plan__button {
-    width: 286px;
+  .add-plan__image-wrapper {
+    width: 264px;
+
+    &::before {
+      top: 25px;
+      left: 38px;
+    }
+  }
+
+  .add-plan__route-flag {
+    margin-left: -22px;
+  }
+
+  .add-plan__entertainment-wrapper {
+    &:nth-child(1) {
+      &::before {
+        right: 225px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 52px;
+
+      .add-plan__entertainment-text {
+        height: 108px;
+        padding-top: 22px;
+        padding-left: 24px;
+      }
+    }
   }
 
   .add-plan__entertainment-text {
-    width: 730px;
+    height: 108px;
+    width: 699px;
+    padding-top: 22px;
+    padding-left: 24px;
+    padding-right: 5px;
   }
 
-  .add-plan__entertainment-form {
-    .add-plan__entertainment-button {
-      justify-content: space-between;
-    }
-
-    .add-plan__button {
-      width: 286px;
+  .add-plan__entertainment-label {
+    &::before {
+      right: 219px;
     }
   }
 }
