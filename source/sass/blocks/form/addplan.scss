@@ -1231,6 +1231,10 @@
       display: flex;
       flex-wrap: wrap;
 
+      &::after {
+        display: none;
+      }
+
       .add-plan__step-title {
         margin-bottom: 20px;
       }

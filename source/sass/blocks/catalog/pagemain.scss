@@ -1,9 +1,32 @@
+.page-main {
+  &--catalog {
+    background-color: $grey;
+    padding-bottom: 79px;
+  }
+}
+
 .title-wrapper {
   display: flex;
   justify-content: space-between;
   background-color: transparent;
-  z-index: 1;
-  margin-top: -80px;
+  margin-top: -51px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.main-title {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 172px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: $orange;
+    left: 0;
+    bottom: -17px;
+  }
 }
 
 @media (max-width: $table-width - 1px) {
@@ -12,43 +35,80 @@
   }
 }
 
+@media (min-width: $table-width) {
+  .title-wrapper {
+    margin-top: -135px;
+    margin-left: 34px;
+    margin-bottom: 95px;
+  }
+
+  .main-title {
+    &::after {
+      width: 288px;
+      height: 8px;
+      left: 0;
+      bottom: -79px;
+    }
+  }
+
+  .title-button {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 180px;
+    text-align: left;
+    padding: 0;
+    margin-right: 32px;
+    margin-top: 13px;
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    background-color: transparent;
+    border: none;
+    color: $white;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 13px;
+      background-color: $white;
+      top: 19px;
+      right: 0;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .page-main {
     &--catalog {
+      margin-top: -50px;
       display: flex;
       flex-wrap: wrap;
-      background-color: $grey;
 
       .title-wrapper {
         width: 100%;
+        padding-left: 92px;
+        padding-top: 52px;
+        padding-right: 87px;
       }
 
       .filter-country {
-        width: 100%;
+        width: 1440px;
       }
-    }
 
-    .cart-profile {
-      width: 950px;
-      margin-left: 60px;
-      margin-right: 85px;
-
-      .container {
-        width: 950px;
-        padding: 0;
-        margin: 0;
+      .title-button {
+        &::after {
+          width: 32px;
+          height: 13px;
+          top: 17px;
+          right: 3px;
+        }
       }
     }
 
     .filter-companion {
       order: 1;
-      width: 20%;
-
-      .container {
-        width: 285px;
-        padding: 0;
-        margin: 0;
-      }
     }
   }
 }
