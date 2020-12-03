@@ -217,7 +217,7 @@
       border-bottom-right-radius: 60px;
 
       .page-header__navigation-top {
-        padding-top: 25px;
+        padding-top: 40px;
       }
     }
   }
@@ -290,7 +290,7 @@
 
     &--open {
       position: relative;
-      z-index: 1;
+      z-index: 4;
       margin-bottom: -478px;
       background-color: $white;
       padding-bottom: 40px;
@@ -568,7 +568,7 @@
       border-bottom-right-radius: 56px;
 
       .page-header__navigation-top {
-        padding-top: 21px;
+        padding-top: 45px;
 
         .page-header__logo {
           &::after {

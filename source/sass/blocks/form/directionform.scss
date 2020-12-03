@@ -258,6 +258,8 @@
     margin: 0;
     margin-right: -30px;
     margin-top: -14px;
+    position: relative;
+    z-index: 3;
   }
 
   .direction-form__person-photo {
@@ -270,6 +272,8 @@
     border-top-right-radius: 7px;
     margin-right: 96px;
     margin-top: -56px;
+    position: relative;
+    z-index: 3;
   }
 
   .direction-form__hashtag-group {
