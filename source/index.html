@@ -9,9 +9,18 @@
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__navigation-wrapper page-header__navigation-top page-header__navigation-top">
-        <a class="link page-header__logo" href="index.html">
-          погнали?
-          <img class="img page-header__logo-image" src="" width="" height="" alt="">
+        <a class="link page-header__logo page-header__logo1" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.png 1x, img/logo-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x">
+            <img class="img page-header__logo-image" src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" alt="Логотип сервиса путишествий - погнали?">
+          </picture>
+        </a>
+        <a class="link page-header__logo page-header__logo2" href="index.html">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-menu.png 1x, img/logo-tablet-menu@2x.png 2x">
+            <img class="img page-header__logo-image" src="img/logo-mobile-menu.png" srcset="img/logo-mobile-menu@2x.png 2x" alt="Логотип сервиса путишествий - погнали?">
+          </picture>
         </a>
         <button class="page-header__navigation-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -62,8 +71,7 @@
       <h1 class="page-header__title">В путешествие<br> с крутыми<br> попутчиками!</h1>
       <div class="page-header__navigation-wrapper page-header__navigation-bottom">
         <a class="link page-header__logo" href="">
-          погнали?
-          <img class="img page-header__logo-image" src="" width="" height="" alt="">
+          <img class="img page-header__logo-image" src="img/logo-desktop-menu.png" srcset="img/logo-desktop-menu@2x.png 2x" alt="Логотип сервиса путишествий">
         </a>
         <nav class="page-header__navigation">
           <ul class="list page-header__navigation-list page-header__site-list">
@@ -118,6 +126,13 @@
           <dd class="definition page-header__sequence-number">4</dd>
         </div>
       </dl>
+      <div class="page-header__image-wrapper">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/traveller-illustration-desktop.png 1x, img/traveller-illustration-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/traveller-illustration-tablet.png 1x, img/traveller-illustration-tablet@2x.png 2x">
+          <img class="img page-header__image" src="img/traveller-illustration-mobile.png" srcset="img/traveller-illustration-mobile@2x.png 2x" alt="Путишественник">
+        </picture>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Сервис для путешествий - погнали?</h1>
@@ -134,10 +149,18 @@
               вдохновение в чужих.
             </p>
             <p class="service__description">А если найдете кого-то близкого по духу
-              <span class="service__description-text1">—&nbsp;скорее</span>
-              <span class="service__description-text2">— скорее</span>
-              зовите в совместный трип!</p>
+              <span class="service__description-text1">&#8213;&nbsp;скорее</span>
+              <span class="service__description-text2">&#8213; скорее</span>
+              зовите в совместный трип!
+            </p>
             <a class="link link-typography link-typography--small service__link" href="">Подробнее</a>
+          </div>
+          <div class="service__image-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/about-desktop.png 1x, img/about-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/about_tablet.png 1x, img/about_tablet@2x.png 2x">
+              <img src="img/about-mobile.png" srcset="img/about-mobile@2x.png 2x" alt="Мобильный телефон с возможными попутчиками">
+            </picture>
           </div>
         </div>
       </section>
@@ -156,7 +179,10 @@
           <ul class="list direction__list">
             <li class="list__item direction__item">
               <div class="direction__image-wrapper">
-                <img class="img direction__county-image" src="" width="" height="" alt="">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/thailand-desktop.png 1x, img/thailand-desktop@2x.jpg 2x">
+                  <img class="img direction__county-image" src="img/thailand-mobile.png" srcset="img/thailand-mobile@2x.png 2x" alt="Фото Тайланда">
+                </picture>
               </div>
               <div class="direction__country-wrapper">
                 <div class="direction__text-wrapper">
@@ -168,7 +194,10 @@
             </li>
             <li class="list__item direction__item">
               <div class="direction__image-wrapper">
-                <img class="img direction__county-image" src="" width="" height="" alt="">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/france-desktop.png 1x, img/france-desktop@2x.jpg 2x">
+                  <img class="img direction__county-image" src="img/france-mobile.png" srcset="img/france-mobile@2x.png 2x" alt="Фото Франции">
+                </picture>
               </div>
               <div class="direction__country-wrapper">
                 <div class="direction__text-wrapper">
@@ -180,7 +209,10 @@
             </li>
             <li class="list__item direction__item">
               <div class="direction__image-wrapper">
-                <img class="img direction__county-image" src="" width="" height="" alt="">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/czech-desktop.png 1x, img/czech-desktop@2x.jpg 2x">
+                  <img class="img direction__county-image" src="img/czech-mobile.png" srcset="img/czech-mobile@2x.png 2x" alt="Фото Чехии">
+                </picture>
               </div>
               <div class="direction__country-wrapper">
                 <div class="direction__text-wrapper">
@@ -214,18 +246,21 @@
           <ul class="list companion__list">
             <li class="list__item companion__item">
               <div class="companion__image-wrapper">
-                <img class="img companion__person-photo" src="" width="" height="" alt="">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/firsova.png 1x, img/firsova@2x.png 2x">
+                  <img class="img companion__person-photo" src="img/firsova-mobile.png" srcset="img/firsova-mobile@2x.png 2x" alt="Фото попутчика">
+                </picture>
               </div>
               <div class="companion__info-wrapper">
                 <ul class="list companion__flag-list">
                   <li class="list__item companion__flag-item">
-                    <img class="img" src="" width="" height="" alt="">
+                    <img class="img" src="img/sri-lanka-flag.png" srcset="img/sri-lanka-flag@2x.png 2x" alt="Флаг Шри-Ланки">
                   </li>
                   <li class="list__item companion__flag-item">
-                    <img class="img" src="" width="" height="" alt="">
+                    <img class="img" src="img/thailand-flag.png" srcset="img/thailand-flag@2x.png 2x" alt="Флаг Тайланда">
                   </li>
                   <li class="list__item companion__flag-item">
-                    <img class="img" src="" width="" height="" alt="">
+                    <img class="img" src="img/seychelles-flag.png" srcset="img/seychelles-flag@2x.png 2x" alt="Флаг Сейшел">
                   </li>
                 </ul>
                 <span class="span span--middle companion__person-name">Таня Фирсова</span>
@@ -267,15 +302,18 @@
             </li>
             <li class="list__item companion__item">
               <div class="companion__image-wrapper">
-                <img class="img companion__person-photo" src="" width="" height="" alt="">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/demin.png 1x, img/demin@2x.png 2x">
+                  <img class="img companion__person-photo" src="img/demin-mobile.png" srcset="img/demin-mobile@2x.png 2x" alt="Фото попутчика">
+                </picture>
               </div>
               <div class="companion__info-wrapper">
                 <ul class="list companion__flag-list">
                   <li class="list__item companion__flag-item">
-                    <img class="img" src="" width="" height="" alt="">
+                    <img class="img" src="img/germany-flag.png" srcset="img/germany-flag@2x.png 2x" alt="Флаг Германии">
                   </li>
                   <li class="list__item companion__flag-item">
-                    <img class="img" src="" width="" height="" alt="">
+                    <img class="img" src="img/czech-flag.png" srcset="img/czech-flag@2x.png 2x" alt="Флаг Чехии">
                   </li>
                 </ul>
                 <span class="span span--middle companion__person-name">Петя Демин</span>
@@ -324,7 +362,7 @@
         <div class="container">
           <h2 class="title title--middle add-profile__title">Добавьте свой профиль</h2>
           <div class="add-profile__icon-wrapper">
-            <img class="img add-profile__icon" src="" width="" height="" alt="">
+            <img class="img add-profile__icon" src="img/rates.png" srcset="img/rates@2x.png 2x" alt="Иконка тарифов">
           </div>
           <div class="add-profile__option-wrapper">
             <dl class="add-profile__option">
@@ -388,14 +426,17 @@
             <span class="map__link-text">Проложить маршрут</span>
           </a>
         </div>
-        <img class="img map__image" src="" width="" height="" alt="">
+        <iframe class="map-image" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.207512053241!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1607098009989!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
     </main>
     <footer class="page-footer">
       <div class="container">
-        <a class="link page-footer__logo" href="">
-          погнали?
-          <img class="page-footer__logo-image" src="" width="" height="" alt="">
+        <a class="link page-footer__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-desktop-menu.png 1x, img/logo-desktop-menu@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-menu.png 1x, img/logo-tablet-menu@2x.png 2x">
+            <img class="page-footer__logo-image" src="img/logo-mobile-menu.png" srcset="img/logo-mobile-menu@2x.png 2x" alt="Логотип сервиса">
+          </picture>
         </a>
         <ul class="list page-footer__list">
           <li class="list__item page-footer__item">
@@ -411,7 +452,7 @@
         <div class="copyright-wrapper">
           <span class="page-footer__text">Разработано</span>
           <a class="link page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="img page-footer__academy-image" src="" width="" height="" alt="">
+            <img class="img page-footer__academy-image" src="img/academy-logo.svg" alt="Логотип академии">
           </a>
         </div>
       </div>
