@@ -1,6 +1,8 @@
 .page-header {
-  background-color: $blue;
   padding-bottom: 39px;
+  background:
+    linear-gradient(to bottom, transparent 477px, $blue 477px, $blue 762px, $special-blue 762px, $special-blue 100%),
+    $blue url("../../../img/globe-back-desktop.png") -314px 119px / 928px auto no-repeat;
 
   &--inner-page {
     position: relative;
@@ -18,11 +20,25 @@
   }
 }
 
+.page-header__navigation-top {
+  &--open {
+    .page-header__logo1 {
+      display: none;
+    }
+
+    .page-header__logo2 {
+      display: block;
+    }
+  }
+}
+
 .page-header__navigation-bottom,
 .page-header__title,
 .page-header__review,
 .page-header__sequence {
   margin: 0 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .page-header__social-list {
@@ -119,6 +135,22 @@
   color: $white;
 }
 
+.page-header__image-wrapper {
+  position: absolute;
+  z-index: 0;
+  top: 222px;
+  right: 48px;
+}
+
+.page-header__logo {
+  margin-top: -3px;
+  margin-left: 27px;
+}
+
+.page-header__logo2 {
+  display: none;
+}
+
 @media (max-width: $table-width - 1px) {
   .page-header__navigation-bottom {
     height: 40px;
@@ -210,6 +242,9 @@
 @media (min-width: $table-width) {
   .page-header {
     padding-bottom: 96px;
+    background:
+      linear-gradient(to bottom, transparent 994px, $special-blue-dark 994px, $special-blue-dark 100%),
+      $blue url("../../../img/globe-back-desktop.png") -207px 244px / auto auto no-repeat;
 
     &--inner-page {
       padding-bottom: 195px;
@@ -265,6 +300,11 @@
     line-height: 30px;
     margin-left: 2px;
   }
+
+  .page-header__image-wrapper {
+    top: 404px;
+    right: 111px;
+  }
 }
 
 @media (max-width: $desktop-width - 1px) {
@@ -278,10 +318,6 @@
     .page-header__navigation,
     .page-header__social-list {
       display: none;
-    }
-
-    .page-header__logo {
-      margin-left: 25px;
     }
 
     .page-header__navigation-toggle {
@@ -414,10 +450,11 @@
 @media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
   .page-header__navigation-top {
     padding-top: 40px;
-    margin-bottom: 65px;
+    margin-bottom: 55px;
 
     .page-header__logo {
-      margin-left: 40px;
+      margin-top: 5px;
+      margin-left: 37px;
       width: 188px;
     }
 
@@ -446,7 +483,6 @@
 
     &--open {
       position: relative;
-      z-index: 1;
       margin-bottom: -755px;
       padding-bottom: 91px;
 
@@ -561,6 +597,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 0;
+    background: $blue url("../../../img/globe-back-desktop.png") 0 0 / auto auto no-repeat;
+    position: relative;
+    z-index: 7;
 
     &--inner-page {
       padding-bottom: 148px;
@@ -591,7 +630,7 @@
   }
 
   .page-header__navigation-top {
-    padding-top: 47px;
+    padding-top: 45px;
     display: flex;
     margin-left: 60px;
     margin-right: 60px;
@@ -617,20 +656,6 @@
     .page-header__user-authorization {
       display: none;
     }
-
-    .page-header__logo {
-      position: relative;
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 60px;
-        height: 2px;
-        background-color: $white;
-        top: 17px;
-        right: -102px;
-      }
-    }
   }
 
   .page-header__navigation-bottom {
@@ -641,12 +666,13 @@
     margin: 0;
     padding-left: 60px;
     padding-right: 60px;
-    padding-top: 16px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 17px;
 
     .page-header__logo {
       display: block;
       position: relative;
+      top: 8px;
 
       &::after {
         position: absolute;
@@ -654,8 +680,8 @@
         width: 44px;
         height: 2px;
         background-color: $special-blue;
-        top: 18px;
-        right: -102px;
+        top: 29px;
+        right: -100px;
       }
     }
 
@@ -678,7 +704,20 @@
   }
 
   .page-header__logo {
-    width: 198px;
+    margin-left: 0;
+    width: 200px;
+    position: relative;
+    top: 4px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 2px;
+      background-color: $white;
+      top: 28px;
+      right: -100px;
+    }
   }
 
   .page-header__site-list {
@@ -805,5 +844,10 @@
     font-size: 24px;
     line-height: 24px;
     margin-top: -1px;
+  }
+
+  .page-header__image-wrapper {
+    top: 110px;
+    right: 405px;
   }
 }

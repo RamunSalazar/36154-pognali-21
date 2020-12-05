@@ -1,5 +1,5 @@
 .direction {
-  background-color: $grey;
+  background: $grey;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: relative;
@@ -7,13 +7,14 @@
   margin-top: -37px;
 
   .container {
-    padding-top: 108px;
-    padding-bottom: 34px;
+    padding-top: 106px;
+    padding-bottom: 33px;
   }
 }
 
 .direction__wrapper {
   margin-left: 25px;
+  margin-bottom: 62px;
 }
 
 .direction__title {
@@ -24,7 +25,6 @@
 .direction__description {
   color: $special-grey;
   margin: 0;
-  margin-bottom: 60px;
 }
 
 .direction__country-description {
@@ -49,18 +49,50 @@
 }
 
 .direction__list {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .direction__item {
   height: 190px;
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   margin-bottom: 9px;
 
+  &:nth-child(1) {
+    .direction__country-wrapper {
+      &::before {
+        background: url("../../../img/thailand-flag.png") 0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .direction__country-wrapper {
+      &::before {
+        background: url("../../../img/france-flag.png") 0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
   &:nth-child(3) {
     .direction__text-wrapper {
       width: 130px;
+    }
+
+    .direction__counter {
+      margin-right: 9px;
+    }
+
+    .direction__country-wrapper {
+      &::before {
+        background: url("../../../img/czech-flag.png") 0 0 no-repeat;
+        background-size: contain;
+      }
     }
   }
 }
@@ -69,7 +101,8 @@
   display: flex;
   justify-content: space-between;
   background-color: $white;
-  padding-top: 26px;
+  height: 64px;
+  padding-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
   position: relative;
@@ -79,8 +112,8 @@
     content: "";
     width: 35px;
     height: 24px;
-    background-color: $orange;
-    top: -12px;
+    top: -14px;
+    left: 25px;
   }
 }
 
@@ -97,8 +130,45 @@
 }
 
 .direction__image-wrapper {
-  background-color: $black;
+  background-color: $white;
   height: 110px;
+}
+
+@media (min-resolution: 2dppx) {
+  .direction__item {
+    &:nth-child(1) {
+      .direction__country-wrapper {
+        &::before {
+          background: url("../../../img/thailand-flag@2x.png") 0 0 no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .direction__country-wrapper {
+        &::before {
+          background: url("../../../img/france-flag@2x.png") 0 0 no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .direction__country-wrapper {
+        &::before {
+          background: url("../../../img/czech-flag@2x.png") 0 0 no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  .direction {
+    background:
+      url("../../../img/rectangle-direction.svg") 40px 456px no-repeat,
+      $grey url("../../../img/flags-back@2x.png") 91.9% 130px no-repeat;
+  }
 }
 
 @media (max-width: $table-width - 1px) {
@@ -118,6 +188,9 @@
     margin-top: -50px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    background:
+      url("../../../img/rectangle-direction.svg") 40px 456px no-repeat,
+      $grey url("../../../img/flags-back.png") 91.9% 130px no-repeat;
 
     .container {
       padding-top: 118px;
@@ -163,10 +236,10 @@
   }
 
   .direction__item {
-    display: flex;
-    flex-direction: row-reverse;
     margin-bottom: 11px;
     height: 140px;
+    width: 616px;
+    position: relative;
 
     &:nth-child(2) {
       margin-bottom: 10px;
@@ -182,18 +255,22 @@
 
   .direction__country-wrapper {
     display: block;
-    width: 68.3%;
+    width: 65%;
+    height: 113px;
     padding-top: 27px;
     padding-left: 30px;
     padding-right: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    position: relative;
+    z-index: 1;
 
     &::before {
       width: 70px;
       height: 47px;
       top: 17px;
-      right: -35px;
+      left: auto;
+      right: -36px;
       border-radius: 5px;
     }
   }
@@ -209,10 +286,25 @@
   }
 
   .direction__image-wrapper {
-    width: 31.7%;
+    width: 559px;
     height: 140px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    position: absolute;
+    z-index: 0;
+    right: 0;
+  }
+
+  .direction__county-image {
+    height: 140px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .direction {
+      background:
+        url("../../../img/rectangle-direction.svg") 40px 456px no-repeat,
+        $grey url("../../../img/flags-back@2x.png") 91.9% 130px no-repeat;
+    }
   }
 }
 
@@ -220,6 +312,9 @@
   .direction {
     border-bottom-left-radius: 56px;
     border-bottom-right-radius: 56px;
+    background:
+      url("../../../img/rectangle-direction.svg") 60px 140px no-repeat,
+      $grey url("../../../img/flags-back.png") 94.9% 138px no-repeat;
 
     .container {
       display: grid;
@@ -275,6 +370,15 @@
   }
 
   .direction__image-wrapper {
-    width: 186px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .direction {
+      background:
+        url("../../../img/rectangle-direction.svg") 60px 140px no-repeat,
+        $grey url("../../../img/flags-back@2x.png") 94.9% 138px no-repeat;
+    }
   }
 }
