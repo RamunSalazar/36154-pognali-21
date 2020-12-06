@@ -9,9 +9,18 @@
   <body class="page-body">
     <header class="page-header page-header--inner-page">
       <div class="page-header__navigation-wrapper page-header__navigation-top page-header__navigation-top">
-        <a class="link page-header__logo" href="index.html">
-          погнали?
-          <img class="img page-header__logo-image" src="" width="" height="" alt="">
+        <a class="link page-header__logo page-header__logo1" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.png 1x, img/logo-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x">
+            <img class="img page-header__logo-image" src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" alt="Логотип сервиса путишествий - погнали?">
+          </picture>
+        </a>
+        <a class="link page-header__logo page-header__logo2" href="index.html">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-menu.png 1x, img/logo-tablet-menu@2x.png 2x">
+            <img class="img page-header__logo-image" src="img/logo-mobile-menu.png" srcset="img/logo-mobile-menu@2x.png 2x" alt="Логотип сервиса путишествий - погнали?">
+          </picture>
         </a>
         <button class="page-header__navigation-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -68,10 +77,12 @@
           <div class="direction-form__level-wrapper">
             <img class="img direction-form__image-level" src="" width="" height="" alt="">
           </div>
-          <figure class="direction-form__person-photo">
-            <img class="img direction-form__person-image" src="" width="" height="" alt="">
-            <figcaption class="direction-form__person-text">фото</figcaption>
-          </figure>
+          <div class="direction-form__photo-wrapper">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/demin.png 1x, img/demin@2x.png 2x">
+              <img class="img direction-form__person-photo" src="img/demin-mobile.png" srcset="img/demin-mobile@2x.png 2x" alt="Фото попутчика">
+            </picture>
+          </div>
           <div class="direction-form__button-wrapper">
             <button class="direction-form__button" type="button">
               <span class="direction-form__button-text">сменить</span> фото
@@ -381,14 +392,14 @@
                 <label class="add-plan__route-label" for="country-1" aria-label="Выбор страны"></label>
                 <input class="text text--route add-plan__route-country" type="text" name="countrys" id="country-1" value="Босния и герцеговина">
                 <div class="add-plan__image-wrapper">
-                  <img class="img add-plan__route-flag" src="" width="" height="" alt="">
+                  <img class="img add-plan__route-flag" src="img/bosnia-and-herzegovina-flag.png" srcset="img/bosnia-and-herzegovina-flag@2x.png 2x" alt="Флаг Боснии и Герцеговины">
                 </div>
               </div>
               <div class="add-plan__route-wrapper">
                 <label class="add-plan__route-label" for="country-2" aria-label="Выбор страны"></label>
                 <input class="text text--route add-plan__route-country" type="text" name="countrys" id="country-2" value="Чехия">
                 <div class="add-plan__image-wrapper">
-                  <img class="img add-plan__route-flag" src="" width="" height="" alt="">
+                  <img class="img add-plan__route-flag" src="img/czech-flag.png" srcset="img/czech-flag@2x.png 2x" alt="Флаг Чехии">
                 </div>
               </div>
               <div class="add-plan__route-wrapper">
@@ -424,7 +435,7 @@
                 <div class="add-plan__text-wrapper">
                   <label class="add-plan__entertainment-label" for="bosnia">Босния и Герцеговина</label>
                   <div class="add-plan__flag-wrapper">
-                    <img class="img add-plan__entertainment-flag" src="" width="" height="" alt="">
+                    <img class="img add-plan__route-flag" src="img/bosnia-and-herzegovina-flag.png" srcset="img/bosnia-and-herzegovina-flag@2x.png 2x" alt="Флаг Боснии и Герцеговины">
                   </div>
                 </div>
                 <textarea class="add-plan__entertainment-text" id="bosnia" placeholder="План действий"></textarea>
@@ -433,7 +444,7 @@
                 <div class="add-plan__text-wrapper">
                   <label class="add-plan__entertainment-label" for="czech">Чехия</label>
                   <div class="add-plan__flag-wrapper">
-                    <img class="img add-plan__entertainment-flag" src="" width="" height="" alt="">
+                    <img class="img add-plan__route-flag" src="img/czech-flag.png" srcset="img/czech-flag@2x.png 2x" alt="Флаг Чехии">
                   </div>
                 </div>
                 <textarea class="add-plan__entertainment-text" id="czech">Пить пиво и лазить по&#160;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
@@ -449,9 +460,12 @@
     </main>
     <footer class="page-footer page-footer--inner-page">
       <div class="container">
-        <a class="link page-footer__logo" href="">
-          погнали?
-          <img class="page-footer__logo-image" src="" width="" height="" alt="">
+        <a class="link page-footer__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-menu.png 1x, img/logo-desktop-menu@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-menu.png 1x, img/logo-tablet-menu@2x.png 2x">
+            <img class="page-footer__logo-image" src="img/logo-mobile-menu.png" srcset="img/logo-mobile-menu@2x.png 2x" alt="Логотип сервиса">
+          </picture>
         </a>
         <ul class="list page-footer__list">
           <li class="list__item page-footer__item">
@@ -467,7 +481,7 @@
         <div class="copyright-wrapper">
           <span class="page-footer__text">Разработано</span>
           <a class="link page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="img page-footer__academy-image" src="" width="" height="" alt="">
+            <img class="img page-footer__academy-image" src="img/academy-logo.svg" alt="Логотип академии">
           </a>
         </div>
       </div>

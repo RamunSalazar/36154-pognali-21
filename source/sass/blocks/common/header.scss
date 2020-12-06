@@ -17,6 +17,11 @@
     .page-header__navigation-toggle {
       margin-top: 0;
     }
+
+    .page-header__logo {
+      margin-top: 2px;
+      margin-left: 26px;
+    }
   }
 }
 
@@ -602,6 +607,7 @@
     z-index: 7;
 
     &--inner-page {
+      z-index: 0;
       padding-bottom: 148px;
       border-bottom-left-radius: 56px;
       border-bottom-right-radius: 56px;
@@ -610,8 +616,11 @@
         padding-top: 45px;
 
         .page-header__logo {
+          margin-left: -1px;
+          margin-top: -6px;
+
           &::after {
-            top: 18px;
+            top: 30px;
           }
         }
 
