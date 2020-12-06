@@ -28,26 +28,24 @@
   }
 }
 
-.direction-form__level-wrapper,
-.direction-form__person-photo {
+.direction-form__level-wrapper {
   width: 100px;
   height: 100px;
+  margin-left: 17px;
+  margin-bottom: 18px;
   background-color: $black;
   border-radius: 50%;
 }
 
-.direction-form__level-wrapper {
-  margin-left: 17px;
-  margin-bottom: 18px;
-}
-
-.direction-form__person-photo {
+.direction-form__photo-wrapper {
   margin: 0;
   margin-right: 18px;
 }
 
-.direction-form__person-text {
-  display: none;
+.direction-form__person-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .direction-form__button-wrapper {
@@ -160,12 +158,16 @@
     height: 94px;
   }
 
+  .direction-form__person-photo {
+    border-radius: 0;
+  }
+
   .direction-form__level-wrapper {
     margin-left: 2px;
     order: 1;
   }
 
-  .direction-form__person-photo {
+  .direction-form__photo-wrapper {
     margin-right: 2px;
     border-radius: 7px;
     order: 3;
@@ -262,7 +264,7 @@
     z-index: 3;
   }
 
-  .direction-form__person-photo {
+  .direction-form__photo-wrapper {
     width: 190px;
     height: 190px;
     order: 2;
@@ -274,6 +276,12 @@
     margin-top: -56px;
     position: relative;
     z-index: 3;
+  }
+
+  .direction-form__person-photo {
+    width: 190px;
+    height: 190px;
+    border-radius: 0;
   }
 
   .direction-form__hashtag-group {

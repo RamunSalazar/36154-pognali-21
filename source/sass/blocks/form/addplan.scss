@@ -459,7 +459,6 @@
 .add-plan__route-flag {
   width: 35px;
   height: 24px;
-  background-color: $black;
   border: none;
 }
 
@@ -576,6 +575,10 @@
 
   .add-plan__entertainment-label {
     margin-bottom: 2px;
+  }
+
+  .add-plan__flag-wrapper {
+    right: 37px;
   }
 }
 
@@ -1565,6 +1568,11 @@
         padding-top: 22px;
         padding-left: 24px;
       }
+    }
+
+    .add-plan__route-flag {
+      margin-top: 2px;
+      margin-left: 0;
     }
   }
 
