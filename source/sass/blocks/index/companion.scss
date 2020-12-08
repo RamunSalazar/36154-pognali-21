@@ -48,6 +48,7 @@
   width: 270px;
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 0;
 
   &:nth-child(1) {
     margin-bottom: 13px;
@@ -114,7 +115,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  padding-bottom: 22px;
+  padding-bottom: 14px;
 }
 
 .companion__person-name {
@@ -143,7 +144,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 
 .companion__hashtag-link {
@@ -212,15 +213,22 @@
 }
 
 .companion__link {
-  width: 100%;
+  width: calc(100% - 21px);
   background-color: $yellow;
   padding-top: 22px;
   border-radius: 10px;
   padding-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 21px;
 }
 
 .companion__link-text {
   margin-left: 23px;
+}
+
+.companion__link-image {
+  margin-top: 3px;
 }
 
 .companion__type-list {
@@ -228,12 +236,16 @@
 }
 
 .companion__type-item {
-  width: 20px;
-  height: 20px;
-  background-color: $blue;
-
-  &:not(:last-child) {
+  &:nth-child(1) {
     margin-right: 15px;
+  }
+
+  &:nth-child(2) {
+    margin-right: 12px;
+  }
+
+  &:nth-child(3) {
+    margin-right: 9px;
   }
 
   &:first-child {
@@ -243,6 +255,26 @@
   &:last-child {
     margin-right: auto;
   }
+}
+
+.companion__type-plane {
+  width: 18px;
+  height: 20px;
+}
+
+.companion__type-bus {
+  width: 18px;
+  height: 21px;
+}
+
+.companion__type-bicycle {
+  width: 25px;
+  height: 24px;
+}
+
+.companion__type-run {
+  width: 21px;
+  height: 24px;
 }
 
 @media (min-resolution: 2dppx) {
@@ -322,7 +354,7 @@
   }
 
   .companion__info-wrapper {
-    padding-bottom: 29px;
+    padding-bottom: 21px;
   }
 
   .companion__item {
@@ -363,6 +395,10 @@
           margin-right: 5px;
         }
       }
+
+      .companion__hashtag-list {
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -389,7 +425,7 @@
 
   .companion__hashtag-list {
     width: 223px;
-    margin-bottom: 36px;
+    margin-bottom: 30px;
   }
 
   .companion__link-text {
@@ -397,14 +433,51 @@
   }
 
   .companion__link {
+    width: calc(100% - 33px);
     padding-top: 24px;
     padding-bottom: 32px;
     border-radius: 20px;
+    padding-right: 33px;
+  }
+
+  .companion__link-image {
+    margin-top: 9px;
   }
 
   .companion__flag-list {
     margin-top: -14px;
     margin-bottom: 14px;
+  }
+
+  .companion__type-plane {
+    width: 20px;
+    height: 22px;
+    position: relative;
+    top: -2px;
+    left: 2px;
+  }
+
+  .companion__type-bus {
+    width: 20px;
+    height: 23px;
+    position: relative;
+    left: 3px;
+    top: -2px;
+  }
+
+  .companion__type-bicycle {
+    width: 27px;
+    height: 26px;
+    position: relative;
+    left: 2px;
+  }
+
+  .companion__type-run {
+    width: 23px;
+    height: 26px;
+    position: relative;
+    left: -1px;
+    top: 2px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -451,7 +524,7 @@
   }
 
   .companion__link {
-    width: 280px;
+    width: 247px;
     margin-left: 1px;
   }
 
