@@ -33,8 +33,16 @@
   height: 100px;
   margin-left: 17px;
   margin-bottom: 18px;
-  background-color: $black;
   border-radius: 50%;
+}
+
+.direction-form__image-level {
+  width: 100px;
+  height: 100px;
+
+  &--desktop {
+    display: none;
+  }
 }
 
 .direction-form__photo-wrapper {
@@ -118,11 +126,33 @@
   justify-content: center;
 }
 
-.direction-form__transport-item {
+.direction-form__transport-button {
   width: 32px;
   height: 32px;
-  background-color: $white;
   border-radius: 50%;
+  border: none;
+  background-color: $white;
+  padding-top: 7px;
+}
+
+.direction-form__plane-image {
+  width: 17px;
+  height: 19px;
+}
+
+.direction-form__bus-image {
+  width: 18px;
+  height: 21px;
+}
+
+.direction-form__bicycle-image {
+  width: 21px;
+  height: 20px;
+}
+
+.direction-form__run-image {
+  width: 19px;
+  height: 22px;
 }
 
 @media (min-width: $table-width) {
@@ -153,6 +183,7 @@
   }
 
   .direction-form__level-wrapper,
+  .direction-form__image-level,
   .direction-form__person-photo {
     width: 94px;
     height: 94px;
@@ -205,13 +236,9 @@
 
   .direction-form__group,
   .direction-form__title,
-  .direction-form__wrapepr {
+  .direction-form__wrapepr,
+  .direction-form__transport-list {
     transform: rotate(180deg);
-  }
-
-  .direction-form__transport-item {
-    width: 43px;
-    height: 43px;
   }
 
   .direction-form__transport-group {
@@ -230,6 +257,32 @@
     padding-inline-start: 37px;
     padding-block-end: 30px;
     padding-block-start: 0;
+  }
+
+  .direction-form__transport-button {
+    width: 43px;
+    height: 43px;
+    padding-top: 3px;
+  }
+
+  .direction-form__plane-image {
+    width: 22px;
+    height: 23px;
+  }
+
+  .direction-form__bus-image {
+    width: 20px;
+    height: 23px;
+  }
+
+  .direction-form__bicycle-image {
+    width: 23px;
+    height: 22px;
+  }
+
+  .direction-form__run-image {
+    width: 21px;
+    height: 24px;
   }
 }
 
@@ -262,6 +315,18 @@
     margin-top: -14px;
     position: relative;
     z-index: 3;
+    width: 95px;
+    height: 95px;
+  }
+
+  .direction-form__image-level {
+    display: none;
+
+    &--desktop {
+      display: inline;
+      width: 95px;
+      height: 95px;
+    }
   }
 
   .direction-form__photo-wrapper {

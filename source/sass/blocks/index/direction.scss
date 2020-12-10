@@ -384,6 +384,18 @@
     width: 560px;
 
     &:nth-child(3) {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        z-index: 1;
+        width: 560px;
+        height: 80px;
+        bottom: 0;
+        background-image: linear-gradient(to bottom, transparent, $grey 60px);
+      }
+
       .direction__text-wrapper {
         width: 250px;
         margin-bottom: 16px;
