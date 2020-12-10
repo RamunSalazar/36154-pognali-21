@@ -5,7 +5,7 @@
   border-top-right-radius: 29px;
 
   .container {
-    padding-top: 27px;
+    padding-top: 25px;
     padding-bottom: 77px;
   }
 }
@@ -102,6 +102,7 @@
 .add-plan__step-description {
   color: $special-grey;
   font-weight: 400;
+  margin-bottom: 18px;
 }
 
 .add-plan__date-companion,
@@ -127,7 +128,7 @@
   }
 
   &:nth-child(2) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }
 
@@ -135,25 +136,31 @@
   width: 100%;
   border: 1px solid $basic-grey-normal;
   text-align: center;
-  padding-top: 9px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
   border-radius: 4px;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
 
-  &::before,
-  &::after {
-    position: absolute;
-  }
+.add-plan__counter-button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
 
-  &::before {
-    content: "-";
-    left: 14px;
-  }
+.add-plan__counter-minus {
+  width: 14px;
+  height: 2px;
+}
 
-  &::after {
-    content: "+";
-    right: 14px;
-  }
+.add-plan__counter-plus {
+  width: 14px;
+  height: 14px;
 }
 
 .add-plan__counter-text {
@@ -195,12 +202,11 @@
     &::after {
       position: absolute;
       content: "";
-      width: 5px;
-      height: 5px;
-      left: -29px;
-      top: 8px;
-      border-radius: 50%;
-      background-color: $black;
+      left: -30px;
+      top: 5px;
+      width: 8px;
+      height: 8px;
+      background: url("../../../img/check-mark.svg") 0 0 no-repeat;
     }
   }
 }
@@ -234,8 +240,19 @@
 }
 
 .add-plan__month-button {
-  background-color: transparent;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+}
+
+.add-plan__image-left,
+.add-plan__image-right {
+  width: 10px;
+  height: 19px;
+  opacity: 0.3;
 }
 
 .add-plan__month-name {
@@ -356,6 +373,10 @@
         right: 17px;
       }
     }
+
+    .add-plan__route-image {
+      right: 16px;
+    }
   }
 
   &:focus-within {
@@ -370,10 +391,10 @@
     position: absolute;
     content: "";
     width: 8px;
-    height: 10px;
-    background-color: $black;
-    bottom: -15px;
-    right: 49px;
+    height: 11px;
+    background: url("../../../img/arrow.svg") 0 0 no-repeat;
+    bottom: -16px;
+    right: 50px;
   }
 }
 
@@ -410,17 +431,16 @@
     top: 3px;
     right: 55px;
   }
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 11px;
-    height: 7px;
-    background-color: $black;
-    z-index: 2;
-    top: 18px;
-    right: 69px;
-  }
+.add-plan__route-image {
+  position: absolute;
+  z-index: 2;
+  right: 68px;
+  top: 16px;
+  width: 12px;
+  height: 9px;
+  opacity: 0.3;
 }
 
 .add-plan__image-wrapper {
@@ -443,17 +463,22 @@
     top: 16px;
     left: -5px;
   }
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    background-color: $grey;
-    top: -11px;
-    right: -10px;
-  }
+.add-plan__button-close {
+  position: absolute;
+  border: none;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: $grey;
+  top: -11px;
+  right: -10px;
+}
+
+.add-plan__close-image {
+  width: 9px;
+  height: 9px;
 }
 
 .add-plan__route-flag {
@@ -482,18 +507,9 @@
   width: calc(100% - 2px);
   background-color: $grey;
   position: relative;
-  margin-bottom: 25px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 14px;
-    height: 14px;
-    background-color: $black;
-    z-index: 2;
-    top: 14px;
-    right: 15px;
-  }
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
 
   &::after {
     position: absolute;
@@ -505,6 +521,14 @@
     top: 17px;
     right: 50px;
   }
+}
+
+.add-plan__add-image {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  right: 9px;
+  top: 1px;
 }
 
 .add-plan__link-backward {
@@ -576,10 +600,6 @@
   .add-plan__entertainment-label {
     margin-bottom: 2px;
   }
-
-  .add-plan__flag-wrapper {
-    right: 37px;
-  }
 }
 
 .add-plan__flag-wrapper {
@@ -623,11 +643,16 @@
   display: none;
 }
 
+.add-plan__forward-image,
+.add-plan__backward-image {
+  display: none;
+}
+
 @media (min-width: $table-width) {
   .add-plan {
     .container {
       padding-top: 49px;
-      padding-bottom: 118px;
+      padding-bottom: 121px;
       padding-left: 75px;
       padding-right: 75px;
     }
@@ -707,6 +732,10 @@
         width: 253px;
       }
 
+      .add-plan__route-flag {
+        margin-left: 7px;
+      }
+
       &::after {
         position: absolute;
         content: "";
@@ -754,6 +783,10 @@
         width: 248px;
         margin-right: -3px;
       }
+
+      .add-plan__forward-text {
+        margin-right: 86px;
+      }
     }
   }
 
@@ -789,6 +822,14 @@
     }
   }
 
+  .add-plan__text-wrapper {
+    &:nth-child(2) {
+      .add-plan__counter {
+        padding-top: 24px;
+      }
+    }
+  }
+
   .add-plan__date-day {
     letter-spacing: 0.1em;
     margin-bottom: 26px;
@@ -799,18 +840,20 @@
   }
 
   .add-plan__counter {
-    padding-top: 13px;
+    padding-top: 22px;
     padding-bottom: 22px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
-    &::before {
-      top: 15px;
-      left: 25px;
-    }
+  .add-plan__counter-minus {
+    width: 20px;
+    height: 3px;
+  }
 
-    &::after {
-      top: 17px;
-      right: 25px;
-    }
+  .add-plan__counter-plus {
+    width: 20px;
+    height: 20px;
   }
 
   .add-plan__counter-text {
@@ -845,8 +888,11 @@
   .add-plan__date-checkbox {
     &:checked + .add-plan__date-label {
       &::after {
-        left: -42px;
-        top: 13px;
+        left: -45px;
+        top: 10px;
+        width: 11px;
+        height: 11px;
+        background: url("../../../img/check-mark-tablet.svg") 0 0 no-repeat;
       }
     }
   }
@@ -857,14 +903,14 @@
   }
 
   .add-plan__month-wrapper {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
 
     &::before {
       top: -24px;
     }
 
     &::after {
-      bottom: -27px;
+      bottom: -25px;
     }
   }
 
@@ -872,6 +918,22 @@
     font-size: 36px;
     line-height: 36px;
     margin-left: -2px;
+  }
+
+  .add-plan__image-left,
+  .add-plan__image-right {
+    width: 19px;
+    height: 34px;
+    opacity: 0.3;
+  }
+
+  .add-plan__image-left {
+    margin-top: 5px;
+    margin-left: 18px;
+  }
+
+  .add-plan__image-right {
+    margin-right: 17px;
   }
 
   .add-plan__calendar-text {
@@ -899,6 +961,13 @@
 
   .add-plan__calendar-button {
     font-size: 18px;
+  }
+
+  .add-plan__route-image {
+    right: 194px;
+    top: 30px;
+    width: 16px;
+    height: 12px;
   }
 
   .add-plan__route-form {
@@ -940,6 +1009,27 @@
     padding-top: 26px;
     padding-left: 33px;
     padding-bottom: 30px;
+  }
+
+  .add-plan__forward-text {
+    margin-right: 22px;
+  }
+
+  .add-plan__forward-image {
+    display: inline;
+    width: 12px;
+    height: 14px;
+  }
+
+  .add-plan__backward-text {
+    margin-left: 15px;
+  }
+
+  .add-plan__backward-image {
+    display: inline;
+    width: 14px;
+    height: 16px;
+    transform: rotate(180deg);
   }
 
   .add-plan__link-backward {
@@ -996,6 +1086,10 @@
           top: 29px;
           right: 0;
         }
+      }
+
+      .add-plan__route-image {
+        right: 194px;
       }
     }
 
@@ -1055,7 +1149,19 @@
   .add-plan__route-flag {
     width: 70px;
     height: 47px;
-    margin-left: 7px;
+  }
+
+  .add-plan__button-close {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    top: 20px;
+    right: -2px;
+  }
+
+  .add-plan__close-image {
+    width: 24px;
+    height: 24px;
   }
 
   .add-plan__button-add {
@@ -1065,7 +1171,7 @@
     padding-left: 26px;
     letter-spacing: 0.09em;
     width: calc(69% - 1px + (31% - 165px));
-    margin-bottom: 50px;
+    margin-bottom: 17px;
     opacity: 1;
 
     &::before {
@@ -1081,6 +1187,13 @@
       background-color: $grey;
       z-index: 1;
     }
+  }
+
+  .add-plan__add-image {
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    top: 2px;
   }
 
   .add-plan__entertainment-wrapper {
@@ -1206,7 +1319,7 @@
 
         &:nth-child(2) {
           width: 468px;
-          margin-bottom: 57px;
+          margin-bottom: 59px;
 
           &::before {
             display: none;
@@ -1267,6 +1380,14 @@
 
       .add-plan__step-description {
         margin-bottom: 118px;
+      }
+
+      .add-plan__route-image {
+        right: 295px;
+      }
+
+      .add-plan__route-flag {
+        margin-left: -22px;
       }
     }
 
@@ -1396,6 +1517,8 @@
 
   .add-plan__date-companion {
     letter-spacing: normal;
+    position: relative;
+    top: 5px;
 
     &--text {
       opacity: 1;
@@ -1412,8 +1535,10 @@
 
   .add-plan__counter {
     order: 1;
-    width: 178px;
+    width: 150px;
     margin-left: 25px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   .add-plan__counter-day {
@@ -1429,6 +1554,8 @@
 
   .add-plan__date-day {
     letter-spacing: normal;
+    position: relative;
+    top: 5px;
 
     &:nth-child(1) {
       order: 0;
@@ -1455,6 +1582,21 @@
 
   .add-plan__month-name {
     margin-left: 3px;
+  }
+
+  .add-plan__image-left,
+  .add-plan__image-right {
+    width: 16px;
+    height: 28px;
+    opacity: 0.3;
+  }
+
+  .add-plan__image-left {
+    margin-left: 0;
+  }
+
+  .add-plan__image-right {
+    margin-right: 0;
   }
 
   .add-plan__calendar-header {
@@ -1512,6 +1654,13 @@
     }
   }
 
+  .add-plan__route-image {
+    right: 295px;
+    top: 26px;
+    width: 21px;
+    height: 16px;
+  }
+
   .add-plan__route-country,
   .add-plan__route-value,
   .add-plan__route-label {
@@ -1520,7 +1669,7 @@
 
   .add-plan__button-add {
     width: 730px;
-    margin-bottom: 57px;
+    margin-bottom: 25px;
 
     &::after {
       right: -52px;
