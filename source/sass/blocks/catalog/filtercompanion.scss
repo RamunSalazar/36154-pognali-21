@@ -165,24 +165,26 @@
   align-items: center;
 }
 
-.filter-companion__transport-plane {
-  width: 15px;
-  height: 17px;
-}
+.filter-companion__transport-image {
+  &--plane {
+    width: 15px;
+    height: 17px;
+  }
 
-.filter-companion__transport-bus {
-  width: 17px;
-  height: 20px;
-}
+  &--bus {
+    width: 17px;
+    height: 20px;
+  }
 
-.filter-companion__transport-bicycle {
-  width: 19px;
-  height: 18px;
-}
+  &--bicycle {
+    width: 19px;
+    height: 18px;
+  }
 
-.filter-companion__transport-run {
-  width: 17px;
-  height: 20px;
+  &--run {
+    width: 17px;
+    height: 20px;
+  }
 }
 
 .filter-companion__range {
@@ -487,24 +489,26 @@
     height: 43px;
   }
 
-  .filter-companion__transport-plane {
-    width: 20px;
-    height: 23px;
-  }
+  .filter-companion__transport-image {
+    &--plane {
+      width: 20px;
+      height: 23px;
+    }
 
-  .filter-companion__transport-bus {
-    width: 23px;
-    height: 25px;
-  }
+    &--bus {
+      width: 23px;
+      height: 25px;
+    }
 
-  .filter-companion__transport-bicycle {
-    width: 24px;
-    height: 23px;
-  }
+    &--bicycle {
+      width: 24px;
+      height: 23px;
+    }
 
-  .filter-companion__transport-run {
-    width: 23px;
-    height: 25px;
+    &--run {
+      width: 23px;
+      height: 25px;
+    }
   }
 
   .filter-companion__range {
@@ -680,24 +684,26 @@
     height: 43px;
   }
 
-  .filter-companion__transport-plane {
-    width: 20px;
-    height: 23px;
-  }
+  .filter-companion__transport-image {
+    &--plane {
+      width: 20px;
+      height: 23px;
+    }
 
-  .filter-companion__transport-bus {
-    width: 23px;
-    height: 25px;
-  }
+    &--bus {
+      width: 23px;
+      height: 25px;
+    }
 
-  .filter-companion__transport-bicycle {
-    width: 24px;
-    height: 23px;
-  }
+    &--bicycle {
+      width: 24px;
+      height: 23px;
+    }
 
-  .filter-companion__transport-run {
-    width: 23px;
-    height: 25px;
+    &--run {
+      width: 23px;
+      height: 25px;
+    }
   }
 
   .filter-companion__transport {

@@ -288,24 +288,26 @@
   align-items: center;
 }
 
-.cart-profile__transport-plane {
-  width: 14px;
-  height: 16px;
-}
+.cart-profile__transport-image {
+  &--plane {
+    width: 14px;
+    height: 16px;
+  }
 
-.cart-profile__transport-bus {
-  width: 16px;
-  height: 19px;
-}
+  &--bus {
+    width: 16px;
+    height: 19px;
+  }
 
-.cart-profile__transport-bicycle {
-  width: 18px;
-  height: 17px;
-}
+  &--bicycle {
+    width: 18px;
+    height: 17px;
+  }
 
-.cart-profile__transport-run {
-  width: 16px;
-  height: 19px;
+  &--run {
+    width: 16px;
+    height: 19px;
+  }
 }
 
 .cart-profile__level-wrapper {
@@ -701,24 +703,26 @@
     }
   }
 
-  .cart-profile__transport-plane {
-    width: 20px;
-    height: 22px;
-  }
+  .cart-profile__transport-image {
+    &--plane {
+      width: 20px;
+      height: 22px;
+    }
 
-  .cart-profile__transport-bus {
-    width: 21px;
-    height: 24px;
-  }
+    &--bus {
+      width: 21px;
+      height: 24px;
+    }
 
-  .cart-profile__transport-bicycle {
-    width: 27px;
-    height: 25px;
-  }
+    &--bicycle {
+      width: 27px;
+      height: 25px;
+    }
 
-  .cart-profile__transport-run {
-    width: 24px;
-    height: 27px;
+    &--run {
+      width: 24px;
+      height: 27px;
+    }
   }
 
   .cart-profile__level-wrapper {
