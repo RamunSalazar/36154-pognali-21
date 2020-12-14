@@ -73,6 +73,10 @@
     .filter-companion__strip-wraper {
       display: block;
     }
+
+    .filter-companion__name-image {
+      transform: rotate(180deg);
+    }
   }
 }
 
@@ -93,18 +97,14 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  display: block;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 6px;
-    background-color: $black;
-    right: -1px;
-    top: 7px;
-  }
+.filter-companion__name-image {
+  width: 10px;
+  height: 5px;
 }
 
 .filter-companion__name-text {
@@ -142,8 +142,7 @@
       content: "";
       width: 8px;
       height: 8px;
-      border-radius: 50%;
-      background-color: $black;
+      background: url("../../../img/check-mark.svg") 0 0 no-repeat;
       left: -21px;
       top: 5px;
     }
@@ -154,11 +153,38 @@
   margin-bottom: 31px;
 }
 
-.filter-companion__transport-item {
+.filter-companion__transport-button {
   width: 31px;
   height: 31px;
   background-color: $white;
   border-radius: 50%;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-companion__transport-image {
+  &--plane {
+    width: 15px;
+    height: 17px;
+  }
+
+  &--bus {
+    width: 17px;
+    height: 20px;
+  }
+
+  &--bicycle {
+    width: 19px;
+    height: 18px;
+  }
+
+  &--run {
+    width: 17px;
+    height: 20px;
+  }
 }
 
 .filter-companion__range {
@@ -358,7 +384,7 @@
     }
 
     &:nth-child(5) {
-      margin-bottom: 48px;
+      margin-bottom: 47px;
 
       &::after {
         display: block;
@@ -373,8 +399,9 @@
 
     .filter-companion__range {
       display: flex;
-      align-items: none;
+      align-items: baseline;
       width: 100%;
+      margin-bottom: 26px;
     }
 
     .filter-companion__name {
@@ -408,10 +435,15 @@
     line-height: 20px;
     font-weight: 500;
     display: flex;
+    justify-content: flex-start;
 
     &::after {
       display: none;
     }
+  }
+
+  .filter-companion__name-image {
+    display: none;
   }
 
   .filter-companion__name-text {
@@ -435,8 +467,11 @@
   .filter-companion__check {
     &:checked + .filter-companion__label {
       &::after {
-        left: -27px;
-        top: 10px;
+        left: -28px;
+        top: 7px;
+        width: 11px;
+        height: 12px;
+        background: url("../../../img/check-mark-tablet.svg") 0 0 no-repeat;
       }
     }
   }
@@ -446,9 +481,34 @@
   }
 
   .filter-companion__transport-item {
+    margin-right: 2px;
+  }
+
+  .filter-companion__transport-button {
     width: 43px;
     height: 43px;
-    margin-right: 2px;
+  }
+
+  .filter-companion__transport-image {
+    &--plane {
+      width: 20px;
+      height: 23px;
+    }
+
+    &--bus {
+      width: 23px;
+      height: 25px;
+    }
+
+    &--bicycle {
+      width: 24px;
+      height: 23px;
+    }
+
+    &--run {
+      width: 23px;
+      height: 25px;
+    }
   }
 
   .filter-companion__range {
@@ -463,6 +523,7 @@
     width: 148px;
     margin-right: -4px;
     margin-top: -13px;
+    margin-bottom: 0;
 
     &::before {
       width: 21px;
@@ -493,7 +554,6 @@
   .filter-companion__strip-wraper {
     order: 1;
     width: 281px;
-    margin-top: 7px;
     margin-right: 63px;
   }
 
@@ -582,20 +642,10 @@
   }
 
   .filter-companion__name {
-    width: 105px;
+    width: 100%;
     font-size: 20px;
     line-height: 20px;
     font-weight: 500;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 10px;
-      height: 6px;
-      background-color: $black;
-      right: -87px;
-      top: 8px;
-    }
   }
 
   .filter-companion__label {
@@ -615,8 +665,11 @@
   .filter-companion__check {
     &:checked + .filter-companion__label {
       &::after {
-        left: -27px;
-        top: 10px;
+        left: -30px;
+        top: 7px;
+        width: 11px;
+        height: 12px;
+        background: url("../../../img/check-mark-tablet.svg") 0 0 no-repeat;
       }
     }
   }
@@ -626,9 +679,31 @@
     margin-left: 1px;
   }
 
-  .filter-companion__transport-item {
+  .filter-companion__transport-button {
     width: 43px;
     height: 43px;
+  }
+
+  .filter-companion__transport-image {
+    &--plane {
+      width: 20px;
+      height: 23px;
+    }
+
+    &--bus {
+      width: 23px;
+      height: 25px;
+    }
+
+    &--bicycle {
+      width: 24px;
+      height: 23px;
+    }
+
+    &--run {
+      width: 23px;
+      height: 25px;
+    }
   }
 
   .filter-companion__transport {

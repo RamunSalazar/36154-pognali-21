@@ -20,7 +20,7 @@
     }
 
     .filter-country__button {
-      display: block;
+      display: flex;
     }
 
     .filter-country__group-list {
@@ -36,7 +36,15 @@
 
     .filter-country__title {
       margin-bottom: 33px;
-      width: 82%;
+      width: 84%;
+    }
+
+    .filter-country__toggle-point1 {
+      display: none;
+    }
+
+    .filter-country__toggle-close {
+      display: inline;
     }
 
     .container {
@@ -52,18 +60,12 @@
   line-height: 18px;
   text-transform: uppercase;
   margin: 0;
-  margin-left: 26px;
-  position: relative;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 15px;
-    height: 10px;
-    background-color: $special-blue;
-    top: 5px;
-    left: -26px;
-  }
+.filter-country__title-image {
+  width: 16px;
+  height: 10px;
+  margin-right: 10px;
 }
 
 .filter-country__wrapper {
@@ -76,7 +78,26 @@
   width: 17px;
   height: 17px;
   margin-right: 5px;
-  background-color: $special-blue;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.filter-country__toggle-point1 {
+  display: inline;
+  width: 17px;
+  height: 3px;
+}
+
+.filter-country__toggle-point2 {
+  display: none;
+}
+
+.filter-country__toggle-close {
+  width: 16px;
+  height: 16px;
+  display: none;
 }
 
 .filter-country__toggle-text {
@@ -170,22 +191,18 @@
   color: $special-blue;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 8px;
   border-radius: 20px;
-  padding-left: 30px;
-  position: relative;
   background-color: $grey-normal;
+  justify-content: center;
+  align-items: center;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 12px;
-    height: 12px;
-    background-color: $special-blue;
-    top: 15px;
-    left: 31.5%;
-  }
+.filter-country__button-close {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
 }
 
 @media (min-width: $table-width) {
@@ -198,7 +215,7 @@
       padding-top: 97px;
       padding-left: 72px;
       padding-right: 64px;
-      padding-bottom: 37px;
+      padding-bottom: 36px;
     }
 
     &--open {
@@ -217,18 +234,16 @@
 
         &:nth-child(2) {
           display: block;
+          margin-right: 62px;
         }
+      }
+
+      .filter-country__toggle-point2 {
+        display: none;
       }
 
       .filter-country__toggle {
         width: 180px;
-
-        &::after {
-          width: 20px;
-          height: 20px;
-          top: 2px;
-          right: 6px;
-        }
       }
 
       .filter-country__list-wrapper {
@@ -278,7 +293,7 @@
   }
 
   .filter-country__toggle {
-    display: block;
+    display: flex;
     width: 190px;
     text-align: left;
     padding: 0;
@@ -290,23 +305,29 @@
     font-weight: 700;
     background-color: transparent;
     margin-top: -1px;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 6px;
-      background-color: $special-blue;
-      top: 8px;
-      right: 4px;
-    }
   }
 
   .filter-country__toggle-text {
     &:nth-child(1) {
       display: block;
+      margin-right: 26px;
     }
+  }
+
+  .filter-country__toggle-point1 {
+    display: none;
+  }
+
+  .filter-country__toggle-point2 {
+    display: inline;
+    width: 30px;
+    height: 6px;
+  }
+
+  .filter-country__toggle-close {
+    width: 22px;
+    height: 22px;
+    display: none;
   }
 
   .filter-country__group-list {
@@ -377,18 +398,17 @@
     width: calc(100% - 15px);
     font-size: 20px;
     letter-spacing: 0;
-    padding-top: 41px;
+    padding-top: 37px;
     padding-bottom: 40px;
     border-radius: 20px;
-    padding-left: 45px;
+    padding-left: 5px;
     margin-left: 3px;
+  }
 
-    &::before {
-      width: 20px;
-      height: 20px;
-      top: 40px;
-      left: 39.5%;
-    }
+  .filter-country__button-close {
+    width: 22px;
+    height: 22px;
+    margin-right: 20px;
   }
 }
 
@@ -398,8 +418,8 @@
     padding-top: 70px;
 
     .container {
-      padding-top: 38px;
-      padding-left: 100px;
+      padding-top: 37px;
+      padding-left: 80px;
       padding-right: 100px;
       display: grid;
       grid-template-rows: repeat(3, max-content);
@@ -414,45 +434,70 @@
         grid-template-rows: repeat(10, max-content);
         grid-template-columns: repeat(5, 1fr);
         margin-bottom: 31px;
+        margin-left: 15px;
       }
 
       .filter-country__title {
-        width: 250px;
+        width: 300px;
       }
 
       .filter-country__toggle {
-        margin-left: -8px;
-
-        &::after {
-          width: 20px;
-          height: 20px;
-          top: 2px;
-          right: 9px;
-        }
+        margin-left: 10px;
       }
 
       .filter-country__letter-list {
         margin-top: 13px;
         margin-bottom: 35px;
+        margin-left: 0;
 
         &:nth-child(1) {
           grid-row: 1/2;
           grid-column: 1/-1;
+
+          .filter-country__letter-item {
+            &:nth-child(5) {
+              position: relative;
+              left: -3px;
+            }
+          }
         }
 
         &:nth-child(2) {
           grid-row: 3/4;
           grid-column: 1/-1;
+          margin-bottom: 33px;
+
+          .filter-country__letter-item {
+            &:nth-child(5) {
+              position: relative;
+              left: -5px;
+            }
+          }
         }
 
         &:nth-child(3) {
           grid-row: 5/6;
           grid-column: 1/-1;
+
+          .filter-country__letter-item {
+            &:nth-child(5) {
+              position: relative;
+              left: -5px;
+            }
+          }
         }
 
         &:nth-child(4) {
           grid-row: 7/8;
           grid-column: 1/-1;
+          margin-bottom: 37px;
+
+          .filter-country__letter-item {
+            &:nth-child(5) {
+              position: relative;
+              left: -5px;
+            }
+          }
         }
 
         &:nth-child(5) {
@@ -464,6 +509,11 @@
           .filter-country__letter-item {
             &:nth-child(4) {
               padding-left: 0;
+            }
+
+            &:nth-child(5) {
+              position: relative;
+              left: -5px;
             }
           }
         }
@@ -478,7 +528,6 @@
         &:nth-child(6) {
           grid-row: 2/3;
           grid-column: 1/2;
-          margin-left: -5px;
         }
 
         &:nth-child(7) {
@@ -489,56 +538,53 @@
         &:nth-child(8) {
           grid-row: 2/3;
           grid-column: 3/4;
-          margin-left: 6px;
+          margin-left: 2px;
         }
 
         &:nth-child(9) {
           grid-row: 2/3;
           grid-column: 4/5;
-          margin-left: 10px;
+          margin-left: 2px;
         }
 
         &:nth-child(10) {
           grid-row: 2/3;
           grid-column: 5/6;
-          margin-left: 2px;
+          margin-left: -5px;
         }
 
         &:nth-child(11) {
           grid-row: 4/5;
           grid-column: 1/2;
-          margin-left: -3px;
         }
 
         &:nth-child(12) {
           grid-row: 4/5;
           grid-column: 2/3;
-          margin-top: -1px;
+          margin-top: -2px;
+          margin-left: 1px;
         }
 
         &:nth-child(13) {
           grid-row: 4/5;
           grid-column: 3/4;
-          margin-left: 4px;
+          margin-left: 2px;
         }
 
         &:nth-child(14) {
           grid-row: 4/5;
           grid-column: 4/5;
-          margin-left: 7px;
         }
 
         &:nth-child(15) {
           grid-row: 4/5;
           grid-column: 5/6;
-          margin-left: 7px;
-          margin-top: 1px;
+          margin-top: 2px;
         }
 
         &:nth-child(16) {
           grid-row: 6/7;
           grid-column: 1/2;
-          margin-left: -5px;
           margin-top: 2px;
           margin-bottom: 68px;
         }
@@ -551,25 +597,24 @@
         &:nth-child(18) {
           grid-row: 6/7;
           grid-column: 3/4;
-          margin-left: 5px;
+          margin-left: 2px;
         }
 
         &:nth-child(19) {
           grid-row: 6/7;
           grid-column: 4/5;
-          margin-left: 9px;
           margin-top: -1px;
         }
 
         &:nth-child(20) {
           grid-row: 6/7;
           grid-column: 5/6;
-          margin-left: 9px;
         }
 
         &:nth-child(21) {
           grid-row: 8/9;
           grid-column: 1/2;
+          margin-left: 2px;
         }
 
         &:nth-child(22) {
@@ -580,25 +625,22 @@
         &:nth-child(23) {
           grid-row: 8/9;
           grid-column: 3/4;
-          margin-left: 5px;
+          margin-left: 2px;
         }
 
         &:nth-child(24) {
           grid-row: 8/9;
           grid-column: 4/5;
-          margin-left: 6px;
         }
 
         &:nth-child(25) {
           grid-row: 8/9;
           grid-column: 5/6;
-          margin-left: 9px;
         }
 
         &:nth-child(26) {
           grid-row: 10/11;
           grid-column: 1/2;
-          margin-left: -3px;
         }
 
         &:nth-child(27) {
@@ -609,30 +651,36 @@
         &:nth-child(28) {
           grid-row: 10/11;
           grid-column: 3/4;
-          margin-left: 5px;
+          margin-left: 2px;
         }
 
         &:nth-child(29) {
           grid-row: 10/11;
           grid-column: 4/5;
-          margin-left: 9px;
+          margin-left: 2px;
         }
 
         &:nth-child(30) {
           grid-row: 10/11;
           grid-column: 5/6;
-          margin-left: 9px;
         }
       }
 
       .filter-country__letter-item {
         padding-right: 0;
         text-align: left;
-        padding-left: 4px;
 
         &:last-child {
           margin-right: 0;
         }
+      }
+
+      .filter-country__group-list {
+        margin-left: 22px;
+      }
+
+      .filter-country__group-item {
+        margin-right: 28px;
       }
     }
   }
@@ -643,19 +691,18 @@
     line-height: 20px;
     grid-column: 1/2;
     grid-row: 1/-1;
+  }
 
-    &::before {
-      width: 23px;
-      height: 15px;
-      top: 2px;
-      left: -46px;
-    }
+  .filter-country__title-image {
+    width: 25px;
+    height: 17px;
+    margin-right: 20px;
   }
 
   .filter-country__toggle {
     grid-column: 3/4;
     grid-row: 1/-1;
-    margin-left: -15px;
+    margin-left: 4px;
     margin-top: -1px;
   }
 
@@ -672,14 +719,15 @@
   .filter-country__group-list {
     grid-column: 2/3;
     grid-row: 1/-1;
+    margin-left: 22px;
+  }
+
+  .filter-country__group-item {
+    margin-right: 32px;
   }
 
   .filter-country__button {
-    width: 106.45%;
-    margin-left: -40px;
-
-    &::before {
-      left: 45%;
-    }
+    width: 104.8%;
+    margin-left: -20px;
   }
 }
