@@ -179,12 +179,6 @@
       }
     }
   }
-
-  .direction {
-    background:
-      url("../../../img/rectangle-direction.svg") 40px 456px no-repeat,
-      $grey url("../../../img/flags-back@2x.png") 91.9% 130px no-repeat;
-  }
 }
 
 @media (max-width: $table-width - 1px) {
