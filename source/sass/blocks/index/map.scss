@@ -1,6 +1,5 @@
 .map {
   height: 536px;
-  background-color: $black;
   position: relative;
   z-index: 1;
   margin-top: -34px;
@@ -41,6 +40,8 @@
 
 .map-image {
   margin-top: -120px;
+  width: 100%;
+  height: 100%;
 }
 
 .map-wrapper {
@@ -154,6 +155,19 @@
     padding-bottom: 25px;
     position: relative;
     top: -15px;
+
+    &:hover,
+    &:focus {
+      background-color: $special-blue;
+      color: $white;
+    }
+
+    &:active {
+      .map__link-text,
+      .map__link-image {
+        opacity: 0.3;
+      }
+    }
   }
 
   .map__image-wrapper {

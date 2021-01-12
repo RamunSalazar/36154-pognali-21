@@ -704,6 +704,16 @@
     grid-row: 1/-1;
     margin-left: 4px;
     margin-top: -1px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .filter-country__wrapper {
@@ -724,10 +734,44 @@
 
   .filter-country__group-item {
     margin-right: 32px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 
   .filter-country__button {
     width: 104.8%;
     margin-left: -20px;
+
+    &:hover,
+    &:focus {
+      background-color: $standart-blue-grey-dark;
+    }
+
+    &:active {
+      .filter-country__button-text,
+      .filter-country__button-close {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .filter-country__link {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: $blue-light;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

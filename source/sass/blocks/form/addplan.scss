@@ -5,7 +5,7 @@
   border-top-right-radius: 29px;
 
   .container {
-    padding-top: 25px;
+    padding-top: 26px;
     padding-bottom: 77px;
   }
 }
@@ -88,7 +88,8 @@
       margin-bottom: 24px;
     }
 
-    .add-plan__link {
+    .add-plan__link,
+    .add-plan__send {
       margin-left: -3px;
       width: calc(100% + 8px);
     }
@@ -136,8 +137,8 @@
   width: 100%;
   border: 1px solid $basic-grey-normal;
   text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 4px;
@@ -153,22 +154,29 @@
   background-color: transparent;
 }
 
-.add-plan__counter-minus {
-  width: 14px;
-  height: 2px;
-}
+.add-plan__counter-image {
+  stroke: $basic-grey-light;
 
-.add-plan__counter-plus {
-  width: 14px;
-  height: 14px;
+  &--minus {
+    width: 14px;
+    height: 2px;
+  }
+
+  &--plus {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .add-plan__counter-text {
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
   text-transform: uppercase;
   color: $blue-light;
+  width: 10px;
+  border: none;
 }
 
 .add-plan__checkbox-wrapper {
@@ -248,8 +256,7 @@
   background-color: transparent;
 }
 
-.add-plan__image-left,
-.add-plan__image-right {
+.add-plan__button-image {
   width: 10px;
   height: 19px;
   opacity: 0.3;
@@ -308,9 +315,22 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: $blue-light;
   padding: 0;
+
+  &--chosen {
+    background-color: $blue-light;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $white;
+
+    .add-plan__calendar-data {
+      opacity: 0.3;
+    }
+  }
 }
 
 .add-plan__link {
@@ -325,6 +345,22 @@
   border-radius: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.add-plan__send {
+  font-family: inherit;
+  width: 100%;
+  color: $blue-light;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $yellow;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
 }
 
 .add-plan__route-form {
@@ -343,6 +379,8 @@
   position: relative;
 
   &:nth-child(3) {
+    position: relative;
+
     .add-plan__image-wrapper {
       height: 0;
       border: none;
@@ -396,6 +434,118 @@
     bottom: -16px;
     right: 50px;
   }
+
+  &--open {
+    .add-plan__route-modal {
+      display: block;
+    }
+
+    .add-plan__route-value {
+      border-radius: 0;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      background-color: $blue-light;
+      border-color: $blue-light;
+      padding-left: 17px;
+      padding-top: 10px;
+
+      &::placeholder {
+        color: $white;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    .add-plan__image-wrapper {
+      &::before {
+        display: none;
+      }
+    }
+
+    .add-plan__button-close {
+      display: none;
+    }
+
+    .add-plan__route-image {
+      &:nth-of-type(1) {
+        display: none;
+      }
+
+      &:nth-of-type(2) {
+        width: 9px;
+        height: 9px;
+        display: inline;
+        stroke: $white;
+        right: 18px;
+        top: 15px;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.add-plan__route-modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: $white;
+  width: 100%;
+  top: 41px;
+}
+
+.add-plan__route-table {
+  border-collapse: collapse;
+}
+
+.add-plan__table-row {
+  &:nth-child(1) {
+    .add-plan__letter {
+      &:nth-child(1) {
+        background-color: $grey;
+      }
+    }
+  }
+}
+
+.add-plan__letter {
+  border: 1px solid $basic-grey-normal;
+  width: 2%;
+  height: 38px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $blue-light;
+}
+
+.add-plan__country-wrapper {
+  margin-top: -1px;
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  border: 1px solid $basic-grey-normal;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.add-plan__country-list {
+  display: none;
+
+  &:nth-child(1) {
+    display: block;
+  }
+}
+
+.add-plan__country-item {
+  margin-bottom: 4px;
+}
+
+.add-plan__country-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $special-grey;
+  vertical-align: top;
 }
 
 .add-plan__route-country,
@@ -441,6 +591,10 @@
   width: 12px;
   height: 9px;
   opacity: 0.3;
+
+  &:nth-of-type(2) {
+    display: none;
+  }
 }
 
 .add-plan__image-wrapper {
@@ -479,6 +633,7 @@
 .add-plan__close-image {
   width: 9px;
   height: 9px;
+  opacity: 0.3;
 }
 
 .add-plan__route-flag {
@@ -505,7 +660,7 @@
   padding-left: 11px;
   border: none;
   width: calc(100% - 2px);
-  background-color: $grey;
+  background-color: transparent;
   position: relative;
   margin-bottom: 2px;
   display: flex;
@@ -529,6 +684,7 @@
   position: relative;
   right: 9px;
   top: 1px;
+  opacity: 0.2;
 }
 
 .add-plan__link-backward {
@@ -644,7 +800,8 @@
 }
 
 .add-plan__forward-image,
-.add-plan__backward-image {
+.add-plan__backward-image,
+.add-plan__send-image {
   display: none;
 }
 
@@ -774,18 +931,25 @@
         justify-content: space-between;
       }
 
-      .add-plan__link-forward {
-        width: 253px;
-        margin-left: 0;
-      }
-
       .add-plan__link-backward {
         width: 248px;
         margin-right: -3px;
       }
 
-      .add-plan__forward-text {
+      .add-plan__send {
+        width: 286px;
+        margin-left: 1px;
+      }
+
+      .add-plan__forward-text,
+      .add-plan__send-text {
         margin-right: 86px;
+      }
+
+      .add-plan__send-image {
+        position: relative;
+        top: 8px;
+        left: 5px;
       }
     }
   }
@@ -822,14 +986,6 @@
     }
   }
 
-  .add-plan__text-wrapper {
-    &:nth-child(2) {
-      .add-plan__counter {
-        padding-top: 24px;
-      }
-    }
-  }
-
   .add-plan__date-day {
     letter-spacing: 0.1em;
     margin-bottom: 26px;
@@ -840,20 +996,22 @@
   }
 
   .add-plan__counter {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  .add-plan__counter-minus {
-    width: 20px;
-    height: 3px;
-  }
+  .add-plan__counter-image {
+    &--minus {
+      width: 20px;
+      height: 3px;
+    }
 
-  .add-plan__counter-plus {
-    width: 20px;
-    height: 20px;
+    &--plus {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .add-plan__counter-text {
@@ -920,20 +1078,18 @@
     margin-left: -2px;
   }
 
-  .add-plan__image-left,
-  .add-plan__image-right {
+  .add-plan__button-image {
     width: 19px;
     height: 34px;
-    opacity: 0.3;
-  }
 
-  .add-plan__image-left {
-    margin-top: 5px;
-    margin-left: 18px;
-  }
+    &--left {
+      margin-top: 5px;
+      margin-left: 18px;
+    }
 
-  .add-plan__image-right {
-    margin-right: 17px;
+    &--right {
+      margin-right: 17px;
+    }
   }
 
   .add-plan__calendar-text {
@@ -1011,11 +1167,24 @@
     padding-bottom: 30px;
   }
 
-  .add-plan__forward-text {
+  .add-plan__send {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    border-radius: 20px;
+    padding-top: 26px;
+    padding-left: 33px;
+    padding-bottom: 30px;
+    display: flex;
+  }
+
+  .add-plan__forward-text,
+  .add-plan__send-text {
     margin-right: 22px;
   }
 
-  .add-plan__forward-image {
+  .add-plan__forward-image,
+  .add-plan__send-image {
     display: inline;
     width: 12px;
     height: 14px;
@@ -1096,6 +1265,41 @@
     &::after {
       display: none;
     }
+
+    &--open {
+      .add-plan__route-modal {
+        display: flex;
+      }
+
+      .add-plan__route-value {
+        padding-left: 24px;
+        padding-top: 21px;
+        margin-top: -1px;
+
+        &::placeholder {
+          letter-spacing: 0.1em;
+        }
+      }
+
+      .add-plan__image-wrapper {
+        &::before {
+          display: block;
+        }
+      }
+
+      .add-plan__button-close {
+        display: block;
+      }
+
+      .add-plan__route-image {
+        &:nth-of-type(2) {
+          width: 20px;
+          height: 20px;
+          right: 192px;
+          top: 26px;
+        }
+      }
+    }
   }
 
   .add-plan__route-country,
@@ -1108,6 +1312,69 @@
     padding-bottom: 22px;
     padding-left: 24px;
     letter-spacing: 0.1em;
+  }
+
+  .add-plan__route-modal {
+    width: calc(100% + 40px);
+    top: 69px;
+    z-index: 2;
+    box-shadow: 0px 8px 16px rgba(54, 80, 148, 0.18);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .add-plan__table-wrapper {
+    width: calc(63.8% - 108px + (36.2% - 205px));
+    padding-top: 35px;
+    padding-left: 27px;
+    padding-right: 79px;
+    padding-bottom: 33px;
+  }
+
+  .add-plan__table-row {
+    &:nth-child(1) {
+      .add-plan__letter {
+        &:nth-child(1) {
+          background-color: $blue-light;
+          color: $white;
+          transform: scaleX(1.08) scaleY(1.02);
+          position: relative;
+          left: 1px;
+        }
+      }
+    }
+  }
+
+  .add-plan__letter {
+    width: 2%;
+    height: 66px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .add-plan__country-wrapper {
+    padding-top: 36px;
+    padding-left: 26px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left: 1px solid $basic-grey-dark;
+  }
+
+  .add-plan__country-item {
+    margin-bottom: 0;
+    margin-top: -3px;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+
+  .add-plan__country-link {
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .add-plan__route-label {
@@ -1437,7 +1704,8 @@
         right: 116px;
       }
 
-      .add-plan__link-forward {
+      .add-plan__link-forward,
+      .add-plan__send {
         margin-left: 2px;
       }
 
@@ -1539,6 +1807,37 @@
     margin-left: 25px;
     padding-left: 14px;
     padding-right: 14px;
+
+    &:hover {
+      cursor: pointer;
+      border-color: $standart-blue-grey;
+
+      .add-plan__counter-image {
+        stroke: $standart-blue-grey;
+      }
+    }
+
+    &:focus-within {
+      border-color: $blue;
+    }
+
+    &:active {
+      .add-plan__counter-image {
+        stroke: $blue;
+      }
+    }
+  }
+
+  .add-plan__counter-button {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      .add-plan__counter-image {
+        stroke: $special-grey-light;
+      }
+    }
   }
 
   .add-plan__counter-day {
@@ -1552,10 +1851,34 @@
     margin-bottom: 0;
   }
 
+  .add-plan__date-checkbox + .add-plan__date-label {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      &::before {
+        border-color: $standart-blue-grey;
+      }
+    }
+
+    &:active {
+      &::before {
+        width: 36px;
+        height: 36px;
+        border: none;
+        background-color: $special-grey-light;
+      }
+    }
+  }
+
   .add-plan__date-day {
     letter-spacing: normal;
     position: relative;
     top: 5px;
+
+    &--text {
+      opacity: 1;
+    }
 
     &:nth-child(1) {
       order: 0;
@@ -1584,19 +1907,27 @@
     margin-left: 3px;
   }
 
-  .add-plan__image-left,
-  .add-plan__image-right {
+  .add-plan__button-image {
     width: 16px;
     height: 28px;
-    opacity: 0.3;
-  }
 
-  .add-plan__image-left {
-    margin-left: 0;
-  }
+    &--left {
+      margin-left: 0;
+    }
 
-  .add-plan__image-right {
-    margin-right: 0;
+    &--right {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   .add-plan__calendar-header {
@@ -1617,6 +1948,19 @@
     display: flex;
     padding-top: 13px;
     padding-left: 15px;
+
+    &:hover,
+    &:focus {
+      &:not(:disabled) {
+        cursor: pointer;
+        border: 4px solid $orange-normal;
+        padding-top: 9px;
+        padding-left: 11px;
+        background-color: $blue-light;
+        color: $white;
+        transform: scale(1.1);
+      }
+    }
   }
 
   .add-plan__calendar-text3 {
@@ -1643,12 +1987,57 @@
     }
   }
 
+  .add-plan__link-forward,
+  .add-plan__send {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $yellow-dark;
+    }
+
+    &:active {
+      .add-plan__forward-text,
+      .add-plan__forward-image,
+      .add-plan__send-text,
+      .add-plan__send-image {
+        opacity: 0.3;
+      }
+    }
+  }
+
   .add-plan__route-wrapper {
     &:nth-child(3) {
       .add-plan__image-wrapper {
         &::before {
           top: 25px;
           left: 38px;
+        }
+      }
+    }
+
+    &--open {
+      .add-plan__route-value {
+        padding-left: 24px;
+        padding-top: 19px;
+        padding-bottom: 24px;
+      }
+
+      .add-plan__route-image {
+        &:nth-of-type(2) {
+          width: 21px;
+          height: 21px;
+          right: 297px;
+          top: 24px;
+
+          &:hover,
+          &:focus {
+            cursor: pointer;
+            opacity: 1;
+          }
+
+          &:active {
+            opacity: 0.1;
+          }
         }
       }
     }
@@ -1665,6 +2054,75 @@
   .add-plan__route-value,
   .add-plan__route-label {
     width: 702px;
+  }
+
+  .add-plan__route-value {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      border-color: $standart-blue-grey;
+    }
+  }
+
+  .add-plan__route-modal {
+    width: 730px;
+    top: 70px;
+  }
+
+  .add-plan__table-wrapper {
+    width: 400px;
+    padding-top: 18px;
+    padding-left: 11px;
+    padding-right: 79px;
+    padding-bottom: 18px;
+  }
+
+  .add-plan__route-table {
+    border-collapse: separate;
+    border-spacing: 15px;
+  }
+
+  .add-plan__table-row {
+    &:nth-child(1) {
+      .add-plan__letter {
+        &:nth-child(1) {
+          background-color: $blue-light;
+          color: $white;
+          border-color: $blue-light;
+          transform: none;
+          position: relative;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .add-plan__letter {
+    width: 56px;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      border-color: $standart-blue-grey;
+    }
+
+    &:active {
+      background-color: $blue-light;
+      color: $white;
+      border-color: $blue-light;
+    }
+  }
+
+  .add-plan__country-link {
+    &:hover,
+    &:focus {
+      color: $blue-light;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .add-plan__button-add {
@@ -1702,6 +2160,52 @@
     margin-left: -22px;
   }
 
+  .add-plan__button-close {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      .add-plan__close-image {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      .add-plan__close-image {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  .add-plan__link-backward {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .add-plan__button-add {
+    &:hover,
+    &:focus {
+      background-color: $grey;
+
+      .add-plan__add-image {
+        opacity: 0.3;
+      }
+    }
+
+    &:active {
+      .add-plan__add-image {
+        opacity: 0.1;
+      }
+    }
+  }
+
   .add-plan__entertainment-wrapper {
     &:nth-child(1) {
       &::before {
@@ -1731,6 +2235,20 @@
     padding-top: 22px;
     padding-left: 24px;
     padding-right: 5px;
+    position: relative;
+
+    &:hover {
+      border-color: $standart-blue-grey;
+    }
+
+    &:active,
+    &:focus {
+      border-color: $blue;
+
+      &::placeholder {
+        opacity: 1;
+      }
+    }
   }
 
   .add-plan__entertainment-label {

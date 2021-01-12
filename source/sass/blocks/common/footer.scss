@@ -194,4 +194,29 @@
       }
     }
   }
+
+  .page-footer__item {
+    &:hover,
+    &:focus {
+      background-color: $yellow-dark;
+    }
+
+    &:active {
+      .page-footer__image {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .copyright-wrapper {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

@@ -257,24 +257,26 @@
   }
 }
 
-.companion__type-plane {
-  width: 18px;
-  height: 20px;
-}
+.companion__type{
+  &--plane {
+    width: 18px;
+    height: 20px;
+  }
 
-.companion__type-bus {
-  width: 18px;
-  height: 21px;
-}
+  &--bus {
+    width: 18px;
+    height: 21px;
+  }
 
-.companion__type-bicycle {
-  width: 25px;
-  height: 24px;
-}
+  &--bicycle {
+    width: 25px;
+    height: 24px;
+  }
 
-.companion__type-run {
-  width: 21px;
-  height: 24px;
+  &--run {
+    width: 21px;
+    height: 24px;
+  }
 }
 
 @media (min-resolution: 2dppx) {
@@ -449,35 +451,37 @@
     margin-bottom: 14px;
   }
 
-  .companion__type-plane {
-    width: 20px;
-    height: 22px;
-    position: relative;
-    top: -2px;
-    left: 2px;
-  }
+  .companion__type{
+    &--plane {
+      width: 20px;
+      height: 22px;
+      position: relative;
+      top: -2px;
+      left: 2px;
+    }
 
-  .companion__type-bus {
-    width: 20px;
-    height: 23px;
-    position: relative;
-    left: 3px;
-    top: -2px;
-  }
+    &--bus {
+      width: 20px;
+      height: 23px;
+      position: relative;
+      left: 3px;
+      top: -2px;
+    }
 
-  .companion__type-bicycle {
-    width: 27px;
-    height: 26px;
-    position: relative;
-    left: 2px;
-  }
+    &--bicycle {
+      width: 27px;
+      height: 26px;
+      position: relative;
+      left: 2px;
+    }
 
-  .companion__type-run {
-    width: 23px;
-    height: 26px;
-    position: relative;
-    left: -1px;
-    top: 2px;
+    &--run {
+      width: 23px;
+      height: 26px;
+      position: relative;
+      left: -1px;
+      top: 2px;
+    }
   }
 
   @media (min-resolution: 2dppx) {
@@ -521,11 +525,83 @@
     &:nth-child(1) {
       margin-left: -5px;
     }
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      transform: scale(1.1);
+      filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+    }
   }
 
   .companion__link {
     width: 247px;
     margin-left: 1px;
+
+    &:hover,
+    &:focus {
+      background-color: $yellow-dark;
+    }
+
+    &:active {
+      .companion__link-text,
+      .companion__link-image {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .companion__person-name {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .companion__type-item,
+  .companion__flag-item {
+    position: relative;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        content: attr(data-title);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        color: $white;
+        min-width: 110px;
+        padding: 18px 25px;
+        background-color: $basic-blue;
+        border-radius: 4px;
+        filter: drop-shadow(0px 4px 9px rgba(255, 255, 255, 0.16));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 40px;
+        left: -65px;
+        z-index: 1;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 12px;
+        height: 14px;
+        background: url("../../../img/triangle.svg") 0 0 no-repeat;
+        transform: rotate(-90deg);
+        top: 27px;
+        left: 8px;
+      }
+    }
   }
 
   @media (min-resolution: 2dppx) {

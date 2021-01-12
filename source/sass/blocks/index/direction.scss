@@ -411,6 +411,18 @@
     padding-top: 27px;
     padding-bottom: 11px;
     padding-right: 34px;
+
+    &:hover,
+    &:focus {
+      background-color: $yellow-dark;
+    }
+
+    &:active {
+      .direction__link-text,
+      .direction__link-image {
+        opacity: 0.3;
+      }
+    }
   }
 
   .direction__image-wrapper {
