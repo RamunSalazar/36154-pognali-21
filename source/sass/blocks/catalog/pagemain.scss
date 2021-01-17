@@ -103,4 +103,16 @@
       order: 1;
     }
   }
+
+  .title-link {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

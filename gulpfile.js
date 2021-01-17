@@ -151,6 +151,7 @@ exports.build = build;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/js/*.js", gulp.series("script"));
   gulp.watch("source/*.html", gulp.series(html)).on("change", sync.reload);
 }
 

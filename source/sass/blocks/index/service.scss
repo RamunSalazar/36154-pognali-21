@@ -120,11 +120,13 @@
 
 @media (min-width: $desktop-width) {
   .service {
+    margin-top: -60px;
     border-bottom-left-radius: 56px;
     border-bottom-right-radius: 56px;
-    background: $special-blue-dark url("../../../img/back-companion.svg") 60px -20px / 212px 212px no-repeat;
+    background: $special-blue-dark url("../../../img/back-companion.svg") 60px 130px / 212px 212px no-repeat;
 
     .container {
+      padding-top: 186px;
       padding-left: 130px;
       padding-bottom: 163px;
     }
@@ -153,10 +155,22 @@
     width: 241px;
     margin-left: 1px;
     padding-left: 33px;
+
+    &:hover,
+    &:focus {
+      background-color: $yellow-dark;
+    }
+
+    &:active {
+      .service__link-text,
+      .service__link-image {
+        opacity: 0.3;
+      }
+    }
   }
 
   .service__image-wrapper {
-    top: -5px;
+    top: 144px;
     right: 60px;
   }
 }
