@@ -1,8 +1,7 @@
 .page-header {
   padding-bottom: 39px;
   z-index: 7;
-  background:
-    linear-gradient(to bottom, transparent 477px, $blue 477px, $blue 762px, $special-blue 762px, $special-blue 100%),
+  background: linear-gradient(to bottom, transparent 477px, $blue 477px, $blue 762px, $special-blue 762px, $special-blue 100%),
     $blue url("../../../img/globe-back-desktop.png") -314px 119px / 928px auto no-repeat;
 
   &--inner-page {
@@ -10,7 +9,7 @@
     padding-bottom: 60px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    z-index: 0;
+    z-index: 1;
 
     .page-header__navigation-top {
       padding-top: 15px;
@@ -211,6 +210,33 @@
 }
 
 @media (max-width: $table-width - 1px) {
+  .page-header {
+    &--nojs {
+      z-index: 0;
+      background-position-y: 513px;
+
+      .page-header__image-wrapper {
+        top: 730px;
+      }
+
+      .page-header__navigation-toggle {
+        display: none;
+      }
+
+      .page-header__logo {
+        margin-bottom: 63px;
+      }
+
+      .page-header__navigation-top {
+        position: relative;
+
+        &--open {
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+
   .page-header__navigation-bottom {
     height: 40px;
     margin-bottom: 25px;
@@ -334,11 +360,10 @@
     }
 
     &--open {
-      position: relative;
-      z-index: 4;
-      margin-bottom: -478px;
+      position: absolute;
       background-color: $white;
       padding-bottom: 35px;
+      z-index: 4;
 
       .page-header__logo {
         order: 0;
@@ -490,12 +515,11 @@
       padding-bottom: 195px;
       border-bottom-left-radius: 60px;
       border-bottom-right-radius: 60px;
-
-      .page-header__navigation-top {
-        padding-top: 40px;
-        margin-bottom: 54px;
-      }
     }
+  }
+
+  .page-header__navigation-top {
+    margin-bottom: 55px;
   }
 
   .page-header__title {
@@ -582,6 +606,34 @@
 }
 
 @media (min-width: $table-width) and (max-width: $desktop-width - 1px) {
+  .page-header {
+    &--nojs {
+      z-index: 0;
+      background: $blue url("../../../img/globe-back-desktop.png") -207px 244px / auto auto no-repeat;
+      background-position-y: 1007px;
+
+      .page-header__image-wrapper {
+        top: 1167px;
+      }
+
+      .page-header__navigation-toggle {
+        display: none;
+      }
+
+      .page-header__logo {
+        margin-bottom: 63px;
+      }
+
+      .page-header__navigation-top {
+        position: relative;
+
+        &--open {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
   .page-header__navigation-top {
     padding-top: 40px;
 
@@ -615,13 +667,30 @@
     }
 
     &--scroll {
+      background-color: $white;
       padding-bottom: 39px;
       margin-bottom: 24px;
+
+      .page-header__logo1 {
+        display: none;
+      }
+
+      .page-header__logo2 {
+        display: block;
+        margin-left: 40px;
+      }
+
+      .page-header__navigation-toggle {
+        &::before {
+          top: 6px;
+          background-color: $basic-grey-light;
+          box-shadow: 0 8px 0 0 $basic-grey-light;
+        }
+      }
     }
 
     &--open {
-      position: relative;
-      margin-bottom: -755px;
+      position: absolute;
       padding-bottom: 91px;
       z-index: 4;
       background-color: $white;
@@ -839,19 +908,20 @@
 
       .page-header__navigation-top {
         padding-top: 45px;
+        margin-bottom: 104px;
+      }
 
-        .page-header__logo {
-          margin-left: -1px;
-          margin-top: -6px;
+      .page-header__logo {
+        margin-left: -1px;
+        margin-top: -6px;
 
-          &::after {
-            top: 30px;
-          }
+        &::after {
+          top: 30px;
         }
+      }
 
-        .page-header__user-list {
-          margin-top: 1px;
-        }
+      .page-header__user-list {
+        margin-top: 1px;
       }
     }
   }
@@ -942,7 +1012,6 @@
     }
 
     &--open {
-      margin-bottom: 0;
       margin-bottom: 102px;
 
       .page-header__logo {
@@ -996,7 +1065,7 @@
     overflow: hidden;
 
     &:hover .page-header__site-text,
-    &:focus .page-header__site-text{
+    &:focus .page-header__site-text {
       transform: translateY(-100%);
     }
 
@@ -1014,7 +1083,7 @@
       position: absolute;
       top: 100%;
       content: attr(data-hover);
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
       color: $yellow;
     }
   }
@@ -1094,7 +1163,7 @@
 
       &:hover,
       &:focus {
-        background-color: $yellow-dark
+        background-color: $yellow-dark;
       }
 
       &:active {
