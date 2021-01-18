@@ -1,0 +1,619 @@
+.companion {
+  background:
+    url("../../../img/smolov-back-desktop.png") 86% 69px / 143px 143px no-repeat,
+    url("../../../img/rogovaya-back-desktop.png") -9px 341px / 71px 71px no-repeat,
+    $special-blue url("../../../img/back-companion.svg") -20px 67px / 132px 132px no-repeat;
+  position: relative;
+  z-index: 4;
+  margin-top: -34px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  .container {
+    padding-top: 100px;
+    padding-bottom: 31px;
+  }
+}
+
+.companion__title {
+  margin-bottom: 19px;
+  color: $orange;
+}
+
+.companion__description {
+  color: $white;
+  margin: 0;
+  margin-bottom: 62px;
+
+  &:nth-child(2) {
+    margin-bottom: 20px;
+  }
+
+  &:nth-child(3) {
+    font-weight: 700;
+  }
+
+  .companion__description-text2 {
+    display: none;
+  }
+}
+
+.companion__list {
+  margin-bottom: 20px;
+}
+
+.companion__item {
+  background-color: $white;
+  border-radius: 10px;
+  width: 270px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 0;
+
+  &:nth-child(1) {
+    margin-bottom: 13px;
+
+    .companion__image-wrapper {
+      &::before {
+        background: url("../../../img/mark99.svg") 0 0 no-repeat;
+      }
+    }
+
+    .companion__hashtag-item {
+      &:nth-child(2) {
+        margin-right: 5px;
+      }
+
+      &:nth-child(3) {
+        margin-right: 5px;
+      }
+
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+
+      &:nth-child(5) {
+        margin-left: 7px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .companion__person-name {
+      margin-bottom: 12px;
+
+      &::before {
+        background-color: $green;
+      }
+    }
+
+    .companion__image-wrapper {
+      &::before {
+        background: url("../../../img/mark80.svg") 0 0 no-repeat;
+      }
+    }
+
+    .companion__hashtag-item {
+      &:nth-child(1) {
+        margin-right: 6px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 5px;
+      }
+
+      &:nth-child(4) {
+        margin-left: 10px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.companion__info-wrapper {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 14px;
+}
+
+.companion__person-name {
+  color: $blue-light;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 11px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $dark-ping;
+    top: 10px;
+    left: -15px;
+  }
+}
+
+.companion__hashtag-list {
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.companion__hashtag-link {
+  font-weight: 400;
+  line-height: 18px;
+  color: $special-grey;
+}
+
+.companion__hashtag-item {
+  height: 18px;
+  margin-right: 3px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.companion__text-wrapper {
+  width: 217px;
+  padding-left: 24px;
+}
+
+.companion__image-wrapper {
+  width: 100%;
+  height: 270px;
+  background-color: transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  z-index: 0;
+  margin-top: -5px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top: 17px;
+    left: 17px;
+  }
+}
+
+.companion__flag-list {
+  display: flex;
+  width: 100%;
+  margin-top: -11px;
+  margin-bottom: 11px;
+}
+
+.companion__flag-item {
+  width: 35px;
+  height: 25px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:first-child {
+    margin-left: auto;
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+}
+
+.companion__link {
+  width: calc(100% - 21px);
+  background-color: $yellow;
+  padding-top: 22px;
+  border-radius: 10px;
+  padding-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 21px;
+}
+
+.companion__link-text {
+  margin-left: 23px;
+}
+
+.companion__link-image {
+  margin-top: 3px;
+}
+
+.companion__type-list {
+  display: flex;
+}
+
+.companion__type-item {
+  &:nth-child(1) {
+    margin-right: 15px;
+  }
+
+  &:nth-child(2) {
+    margin-right: 12px;
+  }
+
+  &:nth-child(3) {
+    margin-right: 9px;
+  }
+
+  &:first-child {
+    margin-left: auto;
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+}
+
+.companion__type {
+  &--plane {
+    width: 18px;
+    height: 20px;
+  }
+
+  &--bus {
+    width: 18px;
+    height: 21px;
+  }
+
+  &--bicycle {
+    width: 25px;
+    height: 24px;
+  }
+
+  &--run {
+    width: 21px;
+    height: 24px;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .companion {
+    background:
+      url("../../../img/smolov-back-desktop@2x.png") 86% 69px / 143px 143px no-repeat,
+      url("../../../img/rogovaya-back-desktop@2x.png") -9px 341px / 71px 71px no-repeat,
+      $special-blue url("../../../img/back-companion.svg") -20px 67px / 132px 132px no-repeat;
+  }
+}
+
+@media (min-width: $table-width) {
+  .companion {
+    margin-top: -55px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background:
+      url("../../../img/smolov-back-desktop.png") 40px 481px / 143px 143px no-repeat,
+      url("../../../img/rogovaya-back-desktop.png") calc(100% - 73px) 135px / 285px 285px no-repeat,
+      $special-blue url("../../../img/back-companion.svg") 40px 125px / 212px 212px no-repeat;
+
+    .container {
+      padding-top: 191px;
+      padding-bottom: 87px;
+      padding-left: 73px;
+      padding-right: 73px;
+    }
+  }
+
+  .companion__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 81px;
+    width: 622px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .companion__description {
+    line-height: 34px;
+    margin-left: 2px;
+    margin-bottom: 67px;
+
+    .companion__description-text1 {
+      display: none;
+    }
+
+    .companion__description-text2 {
+      display: inline;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 40px;
+    }
+
+    &:nth-child(3) {
+      font-size: 21px;
+      line-height: 24px;
+    }
+  }
+
+  .companion__title {
+    margin-bottom: 56px;
+  }
+
+  .companion__hashtag-link {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .companion__hashtag-item {
+    margin-bottom: 6px;
+  }
+
+  .companion__person-name {
+    margin-bottom: 16px;
+  }
+
+  .companion__info-wrapper {
+    padding-bottom: 21px;
+  }
+
+  .companion__item {
+    width: 285px;
+    border-radius: 20px;
+    margin-left: 0;
+    margin-right: 0;
+
+    .companion__person-name {
+      &::before {
+        width: 8px;
+        height: 8px;
+        top: 11px;
+        left: -21px;
+      }
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 0;
+
+      .companion__hashtag-item {
+        &:nth-child(5) {
+          margin-left: 5px;
+          margin-right: 6px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .companion__person-name {
+        margin-bottom: 13px;
+        margin-left: -21px;
+      }
+
+      .companion__hashtag-item {
+        &:nth-child(4) {
+          margin-left: 0;
+          margin-right: 5px;
+        }
+      }
+
+      .companion__hashtag-list {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .companion__link-wrapper {
+    margin-left: 1px;
+    margin-right: 5px;
+  }
+
+  .companion__image-wrapper {
+    height: 285px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    &::before {
+      top: 20px;
+      left: 23px;
+    }
+  }
+
+  .companion__text-wrapper {
+    width: 430px;
+    padding: 0;
+  }
+
+  .companion__hashtag-list {
+    width: 223px;
+    margin-bottom: 30px;
+  }
+
+  .companion__link-text {
+    margin-left: 32px;
+  }
+
+  .companion__link {
+    width: calc(100% - 37px);
+    padding-top: 24px;
+    padding-bottom: 32px;
+    border-radius: 20px;
+    padding-right: 33px;
+  }
+
+  .companion__link-image {
+    margin-top: 9px;
+  }
+
+  .companion__flag-list {
+    margin-top: -14px;
+    margin-bottom: 14px;
+  }
+
+  .companion__type {
+    &--plane {
+      width: 20px;
+      height: 22px;
+      position: relative;
+      top: -2px;
+      left: 2px;
+    }
+
+    &--bus {
+      width: 20px;
+      height: 23px;
+      position: relative;
+      left: 3px;
+      top: -2px;
+    }
+
+    &--bicycle {
+      width: 27px;
+      height: 26px;
+      position: relative;
+      left: 2px;
+    }
+
+    &--run {
+      width: 23px;
+      height: 26px;
+      position: relative;
+      left: -1px;
+      top: 2px;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .companion {
+      background:
+        url("../../../img/smolov-back-desktop@2x.png") 40px 481px / 143px 143px no-repeat,
+        url("../../../img/rogovaya-back-desktop@2x.png") calc(100% - 73px) 135px / 285px 285px no-repeat,
+        $special-blue url("../../../img/back-companion.svg") 40px 125px / 212px 212px no-repeat;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion {
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+    background:
+      url("../../../img/smolov-back-desktop.png") 44.25% 28.5% / 143px 143px no-repeat,
+      url("../../../img/rogovaya-back-desktop.png") 26.1% 84.6% / 285px 285px no-repeat,
+      $special-blue url("../../../img/back-companion.svg") 17.2% 21% / 212px 212px no-repeat;
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 413px min-content;
+      padding-top: 179px;
+      padding-bottom: 134px;
+    }
+  }
+
+  .companion__list {
+    margin-bottom: 0;
+    margin-top: 15px;
+    grid-row: 1/-1;
+    grid-column: 2/3;
+    margin-right: 0;
+  }
+
+  .companion__item {
+    &:nth-child(1) {
+      margin-left: -8px;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      transform: scale(1.1);
+      filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+    }
+  }
+
+  .companion__link {
+    width: 247px;
+    margin-left: 1px;
+
+    &:hover,
+    &:focus {
+      background-color: $yellow-dark;
+    }
+
+    &:active {
+      .companion__link-text,
+      .companion__link-image {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .companion__person-name {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .companion__type-item,
+  .companion__flag-item {
+    position: relative;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        content: attr(data-title);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        color: $white;
+        min-width: 110px;
+        padding: 18px 25px;
+        background-color: $basic-blue;
+        border-radius: 4px;
+        filter: drop-shadow(0 4px 9px rgba(255, 255, 255, 0.16));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 40px;
+        left: -65px;
+        z-index: 1;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 12px;
+        height: 14px;
+        background: url("../../../img/triangle.svg") 0 0 no-repeat;
+        transform: rotate(-90deg);
+        top: 27px;
+        left: 8px;
+      }
+    }
+  }
+
+  .companion__text-wrapper,
+  .companion__link {
+    margin-left: 71px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .companion {
+      background:
+        url("../../../img/smolov-back-desktop@2x.png") 44.25% 28.5% / 143px 143px no-repeat,
+        url("../../../img/rogovaya-back-desktop@2x.png") 26.1% 84.6% / 285px 285px no-repeat,
+        $special-blue url("../../../img/back-companion.svg") 17.2% 21% / 212px 212px no-repeat;
+    }
+  }
+}

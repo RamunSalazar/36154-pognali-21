@@ -1,0 +1,16 @@
+.span {
+  font-weight: 700;
+  line-height: 1;
+
+  &--middle {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: $table-width) {
+  .span {
+    &--middle {
+      font-size: 24px;
+    }
+  }
+}

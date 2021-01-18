@@ -1,0 +1,23 @@
+.page-body {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (min-width: $table-width) {
+  .page-body {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-body {
+    overflow-x: hidden;
+  }
+}

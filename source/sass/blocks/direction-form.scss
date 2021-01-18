@@ -1,0 +1,714 @@
+.direction-form {
+  background: linear-gradient(to bottom, transparent 33px, $grey 33px, $grey 100%);
+  z-index: 1;
+  margin-top: -53px;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 59px;
+  }
+}
+
+.direction-form__main-title {
+  width: 100%;
+  margin-bottom: 41px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 214px;
+    height: 5px;
+    background-color: $orange;
+    border-radius: 4px;
+    left: 0;
+    bottom: -19px;
+  }
+}
+
+.direction-form__level-wrapper {
+  width: 100px;
+  height: 100px;
+  margin-left: 17px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+}
+
+.direction-form__image-level {
+  width: 100px;
+  height: 100px;
+
+  &--desktop {
+    display: none;
+  }
+}
+
+.direction-form__photo-wrapper {
+  margin: 0;
+  margin-right: 18px;
+}
+
+.direction-form__person-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.direction-form__button-wrapper {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.direction-form__button {
+  color: $blue;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: center;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  background-color: $blue-grey-light;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  border-radius: 25px;
+}
+
+.direction-form__form {
+  width: 100%;
+}
+
+.direction-form__title {
+  display: block;
+  color: $blue-light;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  padding-inline-start: 17px;
+  padding-inline-end: 17px;
+}
+
+.direction-form__group {
+  border: 1px solid $basic-grey-normal;
+  border-radius: 10px;
+}
+
+.direction-form__hashtag-group {
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  padding-block-start: 14px;
+  padding-block-end: 20px;
+  margin-bottom: 16px;
+}
+
+.direction-form__hashtag-text {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  color: $special-grey;
+  opacity: 0.6;
+  line-height: 18px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.direction-form__transport-group {
+  padding-block-end: 15px;
+}
+
+.direction-form__transport-list {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 2px;
+}
+
+.direction-form__transport-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.direction-form__checkbox + .direction-form__label {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+}
+
+.direction-form__checkbox {
+  &:checked + .direction-form__label {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+
+  &--plane + .direction-form__label {
+    &::before {
+      background: $white url("../../../img/plane-standart-grey-light.svg") no-repeat center center;
+    }
+  }
+
+  &--bus + .direction-form__label {
+    &::before {
+      background: $white url("../../../img/bus-standart-grey-light.svg") no-repeat center center;
+    }
+  }
+
+  &--bicycle + .direction-form__label {
+    &::before {
+      background: $white url("../../../img/bicycle-standart-grey-light.svg") no-repeat center center;
+    }
+  }
+
+  &--run + .direction-form__label {
+    &::before {
+      background: $white url("../../../img/run-standart-grey-light.svg") no-repeat center center;
+    }
+  }
+
+  &--plane {
+    &:checked + .direction-form__label {
+      &::after {
+        background: $white url("../../../img/plane.svg") no-repeat center center;
+      }
+    }
+  }
+
+  &--bus {
+    &:checked + .direction-form__label {
+      &::after {
+        background: $white url("../../../img/bus.svg") no-repeat center center;
+      }
+    }
+  }
+
+  &--bicycle {
+    &:checked + .direction-form__label {
+      &::after {
+        background: $white url("../../../img/bicycle.svg") no-repeat center center;
+      }
+    }
+  }
+
+  &--run {
+    &:checked + .direction-form__label {
+      &::after {
+        background: $white url("../../../img/run.svg") no-repeat center center;
+      }
+    }
+  }
+}
+
+@media (min-width: $table-width) {
+  .direction-form {
+    margin-top: -132px;
+
+    .container {
+      padding-left: 73px;
+      padding-right: 73px;
+      padding-bottom: 57px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .direction-form__main-title {
+    margin-bottom: 138px;
+    margin-left: 2px;
+    order: 0;
+
+    &::after {
+      width: 358px;
+      height: 8px;
+      left: 0;
+      bottom: -76px;
+    }
+  }
+
+  .direction-form__level-wrapper,
+  .direction-form__image-level,
+  .direction-form__person-photo {
+    width: 94px;
+    height: 94px;
+  }
+
+  .direction-form__person-photo {
+    border-radius: 0;
+  }
+
+  .direction-form__level-wrapper {
+    margin-left: 2px;
+    order: 1;
+  }
+
+  .direction-form__photo-wrapper {
+    margin-right: 2px;
+    border-radius: 7px;
+    order: 3;
+  }
+
+  .direction-form__hashtag {
+    order: 5;
+  }
+
+  .direction-form__button-wrapper {
+    order: 4;
+    margin-bottom: 52px;
+  }
+
+  .direction-form__button {
+    letter-spacing: 0.09em;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    border-radius: 10px;
+    width: calc(100% - 4px);
+    margin-left: 2px;
+  }
+
+  .direction-form__transport {
+    order: 2;
+    width: 50.1%;
+    margin-left: -4px;
+  }
+
+  .direction-form__title {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.07em;
+  }
+
+  .direction-form__group,
+  .direction-form__title,
+  .direction-form__wrapepr,
+  .direction-form__transport-list {
+    transform: rotate(180deg);
+  }
+
+  .direction-form__transport-group {
+    padding-block-end: 25px;
+    padding-block-start: 16px;
+    margin-bottom: 40px;
+  }
+
+  .direction-form__hashtag-text {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .direction-form__hashtag-group {
+    padding-inline-end: 37px;
+    padding-inline-start: 37px;
+    padding-block-end: 30px;
+    padding-block-start: 0;
+  }
+
+  .direction-form__transport-item {
+    width: 43px;
+    height: 43px;
+  }
+
+  .direction-form__checkbox + .direction-form__label {
+    &::before {
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  .direction-form__checkbox {
+    &:checked + .direction-form__label {
+      &::after {
+        width: 43px;
+        height: 43px;
+      }
+    }
+
+    &--plane + .direction-form__label {
+      &::before {
+        background: $white url("../../../img/plane-standart-grey-light-tablet.svg") no-repeat center center;
+      }
+    }
+
+    &--bus + .direction-form__label {
+      &::before {
+        background: $white url("../../../img/bus-standart-grey-light-tablet.svg") no-repeat center center;
+      }
+    }
+
+    &--bicycle + .direction-form__label {
+      &::before {
+        background: $white url("../../../img/bicycle-standart-grey-light-tablet.svg") no-repeat center center;
+      }
+    }
+
+    &--run + .direction-form__label {
+      &::before {
+        background: $white url("../../../img/run-standart-grey-light-tablet.svg") no-repeat center center;
+      }
+    }
+
+    &--plane {
+      &:checked + .direction-form__label {
+        &::after {
+          background: $white url("../../../img/plane-tablet.svg") no-repeat center center;
+        }
+      }
+    }
+
+    &--bus {
+      &:checked + .direction-form__label {
+        &::after {
+          background: $white url("../../../img/bus-tablet.svg") no-repeat center center;
+        }
+      }
+    }
+
+    &--bicycle {
+      &:checked + .direction-form__label {
+        &::after {
+          background: $white url("../../../img/bicycle-tablet.svg") no-repeat center center;
+        }
+      }
+    }
+
+    &--run {
+      &:checked + .direction-form__label {
+        &::after {
+          background: $white url("../../../img/run-tablet.svg") no-repeat center center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction-form {
+    margin-top: -134px;
+
+    .container {
+      padding-bottom: 71px;
+    }
+  }
+
+  .direction-form__main-title {
+    margin-bottom: 0;
+    order: 0;
+    width: 60%;
+    z-index: 2;
+    margin-left: 65px;
+
+    &::after {
+      left: 2px;
+      bottom: -4px;
+    }
+  }
+
+  .direction-form__level-wrapper {
+    order: 1;
+    margin: 0;
+    margin-top: -14px;
+    position: relative;
+    z-index: 3;
+    width: 95px;
+    height: 95px;
+  }
+
+  .direction-form__image-level {
+    display: none;
+
+    &--desktop {
+      display: inline;
+      width: 95px;
+      height: 95px;
+    }
+  }
+
+  .direction-form__photo-wrapper {
+    width: 190px;
+    height: 190px;
+    order: 2;
+    margin: 0;
+    border-radius: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-right: 96px;
+    margin-top: -56px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .direction-form__person-photo {
+    width: 190px;
+    height: 190px;
+    border-radius: 0;
+  }
+
+  .direction-form__group {
+    &:hover {
+      border-color: $special-grey-dark;
+    }
+
+    &:active,
+    &:focus-within {
+      border-color: $blue;
+
+      .direction-form__hashtag-text {
+        opacity: 1;
+      }
+    }
+  }
+
+  .direction-form__hashtag-group {
+    padding-inline-end: 21px;
+
+    .direction-form__title {
+      text-align: right;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .direction-form__hashtag {
+    order: 4;
+    width: 736px;
+    margin-left: 61px;
+  }
+
+  .direction-form__hashtag-text {
+    padding-left: 17px;
+  }
+
+  .direction-form__transport-group {
+    padding-block-end: 24px;
+  }
+
+  .direction-form__transport {
+    order: 5;
+    width: 387px;
+  }
+
+  .direction-form__transport-list {
+    margin-left: -5px;
+  }
+
+  .direction-form__checkbox + .direction-form__label {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+    }
+  }
+
+  .direction-form__checkbox {
+    &--plane + .direction-form__label {
+      &::before {
+        background: $white url("../../../img/plane-standart-grey-light-tablet.svg") no-repeat center center;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background: $white url("../../../img/plane-standart-grey-tablet.svg") no-repeat center center;
+        }
+      }
+
+      &:active {
+        &::before {
+          background: $special-grey-light url("../../../img/plane-01-tablet.svg") no-repeat center center;
+        }
+      }
+    }
+
+    &--bus + .direction-form__label {
+      &::before {
+        background: $white url("../../../img/bus-standart-grey-light-tablet.svg") no-repeat center center;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background: $white url("../../../img/bus-standart-grey-tablet.svg") no-repeat center center;
+        }
+      }
+
+      &:active {
+        &::before {
+          background: $special-grey-light url("../../../img/bus-01-tablet.svg") no-repeat center center;
+        }
+      }
+    }
+
+    &--bicycle + .direction-form__label {
+      &::before {
+        background: $white url("../../../img/bicycle-standart-grey-light-tablet.svg") no-repeat center center;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background: $white url("../../../img/bicycle-standart-grey-tablet.svg") no-repeat center center;
+        }
+      }
+
+      &:active {
+        &::before {
+          background: $special-grey-light url("../../../img/bicycle-01-tablet.svg") no-repeat center center;
+        }
+      }
+    }
+
+    &--run + .direction-form__label {
+      &::before {
+        background: $white url("../../../img/run-standart-grey-light-tablet.svg") no-repeat center center;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background: $white url("../../../img/run-standart-grey-tablet.svg") no-repeat center center;
+        }
+      }
+
+      &:active {
+        &::before {
+          background: $special-grey-light url("../../../img/run-01-tablet.svg") no-repeat center center;
+        }
+      }
+    }
+
+    &--plane {
+      &:checked + .direction-form__label {
+        &::after {
+          background: $white url("../../../img/plane-tablet.svg") no-repeat center center;
+        }
+
+        &:hover,
+        &:focus {
+          &::after {
+            background: $white url("../../../img/plane-07-tablet.svg") no-repeat center center;
+          }
+        }
+
+        &:active {
+          &::after {
+            background: $special-grey-light url("../../../img/plane-03-tablet.svg") no-repeat center center;
+          }
+        }
+      }
+    }
+
+    &--bus {
+      &:checked + .direction-form__label {
+        &::after {
+          background: $white url("../../../img/bus-tablet.svg") no-repeat center center;
+        }
+
+        &:hover,
+        &:focus {
+          &::after {
+            background: $white url("../../../img/bus-07-tablet.svg") no-repeat center center;
+          }
+        }
+
+        &:active {
+          &::after {
+            background: $special-grey-light url("../../../img/bus-03-tablet.svg") no-repeat center center;
+          }
+        }
+      }
+    }
+
+    &--bicycle {
+      &:checked + .direction-form__label {
+        &::after {
+          background: $white url("../../../img/bicycle-tablet.svg") no-repeat center center;
+        }
+
+        &:hover,
+        &:focus {
+          &::after {
+            background: $white url("../../../img/bicycle-07-tablet.svg") no-repeat center center;
+          }
+        }
+
+        &:active {
+          &::after {
+            background: $special-grey-light url("../../../img/bicycle-03-tablet.svg") no-repeat center center;
+          }
+        }
+      }
+    }
+
+    &--run {
+      &:checked + .direction-form__label {
+        &::after {
+          background: $white url("../../../img/run-tablet.svg") no-repeat center center;
+        }
+
+        &:hover,
+        &:focus {
+          &::after {
+            background: $white url("../../../img/run-07-tablet.svg") no-repeat center center;
+          }
+        }
+
+        &:active {
+          &::after {
+            background: $special-grey-light url("../../../img/run-03-tablet.svg") no-repeat center center;
+          }
+        }
+      }
+    }
+  }
+
+  .direction-form__button-wrapper {
+    order: 3;
+    text-align: right;
+    margin-bottom: 26px;
+  }
+
+  .direction-form__button {
+    width: 190px;
+    border-radius: 0;
+    margin-right: 96px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    letter-spacing: 0;
+    padding-top: 15px;
+    padding-bottom: 14px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $grey-blue;
+    }
+
+    &:active {
+      background-color: $blue-grey-light;
+
+      .direction-form__button-text1 {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .direction-form__button-text {
+    display: none;
+  }
+}

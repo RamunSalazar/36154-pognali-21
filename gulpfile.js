@@ -98,7 +98,8 @@ exports.script = script;
 const copy = () => {
   return gulp.src([
     "source/img/*.{jpg,png,svg}",
-    "source/fonts/*.{woff2,woff}"
+    "source/fonts/*.{woff2,woff}",
+    "source/css/*.css"
   ],
   {
     base: "source"
