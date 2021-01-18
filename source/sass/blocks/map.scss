@@ -1,0 +1,280 @@
+.map {
+  height: 536px;
+  position: relative;
+  z-index: 1;
+  margin-top: -34px;
+
+  &--nojs {
+    background: $grey url("../../../img/background-map-mobile.png") no-repeat center 167%;
+  }
+
+  .container {
+    background-color: $yellow;
+    padding-left: 25px;
+    padding-right: 30px;
+    padding-top: 65px;
+    padding-bottom: 35px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: relative;
+  }
+}
+
+.map__address {
+  text-transform: uppercase;
+  color: $blue-light;
+  font-weight: 700;
+  width: 145px;
+  margin: 0;
+}
+
+.map__link {
+  width: calc(100% - 19px);
+  padding-top: 20px;
+  padding-bottom: 18px;
+  border: 3px solid $special-blue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 19px;
+}
+
+.map__link-text {
+  margin-left: 20px;
+}
+
+.map-image {
+  margin-top: -120px;
+  width: 100%;
+  height: 100%;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.map-wrapper {
+  display: flex;
+  margin-bottom: 33px;
+}
+
+.map__image-wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: $super-bark-blue;
+  margin-right: 15px;
+}
+
+.map__image-mark {
+  width: 16px;
+  height: 21px;
+  position: relative;
+  top: 12px;
+  left: 14px;
+}
+
+.map-mark {
+  display: none;
+
+  &--nojs {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 140%;
+    left: 49.3%;
+  }
+}
+
+.map-mark__center {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $black;
+}
+
+@media (min-resolution: 2dppx) {
+  .map {
+    &--nojs {
+      background: $grey url("../../../img/background-map-mobile@2x.png") no-repeat center 167%;
+    }
+  }
+}
+
+@media (min-width: $table-width) {
+  .map {
+    height: 700px;
+    margin-top: -55px;
+    margin-bottom: 180px;
+
+    &--nojs {
+      height: 879px;
+      margin-bottom: 0;
+      background: $grey url("../../../img/background-map-tablet.png") no-repeat center 112%;
+    }
+
+    .container {
+      padding-left: 75px;
+      padding-right: 81px;
+      padding-top: 120px;
+      padding-bottom: 84px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
+
+  .map__address {
+    margin-bottom: 62px;
+    width: 430px;
+  }
+
+  .map__link {
+    width: calc(100% - 30px);
+    padding-top: 23px;
+    padding-bottom: 27px;
+    border-radius: 20px;
+    padding-right: 30px;
+  }
+
+  .map__link-image {
+    margin-top: 7px;
+  }
+
+  .map__link-text {
+    margin-left: 34px;
+  }
+
+  .map-image {
+    margin-top: -120px;
+  }
+
+  .map-wrapper {
+    margin-bottom: 0;
+  }
+
+  .map__image-wrapper {
+    width: 68px;
+    height: 68px;
+    background-color: $super-bark-blue;
+    margin-right: 25px;
+    position: relative;
+    top: -17px;
+  }
+
+  .map__image-mark {
+    width: 26px;
+    height: 31px;
+    position: relative;
+    top: 17px;
+    left: 21px;
+  }
+
+  .map-mark {
+    &--nojs {
+      width: 54px;
+      height: 54px;
+      top: 148.1%;
+      left: 45%;
+    }
+  }
+
+  .map-mark__center {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .map {
+      &--nojs {
+        background: $grey url("../../../img/background-map-tablet@2x.png") no-repeat center 112%;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    height: 632px;
+    margin-bottom: 55px;
+
+    &--nojs {
+      height: 687px;
+      margin-bottom: 0;
+      background: $grey url("../../../img/background-map-desktop.png") no-repeat center 130%;
+    }
+
+    .container {
+      width: auto;
+      display: flex;
+      align-items: baseline;
+      padding-top: 130px;
+      padding-bottom: 24px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
+
+  .map-wrapper {
+    display: flex;
+    padding-left: 26.8%;
+  }
+
+  .map__link {
+    width: 288px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    left: 8.4%;
+    top: -15px;
+
+    &:hover,
+    &:focus {
+      background-color: $special-blue;
+      color: $white;
+    }
+
+    &:active {
+      .map__link-text,
+      .map__link-image {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .map__image-wrapper {
+    width: 90px;
+    height: 90px;
+    margin-right: 2px;
+    top: -27px;
+    left: -28px;
+  }
+
+  .map__image-mark {
+    width: 32px;
+    height: 42px;
+    top: 24px;
+    left: 29px;
+  }
+
+  .map-mark {
+    &--nojs {
+      width: 56px;
+      height: 56px;
+      top: 145.5%;
+      left: 45.5%;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .map {
+      &--nojs {
+        background: $grey url("../../../img/background-map-desktop@2x.png") no-repeat center 130%;
+      }
+    }
+  }
+}
