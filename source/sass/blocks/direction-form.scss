@@ -15,6 +15,7 @@
   width: 100%;
   margin-bottom: 41px;
   position: relative;
+  z-index: 2;
 
   &::after {
     position: absolute;
@@ -56,29 +57,24 @@
   border-radius: 50%;
 }
 
-.direction-form__button-wrapper {
+.direction-form__change-wrapper {
   width: 100%;
   margin-bottom: 24px;
+  display: flex;
 }
 
-.direction-form__button {
+.direction-form__change-label {
   color: $blue;
-  font-family: inherit;
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
   text-align: center;
   width: 100%;
-  border: none;
   text-transform: uppercase;
   background-color: $blue-grey-light;
   padding-top: 10px;
   padding-bottom: 12px;
   border-radius: 25px;
-}
-
-.direction-form__form {
-  width: 100%;
 }
 
 .direction-form__title {
@@ -95,6 +91,7 @@
 .direction-form__group {
   border: 1px solid $basic-grey-normal;
   border-radius: 10px;
+  width: 100%;
 }
 
 .direction-form__hashtag-group {
@@ -265,28 +262,18 @@
     order: 3;
   }
 
-  .direction-form__hashtag {
-    order: 5;
-  }
-
-  .direction-form__button-wrapper {
+  .direction-form__change-wrapper {
     order: 4;
     margin-bottom: 52px;
   }
 
-  .direction-form__button {
+  .direction-form__change-label {
     letter-spacing: 0.09em;
     padding-top: 20px;
     padding-bottom: 22px;
     border-radius: 10px;
     width: calc(100% - 4px);
     margin-left: 2px;
-  }
-
-  .direction-form__transport {
-    order: 2;
-    width: 50.1%;
-    margin-left: -4px;
   }
 
   .direction-form__title {
@@ -306,6 +293,10 @@
     padding-block-end: 25px;
     padding-block-start: 16px;
     margin-bottom: 40px;
+    order: 2;
+    width: 42%;
+    margin-left: -2px;
+    margin-top: 1px;
   }
 
   .direction-form__hashtag-text {
@@ -318,6 +309,7 @@
     padding-inline-start: 37px;
     padding-block-end: 30px;
     padding-block-start: 0;
+    order: 5;
   }
 
   .direction-form__transport-item {
@@ -477,17 +469,16 @@
 
   .direction-form__hashtag-group {
     padding-inline-end: 21px;
+    padding-block-end: 25px;
+    order: 4;
+    width: 672px;
+    margin-left: 64px;
+    height: 79px;
 
     .direction-form__title {
       text-align: right;
       letter-spacing: 0.05em;
     }
-  }
-
-  .direction-form__hashtag {
-    order: 4;
-    width: 736px;
-    margin-left: 61px;
   }
 
   .direction-form__hashtag-text {
@@ -496,11 +487,8 @@
 
   .direction-form__transport-group {
     padding-block-end: 24px;
-  }
-
-  .direction-form__transport {
     order: 5;
-    width: 387px;
+    width: 340px;
   }
 
   .direction-form__transport-list {
@@ -677,13 +665,13 @@
     }
   }
 
-  .direction-form__button-wrapper {
+  .direction-form__change-wrapper {
     order: 3;
-    text-align: right;
+    justify-content: flex-end;
     margin-bottom: 26px;
   }
 
-  .direction-form__button {
+  .direction-form__change-label {
     width: 190px;
     border-radius: 0;
     margin-right: 96px;
@@ -702,13 +690,13 @@
     &:active {
       background-color: $blue-grey-light;
 
-      .direction-form__button-text1 {
+      .direction-form__change-text2 {
         opacity: 0.3;
       }
     }
   }
 
-  .direction-form__button-text {
+  .direction-form__change-text1 {
     display: none;
   }
 }

@@ -58,13 +58,13 @@
   padding-bottom: 23px;
   margin-bottom: 9px;
 
-  &:nth-child(1) {
+  &:nth-child(2) {
     .add-plan__step-title {
       width: 165px;
     }
   }
 
-  &:nth-child(2) {
+  &:nth-child(3) {
     padding-bottom: 6px;
 
     .add-plan__step-title {
@@ -76,7 +76,7 @@
     }
   }
 
-  &:nth-child(3) {
+  &:nth-child(4) {
     padding-bottom: 6px;
     margin-bottom: 0;
 
@@ -865,7 +865,7 @@
     padding-bottom: 56px;
     margin-bottom: 39px;
 
-    &:nth-child(1) {
+    &:nth-child(2) {
       .add-plan__text-wrapper {
         position: relative;
 
@@ -894,7 +894,7 @@
       }
     }
 
-    &:nth-child(2) {
+    &:nth-child(3) {
       padding-left: 43px;
       padding-bottom: 54px;
       position: relative;
@@ -929,7 +929,7 @@
       }
     }
 
-    &:nth-child(3) {
+    &:nth-child(4) {
       padding-top: 43px;
       padding-left: 43px;
       padding-right: 43px;
@@ -1598,15 +1598,15 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    &:nth-child(1),
     &:nth-child(2),
-    &:nth-child(3) {
+    &:nth-child(3),
+    &:nth-child(4) {
       .add-plan__step-title {
         width: 581px;
       }
     }
 
-    &:nth-child(1) {
+    &:nth-child(2) {
       .add-plan__text-wrapper {
         align-items: baseline;
 
@@ -1636,7 +1636,7 @@
       }
     }
 
-    &:nth-child(2) {
+    &:nth-child(3) {
       padding-top: 94px;
       padding-left: 160px;
       padding-right: 160px;
@@ -1689,7 +1689,7 @@
       }
     }
 
-    &:nth-child(3) {
+    &:nth-child(4) {
       padding-top: 96px;
       padding-left: 158px;
       padding-right: 160px;

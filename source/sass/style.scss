@@ -1,7 +1,5 @@
 @import "global/fonts.scss";
 @import "global/variables.scss";
-@import "global/global-style.scss";
-@import "global/typography.scss";
 @import "global/page.scss";
 @import "global/page-boby.scss";
 @import "global/link.scss";
@@ -12,12 +10,13 @@
 @import "global/container.scss";
 @import "global/section.scss";
 @import "global/definition.scss";
+@import "global/page-main.scss";
 @import "typography/title.scss";
 @import "typography/span.scss";
 @import "typography/link-typography.scss";
 @import "typography/text.scss";
-@import "blocks/header.scss";
-@import "blocks/footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-footer.scss";
 @import "blocks/service.scss";
 @import "blocks/direction.scss";
 @import "blocks/companion.scss";
@@ -27,7 +26,6 @@
 @import "blocks/direction-form.scss";
 @import "blocks/plan.scss";
 @import "blocks/add-plan.scss";
-@import "blocks/page-main.scss";
 @import "blocks/filter-country.scss";
 @import "blocks/filter-companion.scss";
 @import "blocks/cart-profile.scss";

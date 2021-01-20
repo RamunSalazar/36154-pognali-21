@@ -235,7 +235,7 @@
     </svg>
     <header class="page-header page-header--nojs">
       <div class="container">
-        <div class="page-header__navigation-wrapper page-header__navigation-top page-header__navigation-top--scroll page-header__navigation-top--open">
+        <div class="page-header__navigation-wrapper page-header__navigation-top page-header__navigation-top--open">
           <a class="link page-header__logo page-header__logo1" href="index.html">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop.webp 1x, img/logo-desktop@2x.webp 2x">
@@ -979,6 +979,34 @@
             <span class="add-profile_link-text">Показать тарифы для бизнеса</span>
           </a>
         </div>
+        <div class="add-profile__modal-wrapper">
+          <div class="add-profile__modal">
+            <div class="container">
+              <h2 class="title title--middle add-profile__modal-title">Бизнес-тарифы</h2>
+              <dl class="add-profile__modal-option">
+                <div class="add-profile__wrapper">
+                  <dt class="add-profile__modal-description">Реклама у блоггера</dt>
+                  <dd class="definition add-profile__modal-price">300 000 руб./пост</dd>
+                </div>
+                <div class="add-profile__wrapper">
+                  <dt class="add-profile__modal-description">Накрутка подписчиков</dt>
+                  <dd class="definition add-profile__modal-price">от 1 руб./шт.</dd>
+                </div>
+                <div class="add-profile__wrapper">
+                  <dt class="add-profile__modal-description">Лайки от ботов</dt>
+                  <dd class="definition add-profile__modal-price">от 20 коп./лайк</dd>
+                </div>
+                <div class="add-profile__wrapper">
+                  <dt class="add-profile__modal-description">Ваш продакт-плейсмент</dt>
+                  <dd class="definition add-profile__modal-price">Индивидуально</dd>
+                </div>
+              </dl>
+              <button class="add-profile__modal-button" type="button">
+                <span class="add-profile__button-text">Закрыть окно</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="feedback">
         <div class="container">
@@ -1053,7 +1081,7 @@
       <section class="map map--nojs">
         <div class="container">
           <h2 class="visually-hidden">Карта</h2>
-          <div class="map-wrapper">
+          <div class="map__wrapper">
             <div class="map__image-wrapper">
               <svg class="map__image-mark" viewBox="0 0 17 21" width="17" height="21">
                 <use xlink:href="#map-mark"></use>
@@ -1067,40 +1095,12 @@
               <path d="M12 7L0 13.0622L0 0.937822L12 7Z" fill="currentColor"/>
             </svg>
           </a>
-          <div class="map-mark map-mark--nojs">
-            <div class="map-mark__center"></div>
+          <div class="map__mark map__mark--nojs">
+            <div class="map__mark-center"></div>
           </div>
         </div>
-        <iframe class="map-image map-image--nojs" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.207512053241!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1607098009989!5m2!1sru!2sru" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="map__image map__image--nojs" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.207512053241!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1607098009989!5m2!1sru!2sru" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
-      <div class="add-profile__modal-wrapper">
-        <div class="add-profile__modal">
-          <div class="container">
-            <h2 class="title title--middle add-profile__modal-title">Бизнес-тарифы</h2>
-            <dl class="add-profile__modal-option">
-              <div class="add-profile__wrapper">
-                <dt class="add-profile__modal-description">Реклама у блоггера</dt>
-                <dd class="definition add-profile__modal-price">300 000 руб./пост</dd>
-              </div>
-              <div class="add-profile__wrapper">
-                <dt class="add-profile__modal-description">Накрутка подписчиков</dt>
-                <dd class="definition add-profile__modal-price">от 1 руб./шт.</dd>
-              </div>
-              <div class="add-profile__wrapper">
-                <dt class="add-profile__modal-description">Лайки от ботов</dt>
-                <dd class="definition add-profile__modal-price">от 20 коп./лайк</dd>
-              </div>
-              <div class="add-profile__wrapper">
-                <dt class="add-profile__modal-description">Ваш продакт-плейсмент</dt>
-                <dd class="definition add-profile__modal-price">Индивидуально</dd>
-              </div>
-            </dl>
-            <button class="add-profile__modal-button" type="button">
-              <span class="add-profile__button-text">Закрыть окно</span>
-            </button>
-          </div>
-        </div>
-      </div>
     </main>
     <footer class="page-footer">
       <div class="container">
@@ -1131,7 +1131,7 @@
             </svg>
           </li>
         </ul>
-        <div class="copyright-wrapper">
+        <div class="page-footer__copyright-wrapper">
           <span class="page-footer__text">Разработано</span>
           <a class="link page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="img page-footer__academy-image" viewBox="0 0 27 34" width="27" height="34" aria-label="Логотип академии">

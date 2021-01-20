@@ -1,6 +1,6 @@
 .filter-country {
   background: linear-gradient(to bottom, transparent 40px, $grey 40px, $special-grey-light 100%);
-  margin-top: -55px;
+  margin-top: -35px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
@@ -11,6 +11,8 @@
   }
 
   &--open {
+    padding-top: 20px;
+    margin-top: -75px;
     position: absolute;
     z-index: 5;
     width: 100%;
@@ -50,6 +52,12 @@
     .container {
       padding-bottom: 28px;
     }
+  }
+
+  &--nojs {
+    position: relative;
+    z-index: 0;
+    padding-top: 40px;
   }
 }
 
@@ -207,6 +215,7 @@
 
 @media (min-width: $table-width) {
   .filter-country {
+    width: 100%;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     margin-bottom: 21px;
@@ -219,6 +228,9 @@
     }
 
     &--open {
+      padding-top: 63px;
+      margin-top: -140px;
+
       .filter-country__group-list {
         display: flex;
         order: -1;
@@ -285,6 +297,10 @@
       .container {
         padding-bottom: 78px;
       }
+    }
+
+    &--nojs {
+      padding-top: 80px;
     }
   }
 
@@ -415,7 +431,7 @@
 @media (min-width: $desktop-width) {
   .filter-country {
     background: linear-gradient(to bottom, transparent 40px, $grey 40px, $special-grey-light 100%);
-    padding-top: 70px;
+    padding-top: 123px;
 
     .container {
       padding-top: 37px;
@@ -424,8 +440,8 @@
     }
 
     &--open {
-      margin-top: 20px;
-      padding-top: 53px;
+      margin-top: 10px;
+      padding-top: 63px;
 
       .filter-country__list-wrapper {
         display: grid;

@@ -142,14 +142,16 @@
   box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
 
   .container {
-    padding-top: 32px;
+    padding-top: 31px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .add-profile__modal-title {
     width: 167px;
     color: $orange;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   .add-profile__wrapper {
@@ -170,13 +172,14 @@
   }
 
   .add-profile__modal-option {
-    margin-bottom: 46px;
+    width: calc(100% - 48px);
+    margin-left: 24px;
+    margin-bottom: 25px;
   }
 
   .add-profile__modal-button {
-    width: calc(100% + 50px);
+    width: 100%;
     border: none;
-    margin-left: -25px;
     background-color: $grey-superlight;
     font-family: "Blogger Sans", "Arial", sans-serif;
     font-weight: 700;
@@ -184,8 +187,8 @@
     line-height: 24px;
     text-transform: uppercase;
     color: $blue-light;
-    padding-top: 20px;
-    padding-bottom: 15px;
+    padding-top: 19px;
+    padding-bottom: 16px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -327,13 +330,12 @@
 
     .container {
       padding-top: 48px;
-      padding-left: 90px;
-      padding-right: 90px;
+      padding-left: 0;
     }
 
     .add-profile__modal-title {
       width: 312px;
-      margin-bottom: 65px;
+      margin-bottom: 43px;
     }
 
     .add-profile__wrapper {
@@ -353,18 +355,17 @@
     }
 
     .add-profile__modal-option {
-      padding-right: 4px;
+      width: calc(100% - 180px);
+      margin-left: 88px;
       font-size: 22px;
       line-height: 28px;
-      margin-bottom: 65px;
+      margin-bottom: 40px;
     }
 
     .add-profile__modal-button {
-      width: calc(100% + 180px);
-      margin-left: -90px;
       font-size: 24px;
       text-transform: none;
-      padding-top: 40px;
+      padding-top: 39px;
       padding-bottom: 45px;
     }
   }
@@ -437,16 +438,17 @@
   .add-profile__modal {
     width: 750px;
     border-radius: 30px;
+    position: relative;
+    top: 32px;
+    left: 17px;
 
     .container {
-      width: 630px;
+      width: 750px;
       padding-top: 50px;
-      padding-left: 60px;
-      padding-right: 60px;
     }
 
     .add-profile__modal-title {
-      margin-bottom: 62px;
+      margin-bottom: 40px;
     }
 
     .add-profile__wrapper {
@@ -462,13 +464,12 @@
     }
 
     .add-profile__modal-option {
-      padding-right: 0;
-      margin-bottom: 69px;
+      width: calc(100% - 120px);
+      margin-left: 60px;
+      margin-bottom: 42px;
     }
 
     .add-profile__modal-button {
-      width: 750px;
-      margin-left: -60px;
       font-size: 24px;
       text-transform: none;
       padding-top: 40px;
