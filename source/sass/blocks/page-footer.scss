@@ -63,11 +63,11 @@
 }
 
 .page-footer__list,
-.copyright-wrapper {
+.page-footer__copyright-wrapper {
   display: flex;
 }
 
-.copyright-wrapper {
+.page-footer__copyright-wrapper {
   width: 100%;
   justify-content: space-between;
   position: relative;
@@ -83,7 +83,7 @@
     margin-bottom: 46px;
   }
 
-  .copyright-wrapper {
+  .page-footer__copyright-wrapper {
     &::after {
       position: absolute;
       content: "";
@@ -170,7 +170,7 @@
     }
   }
 
-  .copyright-wrapper {
+  .page-footer__copyright-wrapper {
     width: 154px;
   }
 }
@@ -205,7 +205,7 @@
     }
   }
 
-  .copyright-wrapper {
+  .page-footer__copyright-wrapper {
     &:hover,
     &:focus {
       cursor: pointer;

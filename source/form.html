@@ -502,40 +502,39 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="direction-form">
-        <div class="container">
-          <h1 class="title title--large direction-form__main-title">Направления</h1>
-          <div class="direction-form__level-wrapper">
-            <svg class="direction-form__image-level" viewBox="0 0 60 60" width="60" height="60">
-              <use xlink:href="#mark80"></use>
-            </svg>
-            <svg class="direction-form__image-level direction-form__image-level--desktop" viewBox="0 0 95 95"  width="95" height="95">
-              <use xlink:href="#mark80-desktop"></use>
-            </svg>
-          </div>
-          <div class="direction-form__photo-wrapper">
-            <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/demin.webp 1x, img/demin@2x.webp 2x">
-              <source type="image/webp" srcset="img/demin-mobile.webp 1x, img/demin-mobile@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/demin.png 1x, img/demin@2x.png 2x">
-              <img class="img direction-form__person-photo" src="img/demin-mobile.png" srcset="img/demin-mobile@2x.png 2x" alt="Фото попутчика">
-            </picture>
-          </div>
-          <div class="direction-form__button-wrapper">
-            <button class="direction-form__button" type="button">
-              <span class="direction-form__button-text">сменить</span>
-              <span class="direction-form__button-text1">фото</span>
-            </button>
-          </div>
-          <form class="direction-form__form direction-form__hashtag">
+      <form method="post" action="https://echo.htmlacademy.ru">
+        <section class="direction-form">
+          <div class="container">
+            <h1 class="title title--large direction-form__main-title">Направления</h1>
+            <div class="direction-form__level-wrapper">
+              <svg class="direction-form__image-level" viewBox="0 0 60 60" width="60" height="60">
+                <use xlink:href="#mark80"></use>
+              </svg>
+              <svg class="direction-form__image-level direction-form__image-level--desktop" viewBox="0 0 95 95"  width="95" height="95">
+                <use xlink:href="#mark80-desktop"></use>
+              </svg>
+            </div>
+            <div class="direction-form__photo-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin.webp 1x, img/demin@2x.webp 2x">
+                <source type="image/webp" srcset="img/demin-mobile.webp 1x, img/demin-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/demin.png 1x, img/demin@2x.png 2x">
+                <img class="img direction-form__person-photo" src="img/demin-mobile.png" srcset="img/demin-mobile@2x.png 2x" alt="Фото попутчика">
+              </picture>
+            </div>
+            <div class="direction-form__change-wrapper">
+              <label class="direction-form__change-label" for="change-foto">
+                <span class="direction-form__change-text1">сменить</span>
+                <span class="direction-form__change-text2">фото</span>
+              </label>
+              <input class="visually-hidden direction-form__change-foto" type="file" id="change-foto">
+            </div>
             <fieldset class="direction-form__group direction-form__hashtag-group">
               <legend class="direction-form__title">тэги</legend>
               <div class="direction-form__wrapepr">
                 <textarea class="direction-form__hashtag-text">#бургер #бар #футбол #концерт #крафт</textarea>
               </div>
             </fieldset>
-          </form>
-          <form class="direction-form__form direction-form__transport">
             <fieldset class="direction-form__group direction-form__transport-group">
               <legend class="direction-form__title">транспорт</legend>
               <ul class="list direction-form__transport-list">
@@ -557,45 +556,43 @@
                 </li>
               </ul>
             </fieldset>
-          </form>
-        </div>
-      </section>
-      <section class="plan">
-        <div class="container">
-          <h2 class="title title--middle plan__title">Мои планы:</h2>
-          <ul class="list plan__list">
-            <li class="list__item plan__item">
-              <div class="plan__item-wrapper">
-                <span class="plan__item-number">1.</span>
-                <span class="plan__item-name">Франция, Италия</span>
-                <span class="plan__text">3 попутчика</span>
-                <span class="plan__text">26 мар &#8213; 29 мар</span>
-                <a class="link plan__link" href="change_plan.html">изменить</a>
-              </div>
-            </li>
-            <li class="list__item plan__item">
-              <div class="plan__item-wrapper">
-                <span class="plan__item-number">2.</span>
-                <span class="plan__item-name">Таиланд, Индонезия</span>
-                <span class="plan__text">1 попутчик</span>
-                <span class="plan__text">1 июл &#8213; 15 июл</span>
-                <a class="link plan__link" href="change_plan.html">изменить</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="add-plan">
-        <div class="container">
-          <div class="add-plan__wrapper">
-            <h2 class="title title--middle add-plan__title">Добавить план:</h2>
-            <ul class="list add-plan__main-list">
-              <li class="list__item add-plan__main-item"></li>
-              <li class="list__item add-plan__main-item"></li>
-              <li class="list__item add-plan__main-item"></li>
+          </div>
+        </section>
+        <section class="plan">
+          <div class="container">
+            <h2 class="title title--middle plan__title">Мои планы:</h2>
+            <ul class="list plan__list">
+              <li class="list__item plan__item">
+                <div class="plan__item-wrapper">
+                  <span class="plan__item-number">1.</span>
+                  <span class="plan__item-name">Франция, Италия</span>
+                  <span class="plan__text">3 попутчика</span>
+                  <span class="plan__text">26 мар &#8213; 29 мар</span>
+                  <a class="link plan__link" href="change_plan.html">изменить</a>
+                </div>
+              </li>
+              <li class="list__item plan__item">
+                <div class="plan__item-wrapper">
+                  <span class="plan__item-number">2.</span>
+                  <span class="plan__item-name">Таиланд, Индонезия</span>
+                  <span class="plan__text">1 попутчик</span>
+                  <span class="plan__text">1 июл &#8213; 15 июл</span>
+                  <a class="link plan__link" href="change_plan.html">изменить</a>
+                </div>
+              </li>
             </ul>
           </div>
-          <form class="add-plan__form" method="post" action="https://echo.htmlacademy.ru">
+        </section>
+        <section class="add-plan">
+          <div class="container">
+            <div class="add-plan__wrapper">
+              <h2 class="title title--middle add-plan__title">Добавить план:</h2>
+              <ul class="list add-plan__main-list">
+                <li class="list__item add-plan__main-item"></li>
+                <li class="list__item add-plan__main-item"></li>
+                <li class="list__item add-plan__main-item"></li>
+              </ul>
+            </div>
             <div class="add-plan__step add-plan__date" id="date">
               <h3 class="title title--small add-plan__step-title">Шаг 1. Даты&nbsp;пребывания</h3>
               <p class="add-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в поездку, и ее предполагаемую длительность.</p>
@@ -1720,9 +1717,9 @@
                 </div>
               </div>
             </div>
-          </form>
-        </div>
-      </section>
+          </div>
+        </section>
+      </form>
     </main>
     <footer class="page-footer page-footer--inner-page">
       <div class="container">
@@ -1753,7 +1750,7 @@
             </svg>
           </li>
         </ul>
-        <div class="copyright-wrapper">
+        <div class="page-footer__copyright-wrapper">
           <span class="page-footer__text">Разработано</span>
           <a class="link page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="img page-footer__academy-image" viewBox="0 0 27 34"  width="27" height="34" aria-label="Логотип академии">

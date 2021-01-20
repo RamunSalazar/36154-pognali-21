@@ -17,22 +17,24 @@ const map = document.querySelector(".map");
 
 if (pageHeader) {
   pageHeader.classList.remove("page-header--nojs");
+  navigation.classList.remove("page-header__navigation-top--open");
 }
 
 if (map) {
   map.classList.remove("map--nojs");
-  const mapMark = map.querySelector(".map-mark");
-  const mapImage = map.querySelector(".map-image");
+  const mapMark = map.querySelector(".map__mark");
+  const mapImage = map.querySelector(".map__image");
   if (mapMark) {
-    mapMark.classList.remove("map-mark--nojs");
+    mapMark.classList.remove("map__mark--nojs");
   }
   if (mapImage) {
-    mapImage.classList.remove("map-image--nojs");
+    mapImage.classList.remove("map__image--nojs");
   }
 }
 
 if (filterCountry) {
   filterCountry.classList.remove("filter-country--open");
+  filterCountry.classList.remove("filter-country--nojs");
 }
 
 for (let i = 0; i < filterCompanionName.length; i++) {
@@ -44,10 +46,10 @@ if (navigationToggle) {
   const pageHeaderInnerPage = document.querySelector(".page-header--inner-page");
     if (navigation.classList.contains("page-header__navigation-top--open")) {
       navigation.classList.remove("page-header__navigation-top--open");
-      pageHeaderInnerPage.style.zIndex = "0";
+      pageHeader.classList.remove("page-header--open");
     } else {
       navigation.classList.add("page-header__navigation-top--open");
-      pageHeaderInnerPage.style.zIndex = "1";
+      pageHeader.classList.add("page-header--open");
     }
   });
 }
@@ -152,7 +154,7 @@ if (addPlanSend) {
   addPlanSend.addEventListener("click", function(evt) {
     const addPlanEntertainmentError = document.querySelector(".add-plan__entertainment-error");
     const addPlanEntertainmentText = document.querySelectorAll(".add-plan__entertainment-text");
-    if (addPlanEntertainmentText[0].innerHTML == "") {
+    if (addPlanEntertainmentText[0].value == "") {
       evt.preventDefault();
       addPlanEntertainmentText[0].classList.add("add-plan__entertainment-text--error");
       addPlanEntertainmentError.style.display = "flex";

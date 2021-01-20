@@ -21,10 +21,9 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([csso()]))
     .pipe(sourcemap.write("."))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
@@ -98,8 +97,7 @@ exports.script = script;
 const copy = () => {
   return gulp.src([
     "source/img/*.{jpg,png,svg}",
-    "source/fonts/*.{woff2,woff}",
-    "source/css/*.css"
+    "source/fonts/*.{woff2,woff}"
   ],
   {
     base: "source"
